@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
@@ -94,7 +94,7 @@ const veilleSujets = [
 const Veille = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <Header />
       
       <PageHeader
         badge="Actualités tech"
