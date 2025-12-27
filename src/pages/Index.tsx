@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import SectionCard from "@/components/SectionCard";
@@ -8,7 +7,6 @@ import { Briefcase, Code, FolderOpen, Brain, Eye, Mail } from "lucide-react";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       <Hero />
 
       {/* Sections Overview */}
