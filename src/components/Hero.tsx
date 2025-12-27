@@ -2,12 +2,13 @@ import { motion } from "framer-motion";
 import { ArrowDown, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import profileImage from "@/assets/hanna-profile.jpeg";
 
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(222_47%_12%)_0%,hsl(222_47%_6%)_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(220_25%_15%)_0%,hsl(220_25%_8%)_70%)]" />
       
       {/* Decorative elements */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -15,10 +16,38 @@ const Hero = () => {
 
       <div className="container-custom relative z-10 px-6">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Profile Photo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="mb-8 flex justify-center"
+          >
+            <div className="relative group">
+              {/* Animated ring */}
+              <motion.div
+                className="absolute -inset-2 rounded-full opacity-75"
+                style={{ background: "var(--gradient-primary)" }}
+                animate={{ rotate: 360 }}
+                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+              />
+              {/* Glow effect */}
+              <div className="absolute -inset-4 bg-primary/20 rounded-full blur-xl group-hover:bg-primary/30 transition-colors duration-500" />
+              {/* Photo container */}
+              <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-background shadow-2xl">
+                <img
+                  src={profileImage}
+                  alt="Hanna Baron"
+                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+            </div>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className="mb-6"
           >
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
@@ -29,7 +58,7 @@ const Hero = () => {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="font-display text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6"
           >
             Hanna <span className="gradient-text">Baron</span>
@@ -38,7 +67,7 @@ const Hero = () => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
           >
             Passionnée par l'informatique, je transforme ma curiosité en compétences 
@@ -49,7 +78,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <Button asChild size="lg" className="group">
@@ -71,7 +100,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-20 md:mt-32"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
