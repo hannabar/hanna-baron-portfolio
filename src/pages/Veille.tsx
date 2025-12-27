@@ -1,0 +1,202 @@
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import PageHeader from "@/components/PageHeader";
+import { motion } from "framer-motion";
+import { Brain, Scan, Fingerprint, Shield, AlertTriangle, Scale } from "lucide-react";
+
+const veilleSujets = [
+  {
+    title: "Imagerie médicale avec IA",
+    icon: Brain,
+    description: "L'intelligence artificielle révolutionne le diagnostic médical grâce à l'analyse d'images.",
+    sections: [
+      {
+        title: "Technologies actuelles",
+        icon: Scan,
+        items: [
+          "Deep Learning et réseaux de neurones convolutifs (CNN)",
+          "Détection automatique de pathologies",
+          "Segmentation d'images médicales",
+          "Radiologie assistée par IA",
+        ],
+      },
+      {
+        title: "Applications concrètes",
+        icon: Brain,
+        items: [
+          "Détection précoce du cancer du sein",
+          "Analyse d'IRM et scanners cérébraux",
+          "Détection de la rétinopathie diabétique",
+          "Analyse des radiographies pulmonaires (COVID-19)",
+        ],
+      },
+      {
+        title: "Enjeux éthiques",
+        icon: Scale,
+        items: [
+          "Fiabilité des diagnostics automatisés",
+          "Responsabilité médicale",
+          "Protection des données de santé (RGPD)",
+          "Certification des dispositifs médicaux",
+        ],
+      },
+    ],
+    perspectives: [
+      "Personnalisation des traitements",
+      "Médecine prédictive",
+      "Télémédecine augmentée",
+    ],
+  },
+  {
+    title: "Données biométriques",
+    icon: Fingerprint,
+    description: "L'utilisation croissante des données biométriques dans l'authentification et la sécurité.",
+    sections: [
+      {
+        title: "Technologies",
+        icon: Fingerprint,
+        items: [
+          "Reconnaissance faciale (Face ID, surveillance)",
+          "Empreintes digitales (smartphones, paiement)",
+          "Reconnaissance vocale (assistants, banque)",
+          "Analyse de l'iris et rétine",
+        ],
+      },
+      {
+        title: "Risques et problématiques",
+        icon: AlertTriangle,
+        items: [
+          "Piratage et usurpation d'identité",
+          "Surveillance de masse et traçage",
+          "Deepfakes et failles de sécurité",
+          "Discrimination algorithmique (biais)",
+        ],
+      },
+      {
+        title: "Cadre réglementaire",
+        icon: Shield,
+        items: [
+          "RGPD (article 9 : données sensibles)",
+          "Recommandations CNIL sur la biométrie",
+          "Débats législatifs (interdiction reconnaissance faciale)",
+          "Équilibre sécurité / liberté individuelle",
+        ],
+      },
+    ],
+    perspectives: [
+      "Biométrie comportementale",
+      "Authentification multimodale",
+      "Standards de sécurité renforcés",
+    ],
+  },
+];
+
+const Veille = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      
+      <PageHeader
+        badge="Actualités tech"
+        title="Veille Technologique"
+        subtitle="Une démarche active de veille pour rester informée des innovations et enjeux du secteur informatique."
+      />
+
+      {/* Introduction */}
+      <section className="py-12 px-6">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass-card rounded-2xl p-8 max-w-3xl"
+          >
+            <h2 className="font-display text-xl font-bold mb-4">Ma démarche de veille</h2>
+            <p className="text-muted-foreground mb-4">
+              La veille technologique est essentielle dans le secteur informatique pour anticiper 
+              les évolutions et adapter ses compétences. Je m'appuie sur diverses sources : 
+              blogs spécialisés, newsletters, podcasts et conférences.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {["Articles scientifiques", "Conférences tech", "CNIL", "Presse spécialisée"].map((source) => (
+                <span key={source} className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm">
+                  {source}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Subjects */}
+      <section className="section-padding pt-8">
+        <div className="container-custom">
+          <div className="space-y-12">
+            {veilleSujets.map((sujet, index) => (
+              <motion.div
+                key={sujet.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="glass-card rounded-2xl overflow-hidden"
+              >
+                {/* Header */}
+                <div className="p-8 border-b border-border bg-gradient-to-r from-primary/5 to-transparent">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
+                      <sujet.icon className="w-8 h-8 text-primary" />
+                    </div>
+                    <div>
+                      <h2 className="font-display text-2xl font-bold mb-2">{sujet.title}</h2>
+                      <p className="text-muted-foreground">{sujet.description}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Sections */}
+                <div className="grid md:grid-cols-3 gap-6 p-8">
+                  {sujet.sections.map((section, i) => (
+                    <div key={i}>
+                      <h3 className="font-display font-semibold mb-4 flex items-center gap-2">
+                        <section.icon className="w-4 h-4 text-primary" />
+                        {section.title}
+                      </h3>
+                      <ul className="space-y-2">
+                        {section.items.map((item, j) => (
+                          <li key={j} className="text-sm text-muted-foreground flex items-start gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Perspectives */}
+                <div className="px-8 pb-8">
+                  <h3 className="font-display font-semibold mb-4">Perspectives d'avenir</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {sujet.perspectives.map((persp, i) => (
+                      <span
+                        key={i}
+                        className="px-4 py-2 rounded-lg bg-accent/10 text-accent text-sm font-medium"
+                      >
+                        {persp}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Veille;
