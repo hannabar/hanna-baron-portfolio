@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import ProjectCard from "@/components/ProjectCard";
@@ -92,7 +92,7 @@ const TravauxPratiques = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Navbar />
       
       <PageHeader
         badge="Formation BTS SIO"

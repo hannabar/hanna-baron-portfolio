@@ -38,27 +38,6 @@ const Hero = () => {
         className="relative z-20 w-full pt-8 px-6"
       >
         <div className="flex flex-col items-center gap-4">
-          {/* Profile Photo with animated ring */}
-          <div className="relative group mb-2">
-            {/* Animated ring */}
-            <motion.div
-              className="absolute -inset-2 rounded-full opacity-75"
-              style={{ background: "var(--gradient-primary)" }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-            />
-            {/* Glow effect */}
-            <div className="absolute -inset-3 bg-primary/20 rounded-full blur-xl group-hover:bg-primary/30 transition-colors duration-500" />
-            {/* Photo container */}
-            <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-background shadow-xl">
-              <img
-                src={profileImage}
-                alt="Hanna Baron"
-                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
-              />
-            </div>
-          </div>
-
           {/* Desktop Navigation - Centered */}
           <div className="hidden lg:flex items-center gap-1 bg-card/30 backdrop-blur-xl rounded-full px-2 py-2 border border-border/30">
             {navItems.map((item) => (
@@ -148,7 +127,7 @@ const Hero = () => {
       <div className="flex-1 flex items-center justify-center w-full">
         <div className="container-custom relative z-10 px-6">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Large Profile Photo */}
+            {/* Profile Photo */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -158,13 +137,13 @@ const Hero = () => {
               <div className="relative group">
                 {/* Animated ring */}
                 <motion.div
-                  className="absolute -inset-3 rounded-full opacity-75"
+                  className="absolute -inset-2 rounded-full opacity-75"
                   style={{ background: "var(--gradient-primary)" }}
                   animate={{ rotate: 360 }}
                   transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
                 />
                 {/* Glow effect */}
-                <div className="absolute -inset-6 bg-primary/20 rounded-full blur-xl group-hover:bg-primary/30 transition-colors duration-500" />
+                <div className="absolute -inset-4 bg-primary/20 rounded-full blur-xl group-hover:bg-primary/30 transition-colors duration-500" />
                 {/* Photo container */}
                 <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-background shadow-2xl">
                   <img

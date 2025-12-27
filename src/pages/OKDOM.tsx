@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
@@ -24,7 +24,7 @@ const OKDOM = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Navbar />
       
       <PageHeader
         badge="Expérience professionnelle"
