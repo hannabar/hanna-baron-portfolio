@@ -218,7 +218,7 @@ const Hero = () => {
               {[
                 { value: "6+", label: "Projets TP" },
                 { value: "2", label: "Ateliers PPE" },
-                { value: "18/20", label: "Note NSI Bac" },
+                { value: "10+", label: "Technologies" },
                 { value: "1", label: "Alternance" },
               ].map((stat, index) => (
                 <div
