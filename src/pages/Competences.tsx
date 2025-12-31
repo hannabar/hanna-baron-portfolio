@@ -9,6 +9,7 @@ const technicalSkills = [
   { name: "Python", level: 90 },
   { name: "PHP", level: 85 },
   { name: "JavaScript", level: 80 },
+  { name: "C++", level: 70 },
   { name: "SQL", level: 85 },
   { name: "HTML/CSS", level: 90 },
 ];
@@ -16,8 +17,6 @@ const technicalSkills = [
 const dbSkills = [
   { name: "MySQL / MariaDB", level: 85 },
   { name: "Requêtes SQL (JOIN, INSERT...)", level: 85 },
-  { name: "Conception MCD/MLD", level: 80 },
-  { name: "Administration BD", level: 70 },
 ];
 
 const securitySkills = [
@@ -29,7 +28,7 @@ const securitySkills = [
   "Analyse des logs",
 ];
 
-const tools = ["Git / GitHub", "VS Code / PHPStorm", "XAMPP / WAMP"];
+const tools = ["Git / GitHub", "VS Code", "Visual Studio", "PHPStorm", "Docker", "Odoo", "Android Studio", "XAMPP", "WAMP"];
 
 const btsSioBloc1 = [
   "Gérer le patrimoine informatique",
@@ -46,13 +45,6 @@ const btsSioBloc2 = [
   "Gérer les données",
 ];
 
-const algoSkills = [
-  "Structures de données : listes, piles, arbres binaires",
-  "Algorithmes sur arbres binaires",
-  "Méthode « diviser pour régner »",
-  "Récursivité",
-  "Gestion et correction de bugs",
-];
 
 const softSkills = [
   { skill: "Gestion de projet", desc: "Planification, suivi, documentation" },
@@ -155,15 +147,6 @@ const Competences = () => {
                 ))}
               </div>
 
-              <h3 className="font-display font-semibold mt-8 mb-4">Connaissances algorithmiques (Bac NSI)</h3>
-              <ul className="space-y-2">
-                {algoSkills.map((skill, index) => (
-                  <li key={index} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 mt-2" />
-                    {skill}
-                  </li>
-                ))}
-              </ul>
             </motion.div>
           </div>
 

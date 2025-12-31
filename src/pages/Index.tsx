@@ -36,7 +36,7 @@ const Index = () => {
             />
             <SectionCard
               title="Travaux Pratiques"
-              description="6 projets pratiques réalisés durant ma formation : jeux, e-commerce, blog et plus encore."
+              description="Projets pratiques réalisés durant ma formation : jeux, e-commerce, blog et plus encore."
               icon={FolderOpen}
               link="/tp"
               delay={0.1}
@@ -90,9 +90,9 @@ const Index = () => {
                   Actuellement étudiante en <strong className="text-foreground">BTS SIO option SLAM</strong> à Euroforma Paris, 
                   je me forme aux métiers du développement logiciel et des applications métiers.
                 </p>
-                <p>
+              <p>
                   Titulaire d'un <strong className="text-foreground">Baccalauréat Général mention Bien</strong> avec la spécialité 
-                  NSI (note 18/20), j'ai acquis de solides bases en algorithmique, Python et bases de données.
+                  NSI, j'ai acquis de solides bases en algorithmique, Python et bases de données.
                 </p>
                 <p>
                   En alternance, je développe mes compétences en entreprise tout en suivant ma formation. 
@@ -147,6 +147,37 @@ const Index = () => {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* BTS SIO Section */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass-card rounded-2xl p-8 max-w-4xl mx-auto"
+          >
+            <h2 className="font-display text-2xl font-bold mb-6 gradient-text">
+              Le BTS SIO Option SLAM
+            </h2>
+            <div className="space-y-4 text-muted-foreground">
+              <p>
+                Le BTS SIO (Services Informatiques aux Organisations) a été créé en 2011, 
+                anciennement connu sous le nom de BTS IG (Informatique de Gestion).
+              </p>
+              <p>
+                L'option <strong className="text-foreground">SLAM</strong> (Solutions Logicielles et Applications Métiers) 
+                est orientée vers le développement de logiciels personnalisés et de sites web.
+              </p>
+              <p>
+                Le titulaire du diplôme intervient dans la définition des spécifications techniques, 
+                la réalisation de solutions applicatives, la gestion du patrimoine applicatif et 
+                la formation des utilisateurs.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 

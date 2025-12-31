@@ -97,7 +97,7 @@ const TravauxPratiques = () => {
       <PageHeader
         badge="Formation BTS SIO"
         title="Travaux Pratiques"
-        subtitle="6 projets pratiques réalisés durant ma formation, couvrant le développement web, la gestion de bases de données et la sécurité informatique."
+        subtitle="Projets pratiques réalisés durant ma formation, couvrant le développement web, la gestion de bases de données et la sécurité informatique."
       />
 
       <section className="section-padding">

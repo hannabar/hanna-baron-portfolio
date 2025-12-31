@@ -13,8 +13,8 @@ const OKDOM = () => {
     "Collaboration avec l'équipe de développement",
   ];
 
-  const technologies = [
-    "PHP", "JavaScript", "MySQL", "HTML/CSS", "Git", "VS Code"
+const technologies = [
+    "PHP", "JavaScript", "MySQL", "HTML/CSS", "Git", "VS Code", "Odoo"
   ];
 
   const skills = [
@@ -50,10 +50,37 @@ const OKDOM = () => {
                   <div>
                     <h2 className="font-display text-2xl font-bold mb-2">OKDOM</h2>
                     <p className="text-muted-foreground">
-                      Entreprise spécialisée dans les solutions logicielles pour la gestion immobilière.
-                      OKDOM développe des outils innovants pour faciliter la gestion des biens et des services.
+                      OKDOM est une société spécialisée dans la domiciliation d'entreprises, 
+                      offrant aux professionnels et entrepreneurs des solutions flexibles 
+                      pour établir leur siège social.
                     </p>
                   </div>
+                </div>
+
+                <div className="mb-8">
+                  <h3 className="font-display text-lg font-semibold mb-4">Services principaux</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-start gap-3 text-sm text-muted-foreground">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong className="text-foreground">Domiciliation commerciale :</strong> mise à disposition d'une adresse professionnelle</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-muted-foreground">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong className="text-foreground">Gestion du courrier :</strong> réception, numérisation et réexpédition</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-muted-foreground">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong className="text-foreground">Permanence téléphonique :</strong> accueil des appels professionnels</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-muted-foreground">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong className="text-foreground">Espaces de travail :</strong> salles de réunion et bureaux équipés en location ponctuelle</span>
+                    </li>
+                    <li className="flex items-start gap-3 text-sm text-muted-foreground">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                      <span><strong className="text-foreground">Accompagnement administratif :</strong> aide à la création et gestion d'entreprise</span>
+                    </li>
+                  </ul>
                 </div>
 
                 <div className="grid sm:grid-cols-3 gap-4 mb-8">
@@ -131,37 +158,6 @@ const OKDOM = () => {
               ))}
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* BTS SIO Info */}
-      <section className="section-padding bg-card/30">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="glass-card rounded-2xl p-8 max-w-4xl mx-auto"
-          >
-            <h2 className="font-display text-2xl font-bold mb-6 gradient-text">
-              Le BTS SIO Option SLAM
-            </h2>
-            <div className="space-y-4 text-muted-foreground">
-              <p>
-                Le BTS SIO (Services Informatiques aux Organisations) a été créé en 2011, 
-                anciennement connu sous le nom de BTS IG (Informatique de Gestion).
-              </p>
-              <p>
-                L'option <strong className="text-foreground">SLAM</strong> (Solutions Logicielles et Applications Métiers) 
-                est orientée vers le développement de logiciels personnalisés et de sites web.
-              </p>
-              <p>
-                Le titulaire du diplôme intervient dans la définition des spécifications techniques, 
-                la réalisation de solutions applicatives, la gestion du patrimoine applicatif et 
-                la formation des utilisateurs.
-              </p>
-            </div>
-          </motion.div>
         </div>
       </section>
 
