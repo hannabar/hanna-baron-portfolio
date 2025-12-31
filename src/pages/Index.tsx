@@ -176,6 +176,10 @@ const Index = () => {
                 la réalisation de solutions applicatives, la gestion du patrimoine applicatif et 
                 la formation des utilisateurs.
               </p>
+              <p>
+                Cette option me permet de développer des compétences en programmation (Python, PHP, JavaScript, C++), 
+                en bases de données (MySQL), et en méthodologies de projet (Agile, Git).
+              </p>
             </div>
           </motion.div>
         </div>
