@@ -34,10 +34,10 @@ const ProjectCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
-      className="glass-card rounded-2xl overflow-hidden group hover-lift"
+      className="glass-card rounded-2xl overflow-hidden group hover-lift h-full flex flex-col"
     >
       {/* Image/Video placeholder */}
-      <div className="h-48 bg-gradient-to-br from-secondary to-muted relative overflow-hidden">
+      <div className="h-48 bg-gradient-to-br from-secondary to-muted relative overflow-hidden flex-shrink-0">
         {video ? (
           <video
             src={video}
@@ -61,7 +61,7 @@ const ProjectCard = ({
         <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
       </div>
 
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-grow">
         <h3 className="font-display text-xl font-semibold mb-2">{title}</h3>
         <p className="text-muted-foreground text-sm mb-4">{description}</p>
 
@@ -78,7 +78,7 @@ const ProjectCard = ({
         </div>
 
         {/* Features */}
-        <ul className="text-sm text-muted-foreground mb-6 space-y-1">
+        <ul className="text-sm text-muted-foreground mb-6 space-y-1 flex-grow">
           {features.slice(0, 3).map((feature, index) => (
             <li key={index} className="flex items-start gap-2">
               <span className="text-primary mt-1">•</span>
@@ -88,7 +88,7 @@ const ProjectCard = ({
         </ul>
 
         {/* Links */}
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 mt-auto">
           {detailLink && (
             <Button asChild size="sm" className="w-full">
               <Link to={detailLink}>
