@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import heroVideo from "@/assets/galerie-hero-video.mp4";
+import screenshot1 from "@/assets/galerie-screenshot-1.png";
+import screenshot2 from "@/assets/galerie-screenshot-2.png";
+import screenshot3 from "@/assets/galerie-screenshot-3.png";
 
 const Galerie = () => {
   return (
@@ -51,21 +53,32 @@ const Galerie = () => {
             ))}
           </motion.div>
 
-          {/* Hero Video */}
+          {/* Screenshots Gallery */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="mb-12"
+            className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12"
           >
-            <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <video
-                src={heroVideo}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full aspect-video object-cover"
+            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src={screenshot1} 
+                alt="Galerie - Vue principale" 
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src={screenshot2} 
+                alt="Galerie - Ajout d'image" 
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src={screenshot3} 
+                alt="Galerie - Détails image" 
+                className="w-full h-full object-cover object-top"
               />
             </div>
           </motion.div>
