@@ -5,7 +5,7 @@ import ProjectCard from "@/components/ProjectCard";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import galerieCover from "@/assets/tp-galerie-cover.jpg";
+import galerieVideo from "@/assets/galerie-hero-video.mp4";
 
 const projects = [
   {
@@ -72,7 +72,7 @@ const projects = [
     ],
     category: "Web App",
     slug: "galerie",
-    image: galerieCover,
+    video: galerieVideo,
   },
   {
     title: "Cyber",
