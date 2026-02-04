@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 interface ProjectCardProps {
   title: string;
@@ -10,6 +11,7 @@ interface ProjectCardProps {
   image?: string;
   demoLink?: string;
   githubLink?: string;
+  detailLink?: string;
   delay?: number;
 }
 
@@ -21,6 +23,7 @@ const ProjectCard = ({
   image,
   demoLink,
   githubLink,
+  detailLink,
   delay = 0,
 }: ProjectCardProps) => {
   return (
@@ -74,23 +77,33 @@ const ProjectCard = ({
         </ul>
 
         {/* Links */}
-        <div className="flex gap-3">
-          {demoLink && (
-            <Button asChild size="sm" variant="outline" className="flex-1">
-              <a href={demoLink} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="mr-2 h-4 w-4" />
-                Démo
-              </a>
+        <div className="flex flex-col gap-3">
+          {detailLink && (
+            <Button asChild size="sm" className="w-full">
+              <Link to={detailLink}>
+                En savoir plus
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
           )}
-          {githubLink && (
-            <Button asChild size="sm" variant="outline" className="flex-1">
-              <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                <Github className="mr-2 h-4 w-4" />
-                Code
-              </a>
-            </Button>
-          )}
+          <div className="flex gap-3">
+            {demoLink && (
+              <Button asChild size="sm" variant="outline" className="flex-1">
+                <a href={demoLink} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="mr-2 h-4 w-4" />
+                  Démo
+                </a>
+              </Button>
+            )}
+            {githubLink && (
+              <Button asChild size="sm" variant="outline" className="flex-1">
+                <a href={githubLink} target="_blank" rel="noopener noreferrer">
+                  <Github className="mr-2 h-4 w-4" />
+                  Code
+                </a>
+              </Button>
+            )}
+          </div>
         </div>
       </div>
     </motion.div>
