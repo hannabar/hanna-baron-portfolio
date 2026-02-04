@@ -95,9 +95,37 @@ const projects = [
     slug: "cyber",
     githubLink: "#",
   },
+  {
+    title: "PPE Main",
+    description: "Projet Professionnel Encadré - Application principale développée en équipe.",
+    technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
+    features: [
+      "Développement en équipe",
+      "Gestion de projet",
+      "Architecture complète",
+      "Documentation technique",
+    ],
+    category: "PPE",
+    slug: "ppe-main",
+    githubLink: "#",
+  },
+  {
+    title: "PPE Android Java",
+    description: "Application mobile Android développée en Java dans le cadre du PPE.",
+    technologies: ["Java", "Android", "SQLite", "XML"],
+    features: [
+      "Interface mobile native",
+      "Base de données locale",
+      "Gestion des activités",
+      "Design Material",
+    ],
+    category: "PPE",
+    slug: "ppe-android-java",
+    githubLink: "#",
+  },
 ];
 
-const categories = ["Tous", "Jeux", "E-commerce", "Web App", "Sécurité"];
+const categories = ["Tous", "Jeux", "E-commerce", "Web App", "Sécurité", "PPE"];
 
 const TravauxPratiques = () => {
   const [activeFilter, setActiveFilter] = useState("Tous");
