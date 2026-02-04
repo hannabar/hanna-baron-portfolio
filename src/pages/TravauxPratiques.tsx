@@ -36,6 +36,7 @@ const projects = [
     ],
     category: "Jeux",
     slug: "machine-a-sous",
+    githubLink: "#",
   },
   {
     title: "Catalogue des paniers",
@@ -49,6 +50,7 @@ const projects = [
     ],
     category: "E-commerce",
     slug: "catalogue-paniers",
+    githubLink: "#",
   },
   {
     title: "Mini Blog",
@@ -62,6 +64,7 @@ const projects = [
     ],
     category: "Web App",
     slug: "mini-blog",
+    githubLink: "#",
   },
   {
     title: "Galerie",
@@ -90,6 +93,7 @@ const projects = [
     ],
     category: "Sécurité",
     slug: "cyber",
+    githubLink: "#",
   },
 ];
 
