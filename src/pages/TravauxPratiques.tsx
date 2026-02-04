@@ -18,6 +18,7 @@ const projects = [
       "Logique de programmation avancée",
     ],
     category: "Jeux",
+    slug: "sweet-memory",
   },
   {
     title: "Machine à sous",
@@ -30,6 +31,7 @@ const projects = [
       "Utilisation de Math.random()",
     ],
     category: "Jeux",
+    slug: "machine-a-sous",
   },
   {
     title: "Catalogue des paniers",
@@ -42,6 +44,7 @@ const projects = [
       "Administration des produits",
     ],
     category: "E-commerce",
+    slug: "catalogue-paniers",
   },
   {
     title: "Mini Blog",
@@ -54,6 +57,7 @@ const projects = [
       "Interface d'administration",
     ],
     category: "Web App",
+    slug: "mini-blog",
   },
   {
     title: "Galerie",
@@ -66,6 +70,7 @@ const projects = [
       "Pagination dynamique",
     ],
     category: "Web App",
+    slug: "galerie",
   },
   {
     title: "Cyber",
@@ -78,6 +83,7 @@ const projects = [
       "Protection des données",
     ],
     category: "Sécurité",
+    slug: "cyber",
   },
 ];
 
@@ -126,6 +132,7 @@ const TravauxPratiques = () => {
               <ProjectCard
                 key={project.title}
                 {...project}
+                detailLink={`/tp/${project.slug}`}
                 delay={index * 0.1}
               />
             ))}

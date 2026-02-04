@@ -9,71 +9,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Hero />
 
-      {/* Sections Overview */}
-      <section className="section-padding">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-              Découvrez mon <span className="gradient-text">parcours</span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Explorez mes projets, compétences et expériences dans le domaine du développement informatique.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <SectionCard
-              title="Expérience OKDOM"
-              description="Mon alternance chez OKDOM : missions, projets réalisés et compétences développées en entreprise."
-              icon={Briefcase}
-              link="/okdom"
-              delay={0}
-            />
-            <SectionCard
-              title="Travaux Pratiques"
-              description="Projets pratiques réalisés durant ma formation : jeux, e-commerce, blog et plus encore."
-              icon={FolderOpen}
-              link="/tp"
-              delay={0.1}
-            />
-            <SectionCard
-              title="Ateliers Professionnels"
-              description="2 Projets Professionnels Encadrés : Medicine App et GSB avec conception et développement complets."
-              icon={Code}
-              link="/ateliers"
-              delay={0.2}
-            />
-            <SectionCard
-              title="Compétences"
-              description="Langages, frameworks, outils et compétences transversales acquises pendant ma formation."
-              icon={Brain}
-              link="/competences"
-              delay={0.3}
-            />
-            <SectionCard
-              title="Veille Technologique"
-              description="IA en imagerie médicale et données biométriques : mes sujets de veille technologique."
-              icon={Eye}
-              link="/veille"
-              delay={0.4}
-            />
-            <SectionCard
-              title="Contact"
-              description="Envie de collaborer ou d'échanger ? Contactez-moi pour discuter de vos projets."
-              icon={Mail}
-              link="/contact"
-              delay={0.5}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
+      {/* About Section - Moved to top */}
       <section className="section-padding bg-card/30">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -150,38 +86,67 @@ const Index = () => {
         </div>
       </section>
 
-      {/* BTS SIO Section */}
+      {/* Sections Overview */}
       <section className="section-padding">
         <div className="container-custom">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-card rounded-2xl p-8 max-w-4xl mx-auto"
+            className="text-center mb-16"
           >
-            <h2 className="font-display text-2xl font-bold mb-6 gradient-text">
-              Le BTS SIO Option SLAM
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+              Découvrez mon <span className="gradient-text">parcours</span>
             </h2>
-            <div className="space-y-4 text-muted-foreground">
-              <p>
-                Le BTS SIO (Services Informatiques aux Organisations) a été créé en 2011, 
-                anciennement connu sous le nom de BTS IG (Informatique de Gestion).
-              </p>
-              <p>
-                L'option <strong className="text-foreground">SLAM</strong> (Solutions Logicielles et Applications Métiers) 
-                est orientée vers le développement de logiciels personnalisés et de sites web.
-              </p>
-              <p>
-                Le titulaire du diplôme intervient dans la définition des spécifications techniques, 
-                la réalisation de solutions applicatives, la gestion du patrimoine applicatif et 
-                la formation des utilisateurs.
-              </p>
-              <p>
-                Cette option me permet de développer des compétences en programmation (Python, PHP, JavaScript, C++), 
-                en bases de données (MySQL), et en méthodologies de projet (Agile, Git).
-              </p>
-            </div>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Explorez mes projets, compétences et expériences dans le domaine du développement informatique.
+            </p>
           </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <SectionCard
+              title="Expérience OKDOM"
+              description="Mon alternance chez OKDOM : missions, projets réalisés et compétences développées en entreprise."
+              icon={Briefcase}
+              link="/okdom"
+              delay={0}
+            />
+            <SectionCard
+              title="Travaux Pratiques"
+              description="Projets pratiques réalisés durant ma formation : jeux, e-commerce, blog et plus encore."
+              icon={FolderOpen}
+              link="/tp"
+              delay={0.1}
+            />
+            <SectionCard
+              title="Ateliers Professionnels"
+              description="2 Projets Professionnels Encadrés : Medicine App et GSB avec conception et développement complets."
+              icon={Code}
+              link="/ateliers"
+              delay={0.2}
+            />
+            <SectionCard
+              title="Compétences"
+              description="Langages, frameworks, outils et compétences transversales acquises pendant ma formation."
+              icon={Brain}
+              link="/competences"
+              delay={0.3}
+            />
+            <SectionCard
+              title="Veille Technologique"
+              description="IA en imagerie médicale et données biométriques : mes sujets de veille technologique."
+              icon={Eye}
+              link="/veille"
+              delay={0.4}
+            />
+            <SectionCard
+              title="Contact"
+              description="Envie de collaborer ou d'échanger ? Contactez-moi pour discuter de vos projets."
+              icon={Mail}
+              link="/contact"
+              delay={0.5}
+            />
+          </div>
         </div>
       </section>
 
