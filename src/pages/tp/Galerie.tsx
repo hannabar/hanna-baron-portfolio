@@ -2,9 +2,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { ArrowLeft, Github, ExternalLink } from "lucide-react";
+import { ArrowLeft, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import heroVideo from "@/assets/galerie-hero-video.mp4";
 
 const Galerie = () => {
   return (
@@ -50,21 +51,22 @@ const Galerie = () => {
             ))}
           </motion.div>
 
-          {/* Images Gallery */}
+          {/* Hero Video */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="grid md:grid-cols-2 gap-4 mb-12"
+            className="mb-12"
           >
-            <div className="aspect-video bg-gradient-to-br from-secondary to-muted rounded-xl flex items-center justify-center">
-              <span className="text-muted-foreground text-sm">Screenshot 1</span>
-            </div>
-            <div className="aspect-video bg-gradient-to-br from-secondary to-muted rounded-xl flex items-center justify-center">
-              <span className="text-muted-foreground text-sm">Screenshot 2</span>
-            </div>
-            <div className="aspect-video bg-gradient-to-br from-secondary to-muted rounded-xl flex items-center justify-center md:col-span-2">
-              <span className="text-muted-foreground text-sm">Screenshot 3</span>
+            <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <video
+                src={heroVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full aspect-video object-cover"
+              />
             </div>
           </motion.div>
 
