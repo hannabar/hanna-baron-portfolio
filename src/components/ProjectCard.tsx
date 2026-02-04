@@ -9,6 +9,7 @@ interface ProjectCardProps {
   technologies: string[];
   features: string[];
   image?: string;
+  video?: string;
   demoLink?: string;
   githubLink?: string;
   detailLink?: string;
@@ -21,6 +22,7 @@ const ProjectCard = ({
   technologies,
   features,
   image,
+  video,
   demoLink,
   githubLink,
   detailLink,
@@ -34,9 +36,18 @@ const ProjectCard = ({
       transition={{ duration: 0.5, delay }}
       className="glass-card rounded-2xl overflow-hidden group hover-lift"
     >
-      {/* Image placeholder */}
+      {/* Image/Video placeholder */}
       <div className="h-48 bg-gradient-to-br from-secondary to-muted relative overflow-hidden">
-        {image ? (
+        {video ? (
+          <video
+            src={video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          />
+        ) : image ? (
           <img src={image} alt={title} className="w-full h-full object-cover" />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
