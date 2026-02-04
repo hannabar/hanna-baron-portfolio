@@ -14,7 +14,7 @@ const SweetMemory = () => {
       <PageHeader
         badge="Travaux Pratiques"
         title="Sweet Memory"
-        subtitle="Jeu de mémoire (Memory Game) avec manipulation du DOM et gestion d'événements."
+        subtitle="Jeu de memory interactif développé en JavaScript autour de petites sucreries."
       />
 
       <section className="section-padding">
@@ -40,7 +40,7 @@ const SweetMemory = () => {
             transition={{ delay: 0.1 }}
             className="flex flex-wrap gap-2 mb-8"
           >
-            {["HTML", "CSS", "JavaScript"].map((tech) => (
+            {["JavaScript", "HTML", "CSS"].map((tech) => (
               <span
                 key={tech}
                 className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"
@@ -50,26 +50,11 @@ const SweetMemory = () => {
             ))}
           </motion.div>
 
-          {/* Images Gallery */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="grid md:grid-cols-2 gap-4 mb-12"
-          >
-            <div className="aspect-video bg-gradient-to-br from-secondary to-muted rounded-xl flex items-center justify-center">
-              <span className="text-muted-foreground text-sm">Screenshot 1</span>
-            </div>
-            <div className="aspect-video bg-gradient-to-br from-secondary to-muted rounded-xl flex items-center justify-center">
-              <span className="text-muted-foreground text-sm">Screenshot 2</span>
-            </div>
-          </motion.div>
-
           {/* Presentation */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.2 }}
             className="glass-card rounded-2xl p-8 mb-8"
           >
             <h2 className="font-display text-2xl font-bold mb-6 gradient-text">
@@ -77,12 +62,15 @@ const SweetMemory = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                <strong className="text-foreground">Sweet Memory</strong> est un jeu de mémoire classique développé en JavaScript vanilla.
-                Le joueur doit retrouver les paires de cartes identiques en les retournant une par une.
+                <strong className="text-foreground">Sweet Memory</strong> est une application web interactive développée en JavaScript 
+                permettant aux utilisateurs de jouer à un jeu de memory ludique basé sur des illustrations de petites sucreries.
+                Ce projet met en œuvre les fondamentaux du développement front-end moderne : gestion des événements, logique de jeu, 
+                calcul du temps et animations CSS.
               </p>
               <p>
-                Ce projet m'a permis de maîtriser la manipulation du DOM, la gestion des événements utilisateur
-                et la logique de programmation pour créer un jeu interactif et engageant.
+                Le joueur doit retourner des cartes afin de retrouver les paires correspondantes. L'application gère automatiquement 
+                les comparaisons, le comptage des mouvements, le calcul du temps de jeu et la réinitialisation complète de la partie, 
+                offrant une expérience fluide et intuitive.
               </p>
             </div>
           </motion.div>
@@ -91,7 +79,7 @@ const SweetMemory = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.3 }}
             className="glass-card rounded-2xl p-8 mb-8"
           >
             <h2 className="font-display text-2xl font-bold mb-6">
@@ -100,28 +88,48 @@ const SweetMemory = () => {
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Retournement de cartes interactif avec animations
+                Affichage dynamique des cartes de sucreries
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Détection automatique des paires
+                Mécanique de jeu de memory (retournement et comparaison)
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Compteur de coups et chronomètre
+                Gestion des paires trouvées
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Mélange aléatoire des cartes à chaque partie
+                Compteur de mouvements
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1">•</span>
+                Chronomètre de jeu
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1">•</span>
+                Bouton pour recommencer la partie
               </li>
             </ul>
           </motion.div>
+
+          {/* Screenshots Gallery - placeholder for future screenshots */}
+          {/* 
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8"
+          >
+            Screenshots will go here
+          </motion.div>
+          */}
 
           {/* Conclusion */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.4 }}
             className="glass-card rounded-2xl p-8 mb-8"
           >
             <h2 className="font-display text-2xl font-bold mb-6 gradient-text">
@@ -129,11 +137,15 @@ const SweetMemory = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Ce projet m'a permis de consolider mes bases en JavaScript et de comprendre l'importance
-                de la gestion d'état dans une application interactive.
+                Ce projet démontre une maîtrise des bases du JavaScript appliquées à un jeu interactif : 
+                logique conditionnelle, gestion du temps et comptage des actions.
+              </p>
+              <p>
+                Les compétences acquises sont directement exploitables en contexte professionnel pour la création 
+                d'interfaces interactives, de jeux web simples et d'expériences utilisateur dynamiques.
               </p>
               <p className="text-foreground font-medium">
-                ✅ Résultat : Jeu fonctionnel avec une expérience utilisateur fluide
+                ✅ Résultat : Application fonctionnelle avec une expérience utilisateur fluide et ludique
               </p>
             </div>
           </motion.div>
@@ -142,10 +154,11 @@ const SweetMemory = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0.5 }}
+            className="flex flex-wrap gap-4"
           >
             <Button asChild size="lg">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/hannabar/tp-memory.git" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-5 w-5" />
                 Voir sur GitHub
               </a>
