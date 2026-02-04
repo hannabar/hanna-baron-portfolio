@@ -53,41 +53,11 @@ const Galerie = () => {
             ))}
           </motion.div>
 
-          {/* Screenshots Gallery */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12"
-          >
-            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-              <img 
-                src={screenshot1} 
-                alt="Galerie - Vue principale" 
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
-            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-              <img 
-                src={screenshot2} 
-                alt="Galerie - Ajout d'image" 
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
-            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-              <img 
-                src={screenshot3} 
-                alt="Galerie - Détails image" 
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
-          </motion.div>
-
           {/* Presentation */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.2 }}
             className="glass-card rounded-2xl p-8 mb-8"
           >
             <h2 className="font-display text-2xl font-bold mb-6 gradient-text">
@@ -112,7 +82,7 @@ const Galerie = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.3 }}
             className="glass-card rounded-2xl p-8 mb-8"
           >
             <h2 className="font-display text-2xl font-bold mb-6">
@@ -140,6 +110,36 @@ const Galerie = () => {
                 Génération automatique de miniatures
               </li>
             </ul>
+          </motion.div>
+
+          {/* Screenshots Gallery */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8"
+          >
+            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src={screenshot1} 
+                alt="Galerie - Vue principale" 
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src={screenshot2} 
+                alt="Galerie - Ajout d'image" 
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src={screenshot3} 
+                alt="Galerie - Détails image" 
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
           </motion.div>
 
           {/* Conclusion */}
