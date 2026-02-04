@@ -73,6 +73,7 @@ const projects = [
     category: "Web App",
     slug: "galerie",
     video: galerieVideo,
+    githubLink: "https://github.com/hannabar/galerie_images.git",
   },
   {
     title: "Cyber",
