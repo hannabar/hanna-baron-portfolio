@@ -6,20 +6,23 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import galerieVideo from "@/assets/galerie-hero-video.mp4";
+import sweetMemoryVideo from "@/assets/sweet-memory-cover-video.mp4";
 
 const projects = [
   {
     title: "Sweet Memory",
-    description: "Jeu de mémoire (Memory Game) avec manipulation du DOM et gestion d'événements.",
+    description: "Jeu de memory interactif développé en JavaScript autour de petites sucreries.",
     technologies: ["HTML", "CSS", "JavaScript"],
     features: [
-      "Retournement de cartes interactif",
-      "Détection automatique des paires",
-      "Compteur de coups et chronomètre",
-      "Logique de programmation avancée",
+      "Affichage dynamique des cartes de sucreries",
+      "Mécanique de jeu de memory",
+      "Compteur de mouvements et chronomètre",
+      "Bouton pour recommencer la partie",
     ],
     category: "Jeux",
     slug: "sweet-memory",
+    video: sweetMemoryVideo,
+    githubLink: "https://github.com/hannabar/tp-memory.git",
   },
   {
     title: "Machine à sous",
