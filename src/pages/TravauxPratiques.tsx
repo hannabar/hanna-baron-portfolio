@@ -9,6 +9,7 @@ import galerieVideo from "@/assets/galerie-hero-video.mp4";
 import sweetMemoryVideo from "@/assets/sweet-memory-animated.mp4";
 import slotMachineVideo from "@/assets/slot-machine-animated.mp4";
 import cyberVideo from "@/assets/cyber-animated.mp4";
+import cataloguePaniersVideo from "@/assets/catalogue-paniers-animated.mp4";
 
 const projects = [
   {
@@ -53,6 +54,7 @@ const projects = [
     ],
     category: "E-commerce",
     slug: "catalogue-paniers",
+    video: cataloguePaniersVideo,
     githubLink: "https://github.com/hannabar/Tp_panier.git",
   },
   {
