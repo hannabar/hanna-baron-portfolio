@@ -10,6 +10,7 @@ import sweetMemoryVideo from "@/assets/sweet-memory-animated.mp4";
 import slotMachineVideo from "@/assets/slot-machine-animated.mp4";
 import cyberVideo from "@/assets/cyber-animated.mp4";
 import cataloguePaniersVideo from "@/assets/catalogue-paniers-animated.mp4";
+import miniBlogVideo from "@/assets/mini-blog-animated.mp4";
 
 const projects = [
   {
@@ -69,6 +70,7 @@ const projects = [
     ],
     category: "Web App",
     slug: "mini-blog",
+    video: miniBlogVideo,
     githubLink: "#",
   },
   {
