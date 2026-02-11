@@ -2,7 +2,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { Stethoscope, Building, FileText, Code, TestTube, Shield } from "lucide-react";
+import { Stethoscope, Building, FileText, Code, TestTube, Shield, Github, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const ateliers = [
   {
@@ -28,6 +30,9 @@ const ateliers = [
       "Gestion de projet",
       "Sécurité des données médicales (RGPD)",
     ],
+    githubLink: "#",
+    tpLink: "/tp/ppe-android-java",
+    tpLabel: "PPE Android Java",
   },
   {
     title: "GSB - Gestion Service des Bénéfices",
@@ -52,6 +57,9 @@ const ateliers = [
       "Gestion des workflows",
       "Sécurisation des accès",
     ],
+    githubLink: "#",
+    tpLink: "/tp/ppe-main",
+    tpLabel: "PPE Main",
   },
 ];
 
@@ -116,7 +124,7 @@ const Ateliers = () => {
                     <ul className="space-y-2">
                       {atelier.conception.map((item, i) => (
                         <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 mt-2" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
                           {item}
                         </li>
                       ))}
@@ -146,12 +154,28 @@ const Ateliers = () => {
                     <ul className="space-y-2">
                       {atelier.competences.map((comp, i) => (
                         <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 mt-2" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
                           {comp}
                         </li>
                       ))}
                     </ul>
                   </div>
+                </div>
+
+                {/* Buttons */}
+                <div className="px-8 pb-8 flex gap-3">
+                  <Button asChild size="sm" variant="outline">
+                    <a href={atelier.githubLink} target="_blank" rel="noopener noreferrer">
+                      <Github className="mr-2 h-4 w-4" />
+                      GitHub
+                    </a>
+                  </Button>
+                  <Button asChild size="sm">
+                    <Link to={atelier.tpLink}>
+                      <ArrowRight className="mr-2 h-4 w-4" />
+                      {atelier.tpLabel}
+                    </Link>
+                  </Button>
                 </div>
               </motion.div>
             ))}
