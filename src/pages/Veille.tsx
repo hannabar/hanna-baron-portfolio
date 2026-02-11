@@ -4,7 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
 import { Brain, Scan, Fingerprint, Shield, AlertTriangle, Scale } from "lucide-react";
 import dnaVideo from "@/assets/dna-animation.mp4";
-import fingerprintBg from "@/assets/fingerprint-bg.jpg";
+import fingerprintVideo from "@/assets/fingerprint-scan.mp4";
 
 const veilleSujets = [
   {
@@ -154,11 +154,15 @@ const Veille = () => {
                 {/* Image background for Données biométriques */}
                 {index === 1 && (
                   <>
-                    <img
-                      src={fingerprintBg}
-                      alt=""
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
                       className="absolute inset-0 w-full h-full object-cover"
-                    />
+                    >
+                      <source src={fingerprintVideo} type="video/mp4" />
+                    </video>
                     <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
                   </>
                 )}
