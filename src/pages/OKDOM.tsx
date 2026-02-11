@@ -31,6 +31,7 @@ const technologies = [
         badge="Expérience professionnelle"
         title="Alternance chez OKDOM"
         subtitle="Mon expérience en entreprise dans le cadre de mon BTS SIO, où je développe mes compétences techniques et professionnelles."
+        backgroundImage={okdomLogo}
       />
 
       {/* Company Info */}
