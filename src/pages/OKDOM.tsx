@@ -2,7 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { Building2, Calendar, MapPin, Users, Code, CheckCircle } from "lucide-react";
+import { Calendar, MapPin, Users, Code, CheckCircle } from "lucide-react";
+import okdomLogo from "@/assets/okdom-logo.jpg";
 
 const OKDOM = () => {
   const missions = [
@@ -44,8 +45,8 @@ const technologies = [
             >
               <div className="glass-card rounded-2xl p-8">
                 <div className="flex items-start gap-6 mb-8">
-                  <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
-                    <Building2 className="w-10 h-10 text-primary" />
+                  <div className="w-20 h-20 rounded-2xl overflow-hidden shrink-0">
+                    <img src={okdomLogo} alt="Logo OKDOM" className="w-full h-full object-cover" />
                   </div>
                   <div>
                     <h2 className="font-display text-2xl font-bold mb-2">OKDOM</h2>
