@@ -81,8 +81,8 @@ const Competences = () => {
               </h2>
               <ul className="space-y-3">
                 {technicalSkills.map((skill) => (
-                  <li key={skill.name} className="flex items-center gap-3 text-sm text-muted-foreground">
-                    <img src={skill.logo} alt={skill.name} className="w-6 h-6" />
+                  <li key={skill.name} className="flex items-start gap-3 text-sm text-muted-foreground">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
                     <span className="font-medium">{skill.name}</span>
                   </li>
                 ))}
@@ -103,8 +103,8 @@ const Competences = () => {
               </h2>
               <ul className="space-y-3">
                 {dbSkills.map((skill) => (
-                  <li key={skill.name} className="flex items-center gap-3 text-sm text-muted-foreground">
-                    <img src={skill.logo} alt={skill.name} className="w-6 h-6" />
+                  <li key={skill.name} className="flex items-start gap-3 text-sm text-muted-foreground">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
                     <span className="font-medium">{skill.name}</span>
                   </li>
                 ))}

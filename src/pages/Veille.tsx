@@ -112,18 +112,11 @@ const Veille = () => {
             className="glass-card rounded-2xl p-8 max-w-3xl"
           >
             <h2 className="font-display text-xl font-bold mb-4">Ma démarche de veille</h2>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-muted-foreground">
               La veille technologique est essentielle dans le secteur informatique pour anticiper 
               les évolutions et adapter ses compétences. Je m'appuie sur diverses sources : 
-              blogs spécialisés, newsletters, podcasts et conférences.
+              alertes Google, vidéo, la presse, podcast.
             </p>
-            <div className="flex flex-wrap gap-2">
-              {["Articles scientifiques", "Conférences tech", "CNIL", "Presse spécialisée"].map((source) => (
-                <span key={source} className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm">
-                  {source}
-                </span>
-              ))}
-            </div>
           </motion.div>
         </div>
       </section>
@@ -181,7 +174,7 @@ const Veille = () => {
                     {sujet.perspectives.map((persp, i) => (
                       <span
                         key={i}
-                        className="px-4 py-2 rounded-lg bg-accent/10 text-accent text-sm font-medium"
+                        className="px-4 py-2 rounded-lg bg-primary/10 text-primary text-sm font-medium"
                       >
                         {persp}
                       </span>
