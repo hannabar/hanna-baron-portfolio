@@ -10,6 +10,7 @@ interface ProjectCardProps {
   features: string[];
   image?: string;
   video?: string;
+  backgroundVideo?: boolean;
   demoLink?: string;
   githubLink?: string;
   detailLink?: string;
@@ -23,6 +24,7 @@ const ProjectCard = ({
   features,
   image,
   video,
+  backgroundVideo = false,
   demoLink,
   githubLink,
   detailLink,
@@ -34,9 +36,25 @@ const ProjectCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
-      className="glass-card rounded-2xl overflow-hidden group hover-lift h-full flex flex-col"
+      className="rounded-2xl overflow-hidden group hover-lift h-full flex flex-col relative"
     >
-      {/* Image/Video placeholder */}
+      {/* Background video (fingerprint style) */}
+      {backgroundVideo && video ? (
+        <>
+          <video
+            src={video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+        </>
+      ) : null}
+
+      {/* Regular cover image/video */}
+      {!backgroundVideo && (
       <div className="h-48 bg-gradient-to-br from-secondary to-muted relative overflow-hidden flex-shrink-0">
         {video ? (
           <video
@@ -60,8 +78,9 @@ const ProjectCard = ({
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
       </div>
+      )}
 
-      <div className="p-6 flex flex-col flex-grow">
+      <div className="relative z-10 p-6 flex flex-col flex-grow">
         <h3 className="font-display text-xl font-semibold mb-2">{title}</h3>
         <p className="text-muted-foreground text-sm mb-4">{description}</p>
 
