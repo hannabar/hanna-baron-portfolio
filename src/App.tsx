@@ -21,6 +21,8 @@ import CataloguePaniers from "./pages/tp/CataloguePaniers";
 import MiniBlog from "./pages/tp/MiniBlog";
 import Galerie from "./pages/tp/Galerie";
 import Cyber from "./pages/tp/Cyber";
+import PPEMain from "./pages/tp/PPEMain";
+import PPEAndroidJava from "./pages/tp/PPEAndroidJava";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +44,8 @@ const App = () => (
             <Route path="/tp/mini-blog" element={<MiniBlog />} />
             <Route path="/tp/galerie" element={<Galerie />} />
             <Route path="/tp/cyber" element={<Cyber />} />
+            <Route path="/tp/ppe-main" element={<PPEMain />} />
+            <Route path="/tp/ppe-android-java" element={<PPEAndroidJava />} />
             <Route path="/ateliers" element={<Ateliers />} />
             <Route path="/competences" element={<Competences />} />
             <Route path="/veille" element={<Veille />} />

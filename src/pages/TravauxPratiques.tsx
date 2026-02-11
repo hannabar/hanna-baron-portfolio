@@ -107,7 +107,7 @@ const projects = [
     ],
     category: "PPE",
     slug: "ppe-main",
-    githubLink: "#",
+    githubLink: "https://github.com/hannabar/PPE_PHP.git",
   },
   {
     title: "PPE Android Java",
@@ -121,7 +121,7 @@ const projects = [
     ],
     category: "PPE",
     slug: "ppe-android-java",
-    githubLink: "#",
+    githubLink: "https://github.com/hannabar/GSB_MedicineApp.git",
   },
 ];
 
