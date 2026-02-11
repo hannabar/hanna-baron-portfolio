@@ -23,6 +23,7 @@ const projects = [
     category: "Jeux",
     slug: "sweet-memory",
     video: sweetMemoryVideo,
+    backgroundVideo: true,
     githubLink: "https://github.com/hannabar/tp-memory.git",
   },
   {
@@ -38,6 +39,7 @@ const projects = [
     category: "Jeux",
     slug: "machine-a-sous",
     video: slotMachineVideo,
+    backgroundVideo: true,
     githubLink: "#",
   },
   {
