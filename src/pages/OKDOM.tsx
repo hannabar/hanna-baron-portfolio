@@ -45,7 +45,7 @@ const technologies = [
             >
               <div className="glass-card rounded-2xl p-8">
                 <div className="flex items-start gap-6 mb-8">
-                  <div className="w-20 h-20 rounded-2xl overflow-hidden shrink-0">
+                  <div className="w-28 h-28 rounded-2xl overflow-hidden shrink-0">
                     <img src={okdomLogo} alt="Logo OKDOM" className="w-full h-full object-cover" />
                   </div>
                   <div>
@@ -62,23 +62,23 @@ const technologies = [
                   <h3 className="font-display text-lg font-semibold mb-4">Services principaux</h3>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 mt-2" />
                       <span><strong className="text-foreground">Domiciliation commerciale :</strong> mise à disposition d'une adresse professionnelle</span>
                     </li>
                     <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 mt-2" />
                       <span><strong className="text-foreground">Gestion du courrier :</strong> réception, numérisation et réexpédition</span>
                     </li>
                     <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 mt-2" />
                       <span><strong className="text-foreground">Permanence téléphonique :</strong> accueil des appels professionnels</span>
                     </li>
                     <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 mt-2" />
                       <span><strong className="text-foreground">Espaces de travail :</strong> salles de réunion et bureaux équipés en location ponctuelle</span>
                     </li>
                     <li className="flex items-start gap-3 text-sm text-muted-foreground">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 mt-2" />
                       <span><strong className="text-foreground">Accompagnement administratif :</strong> aide à la création et gestion d'entreprise</span>
                     </li>
                   </ul>
@@ -86,15 +86,15 @@ const technologies = [
 
                 <div className="grid sm:grid-cols-3 gap-4 mb-8">
                   <div className="flex items-center gap-3 text-sm">
-                    <Calendar className="w-5 h-5 text-primary" />
+                    <Calendar className="w-5 h-5 text-accent" />
                     <span className="text-muted-foreground">2024 - 2026</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm">
-                    <MapPin className="w-5 h-5 text-primary" />
+                    <MapPin className="w-5 h-5 text-accent" />
                     <span className="text-muted-foreground">Paris, France</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm">
-                    <Users className="w-5 h-5 text-primary" />
+                    <Users className="w-5 h-5 text-accent" />
                     <span className="text-muted-foreground">Équipe Tech</span>
                   </div>
                 </div>
@@ -110,7 +110,7 @@ const technologies = [
                       transition={{ delay: index * 0.1 }}
                       className="flex items-start gap-3"
                     >
-                      <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <CheckCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                       <span className="text-muted-foreground">{mission}</span>
                     </motion.li>
                   ))}
@@ -127,14 +127,14 @@ const technologies = [
             >
               <div className="glass-card rounded-2xl p-6">
                 <h3 className="font-display font-semibold mb-4 flex items-center gap-3">
-                  <Code className="w-5 h-5 text-primary" />
+                  <Code className="w-5 h-5 text-accent" />
                   Technologies utilisées
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium"
+                      className="px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium"
                     >
                       {tech}
                     </span>
@@ -150,7 +150,7 @@ const technologies = [
                   <ul className="space-y-2">
                     {skill.items.map((item, i) => (
                       <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                         {item}
                       </li>
                     ))}
