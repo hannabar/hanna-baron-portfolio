@@ -5,14 +5,21 @@ interface PageHeaderProps {
   title: string;
   subtitle?: string;
   badge?: string;
+  backgroundImage?: string;
   children?: ReactNode;
 }
 
-const PageHeader = ({ title, subtitle, badge, children }: PageHeaderProps) => {
+const PageHeader = ({ title, subtitle, badge, backgroundImage, children }: PageHeaderProps) => {
   return (
     <section className="pt-32 pb-16 px-6 relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(222_47%_12%)_0%,hsl(222_47%_6%)_70%)]" />
+      {backgroundImage && (
+        <div
+          className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-[0.06] pointer-events-none"
+          style={{ backgroundImage: `url(${backgroundImage})` }}
+        />
+      )}
       
       <div className="container-custom relative z-10">
         <div className="max-w-3xl">
