@@ -130,7 +130,7 @@ const projects = [
     ],
     category: "PPE",
     slug: "ppe-android-java",
-    video: ppeAndroidJavaVideo,
+    image: ppeAndroidJavaCover,
     githubLink: "https://github.com/hannabar/GSB_MedicineApp.git",
   },
 ];
