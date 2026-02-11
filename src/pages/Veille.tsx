@@ -4,6 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
 import { Brain, Scan, Fingerprint, Shield, AlertTriangle, Scale } from "lucide-react";
 import dnaVideo from "@/assets/dna-animation.mp4";
+import fingerprintBg from "@/assets/fingerprint-bg.jpg";
 
 const veilleSujets = [
   {
@@ -133,7 +134,7 @@ const Veille = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`rounded-2xl overflow-hidden relative ${index === 0 ? '' : 'glass-card'}`}
+                className="rounded-2xl overflow-hidden relative"
               >
                 {/* Video background for Imagerie médicale */}
                 {index === 0 && (
@@ -147,6 +148,17 @@ const Veille = () => {
                     >
                       <source src={dnaVideo} type="video/mp4" />
                     </video>
+                    <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+                  </>
+                )}
+                {/* Image background for Données biométriques */}
+                {index === 1 && (
+                  <>
+                    <img
+                      src={fingerprintBg}
+                      alt=""
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
                     <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
                   </>
                 )}
