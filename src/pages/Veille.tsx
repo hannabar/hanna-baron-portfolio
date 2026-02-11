@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
 import { Brain, Scan, Fingerprint, Shield, AlertTriangle, Scale } from "lucide-react";
+import dnaVideo from "@/assets/dna-animation.mp4";
 
 const veilleSujets = [
   {
@@ -115,7 +116,7 @@ const Veille = () => {
             <p className="text-muted-foreground">
               La veille technologique est essentielle dans le secteur informatique pour anticiper 
               les évolutions et adapter ses compétences. Je m'appuie sur diverses sources : 
-              alertes Google, vidéo, la presse, podcast.
+              alertes Google, vidéos, la presse et des podcasts.
             </p>
           </motion.div>
         </div>
@@ -132,10 +133,25 @@ const Veille = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="glass-card rounded-2xl overflow-hidden"
+                className={`rounded-2xl overflow-hidden relative ${index === 0 ? '' : 'glass-card'}`}
               >
+                {/* Video background for Imagerie médicale */}
+                {index === 0 && (
+                  <>
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="absolute inset-0 w-full h-full object-cover"
+                    >
+                      <source src={dnaVideo} type="video/mp4" />
+                    </video>
+                    <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+                  </>
+                )}
                 {/* Header */}
-                <div className="p-8 border-b border-border bg-gradient-to-r from-primary/5 to-transparent">
+                <div className="relative z-10 p-8 border-b border-border bg-gradient-to-r from-primary/5 to-transparent">
                   <div className="flex items-start gap-6">
                     <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
                       <sujet.icon className="w-8 h-8 text-primary" />
@@ -148,7 +164,7 @@ const Veille = () => {
                 </div>
 
                 {/* Sections */}
-                <div className="grid md:grid-cols-3 gap-6 p-8">
+                <div className="relative z-10 grid md:grid-cols-3 gap-6 p-8">
                   {sujet.sections.map((section, i) => (
                     <div key={i}>
                       <h3 className="font-display font-semibold mb-4 flex items-center gap-2">
@@ -168,7 +184,7 @@ const Veille = () => {
                 </div>
 
                 {/* Perspectives */}
-                <div className="px-8 pb-8">
+                <div className="relative z-10 px-8 pb-8">
                   <h3 className="font-display font-semibold mb-4">Perspectives d'avenir</h3>
                   <div className="flex flex-wrap gap-2">
                     {sujet.perspectives.map((persp, i) => (
