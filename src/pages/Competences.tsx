@@ -1,22 +1,21 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
-import SkillBar from "@/components/SkillBar";
 import { motion } from "framer-motion";
 import { Code, Database, Shield, Wrench, Users, BookOpen } from "lucide-react";
 
 const technicalSkills = [
-  { name: "Python", level: 90 },
-  { name: "PHP", level: 85 },
-  { name: "JavaScript", level: 80 },
-  { name: "C++", level: 70 },
-  { name: "SQL", level: 85 },
-  { name: "HTML/CSS", level: 90 },
+  { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+  { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+  { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+  { name: "SQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+  { name: "HTML/CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
 ];
 
 const dbSkills = [
-  { name: "MySQL / MariaDB", level: 85 },
-  { name: "Requêtes SQL (JOIN, INSERT...)", level: 85 },
+  { name: "MySQL / MariaDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+  { name: "Requêtes SQL (JOIN, INSERT...)", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
 ];
 
 const securitySkills = [
@@ -80,9 +79,14 @@ const Competences = () => {
                 <Code className="w-6 h-6 text-primary" />
                 Langages de programmation
               </h2>
-              {technicalSkills.map((skill, index) => (
-                <SkillBar key={skill.name} {...skill} delay={index * 0.1} />
-              ))}
+              <ul className="space-y-3">
+                {technicalSkills.map((skill) => (
+                  <li key={skill.name} className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <img src={skill.logo} alt={skill.name} className="w-6 h-6" />
+                    <span className="font-medium">{skill.name}</span>
+                  </li>
+                ))}
+              </ul>
             </motion.div>
 
             {/* Database Skills */}
@@ -97,9 +101,14 @@ const Competences = () => {
                 <Database className="w-6 h-6 text-primary" />
                 Bases de données
               </h2>
-              {dbSkills.map((skill, index) => (
-                <SkillBar key={skill.name} {...skill} delay={index * 0.1} />
-              ))}
+              <ul className="space-y-3">
+                {dbSkills.map((skill) => (
+                  <li key={skill.name} className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <img src={skill.logo} alt={skill.name} className="w-6 h-6" />
+                    <span className="font-medium">{skill.name}</span>
+                  </li>
+                ))}
+              </ul>
             </motion.div>
 
             {/* Security Skills */}
