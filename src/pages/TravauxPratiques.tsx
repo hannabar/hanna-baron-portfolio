@@ -12,6 +12,7 @@ import cyberVideo from "@/assets/cyber-animated.mp4";
 import cataloguePaniersVideo from "@/assets/catalogue-paniers-animated.mp4";
 import miniBlogVideo from "@/assets/mini-blog-animated.mp4";
 import ppeAndroidJavaVideo from "@/assets/ppe-android-java-animated.mp4";
+import ppeMainVideo from "@/assets/ppe-main-animated.mp4";
 
 const projects = [
   {
@@ -116,6 +117,7 @@ const projects = [
     ],
     category: "PPE",
     slug: "ppe-main",
+    video: ppeMainVideo,
     githubLink: "https://github.com/hannabar/PPE_PHP.git",
   },
   {
