@@ -4,6 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
 import { Calendar, MapPin, Users, Code, CheckCircle } from "lucide-react";
 import okdomLogo from "@/assets/okdom-logo.jpg";
+import okdomVideo from "@/assets/okdom-animated.mp4";
 
 const OKDOM = () => {
   const missions = [
@@ -31,7 +32,7 @@ const technologies = [
         badge="Expérience professionnelle"
         title="Alternance chez OKDOM"
         subtitle="Mon expérience en entreprise dans le cadre de mon BTS SIO, où je développe mes compétences techniques et professionnelles."
-        backgroundImage={okdomLogo}
+        backgroundVideo={okdomVideo}
       />
 
       {/* Company Info */}
