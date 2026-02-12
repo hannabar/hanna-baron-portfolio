@@ -63,10 +63,10 @@ const ProjectCard = ({
             loop
             muted
             playsInline
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
         ) : image ? (
-          <img src={image} alt={title} className="w-full h-full object-cover" />
+          <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-20 h-20 rounded-xl bg-primary/20 flex items-center justify-center">
