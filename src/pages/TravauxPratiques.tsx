@@ -13,6 +13,7 @@ import cataloguePaniersVideo from "@/assets/catalogue-paniers-animated.mp4";
 import miniBlogVideo from "@/assets/mini-blog-animated.mp4";
 import ppeAndroidJavaVideo from "@/assets/ppe-android-java-animated.mp4";
 import ppeMainVideo from "@/assets/ppe-main-animated.mp4";
+import tpBgVideo from "@/assets/tp-bg-animated.mp4";
 
 const projects = [
   {
@@ -154,6 +155,7 @@ const TravauxPratiques = () => {
         badge="Formation BTS SIO"
         title="Travaux Pratiques"
         subtitle="Projets pratiques réalisés durant ma formation, couvrant le développement web, la gestion de bases de données et la sécurité informatique."
+        backgroundVideo={tpBgVideo}
       />
 
       <section className="section-padding">
