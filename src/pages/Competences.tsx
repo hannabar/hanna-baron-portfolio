@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
 import { Code, Database, Shield, Wrench, Users, BookOpen } from "lucide-react";
+import competencesBgVideo from "@/assets/competences-bg-animated.mp4";
 
 const technicalSkills = [
   { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
@@ -62,6 +63,7 @@ const Competences = () => {
       <PageHeader
         title="Compétences"
         subtitle="Compétences techniques et transversales développées durant ma formation BTS SIO et mes expériences professionnelles."
+        backgroundVideo={competencesBgVideo}
       />
 
       <section className="section-padding">
@@ -184,13 +186,13 @@ const Competences = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="font-display font-semibold mb-4 text-accent">
+                <h3 className="font-display font-semibold mb-4 text-primary">
                   Bloc 2 : Option SLAM
                 </h3>
                 <ul className="space-y-2">
                   {btsSioBloc2.map((comp, index) => (
                     <li key={index} className="flex items-start gap-3 text-sm text-muted-foreground">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 mt-2" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
                       {comp}
                     </li>
                   ))}
