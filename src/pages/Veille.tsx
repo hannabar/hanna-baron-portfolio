@@ -99,7 +99,6 @@ const Veille = () => {
       <Navbar />
       
       <PageHeader
-        badge="Actualités tech"
         title="Veille Technologique"
         subtitle="Une démarche active de veille pour rester informée des innovations et enjeux du secteur informatique."
       />

@@ -12,7 +12,6 @@ const MachineASous = () => {
       <Navbar />
       
       <PageHeader
-        badge="Travaux Pratiques"
         title="Machine à sous"
         subtitle="Simulation d'une machine à sous avec génération aléatoire et animations."
       />

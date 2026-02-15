@@ -60,7 +60,6 @@ const Competences = () => {
       <Navbar />
       
       <PageHeader
-        badge="Savoir-faire"
         title="Compétences"
         subtitle="Compétences techniques et transversales développées durant ma formation BTS SIO et mes expériences professionnelles."
       />

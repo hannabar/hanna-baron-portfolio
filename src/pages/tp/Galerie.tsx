@@ -15,7 +15,6 @@ const Galerie = () => {
       <Navbar />
       
       <PageHeader
-        badge="Travaux Pratiques"
         title="Galerie d'Images"
         subtitle="Application web complète développée en PHP pour gérer une collection d'images de manière professionnelle."
       />
