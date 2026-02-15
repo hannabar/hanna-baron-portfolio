@@ -8,7 +8,7 @@ import okdomVideo from "@/assets/okdom-animated.mp4";
 
 const OKDOM = () => {
   const missions = [
-    "Développement et maintenance d'applications web",
+    "Maintenance d'applications web",
     "Développement de nouvelles fonctionnalités sur Odoo",
     "Tests et débogage des fonctionnalités",
     "Documentation technique des projets",
@@ -20,12 +20,12 @@ const technologies = [
   ];
 
   const skills = [
-    { category: "Techniques", items: ["Création d'un environnement de test", "Exploitation d'Odoo", "Amélioration des fonctionnalités existantes", "Gestion de bases de données", "Versionning Git"] },
+    { category: "Techniques", items: ["Création d'un environnement de test", "Exploitation d'Odoo", "Amélioration des fonctionnalités existantes"] },
     { category: "Transversales", items: ["Travail en équipe", "Autonomie", "Communication", "Gestion du temps"] },
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background okdom-theme">
       <Navbar />
       
       <PageHeader
