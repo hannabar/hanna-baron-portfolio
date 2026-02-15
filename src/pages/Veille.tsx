@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Brain, Scan, Fingerprint, Shield, AlertTriangle, Scale } from "lucide-react";
 import dnaVideo from "@/assets/dna-animation.mp4";
 import fingerprintVideo from "@/assets/fingerprint-scan.mp4";
+import veilleBgVideo from "@/assets/veille-bg-animated.mp4";
 
 const veilleSujets = [
   {
@@ -101,6 +102,7 @@ const Veille = () => {
       <PageHeader
         title="Veille Technologique"
         subtitle="Une démarche active de veille pour rester informée des innovations et enjeux du secteur informatique."
+        backgroundVideo={veilleBgVideo}
       />
 
       {/* Introduction */}
