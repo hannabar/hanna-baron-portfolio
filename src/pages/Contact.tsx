@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Mail, Phone, MapPin, Github, Linkedin, Download, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import contactBgVideo from "@/assets/contact-bg-animated.mp4";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -33,6 +34,7 @@ const Contact = () => {
       <PageHeader
         title="Me contacter"
         subtitle="Vous avez un projet, une question ou souhaitez échanger ? N'hésitez pas à me contacter."
+        backgroundVideo={contactBgVideo}
       />
 
       <section className="section-padding">
