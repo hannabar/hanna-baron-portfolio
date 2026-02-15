@@ -12,7 +12,6 @@ const PPEMain = () => {
       <Navbar />
       
       <PageHeader
-        badge="Travaux Pratiques"
         title="PPE Main"
         subtitle="Projet Professionnel Encadré - Application principale développée en équipe."
       />

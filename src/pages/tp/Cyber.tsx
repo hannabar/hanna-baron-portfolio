@@ -12,7 +12,6 @@ const Cyber = () => {
       <Navbar />
       
       <PageHeader
-        badge="Travaux Pratiques"
         title="Cyber"
         subtitle="Projet sur la cybersécurité avec sensibilisation aux failles de sécurité."
       />

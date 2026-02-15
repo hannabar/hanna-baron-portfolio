@@ -12,7 +12,6 @@ const SweetMemory = () => {
       <Navbar />
       
       <PageHeader
-        badge="Travaux Pratiques"
         title="Sweet Memory"
         subtitle="Jeu de memory interactif développé en JavaScript autour de petites sucreries."
       />

@@ -12,7 +12,6 @@ const CataloguePaniers = () => {
       <Navbar />
       
       <PageHeader
-        badge="Travaux Pratiques"
         title="Catalogue des paniers"
         subtitle="Site e-commerce de vente de paniers avec gestion CRUD complète."
       />

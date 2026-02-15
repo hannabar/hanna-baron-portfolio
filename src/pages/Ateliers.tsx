@@ -69,7 +69,6 @@ const Ateliers = () => {
       <Navbar />
       
       <PageHeader
-        badge="Projets Professionnels Encadrés"
         title="Ateliers Professionnels"
         subtitle="2 PPE complets avec analyse, conception, développement et documentation technique."
       />

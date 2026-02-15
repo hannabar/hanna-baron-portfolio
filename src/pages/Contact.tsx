@@ -31,7 +31,6 @@ const Contact = () => {
       <Navbar />
       
       <PageHeader
-        badge="Prenons contact"
         title="Me contacter"
         subtitle="Vous avez un projet, une question ou souhaitez échanger ? N'hésitez pas à me contacter."
       />

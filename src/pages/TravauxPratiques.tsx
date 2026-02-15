@@ -152,7 +152,6 @@ const TravauxPratiques = () => {
       <Navbar />
       
       <PageHeader
-        badge="Formation BTS SIO"
         title="Travaux Pratiques"
         subtitle="Projets pratiques réalisés durant ma formation, couvrant le développement web, la gestion de bases de données et la sécurité informatique."
         backgroundVideo={tpBgVideo}

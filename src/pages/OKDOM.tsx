@@ -2,21 +2,22 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { Calendar, MapPin, Users, Code, CheckCircle } from "lucide-react";
+import { Calendar, MapPin, Users, Code, CheckCircle, FileText } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import okdomLogo from "@/assets/okdom-logo.jpg";
 import okdomVideo from "@/assets/okdom-animated.mp4";
 
 const OKDOM = () => {
   const missions = [
     "Développement et maintenance d'applications web",
-    "Participation aux réunions d'équipe et sprints Agile",
+    "Développement de nouvelles fonctionnalités sur Odoo",
     "Tests et débogage des fonctionnalités",
     "Documentation technique des projets",
     "Collaboration avec l'équipe de développement",
   ];
 
 const technologies = [
-    "PHP", "JavaScript", "MySQL", "HTML/CSS", "Git", "VS Code", "Odoo"
+    "HTML/CSS", "Git", "VS Code", "Odoo", "Docker", "Python", "PostgreSQL"
   ];
 
   const skills = [
@@ -29,7 +30,6 @@ const technologies = [
       <Navbar />
       
       <PageHeader
-        badge="Expérience professionnelle"
         title="Alternance chez OKDOM"
         subtitle="Mon expérience en entreprise dans le cadre de mon BTS SIO, où je développe mes compétences techniques et professionnelles."
         backgroundVideo={okdomVideo}
@@ -47,8 +47,8 @@ const technologies = [
             >
               <div className="glass-card rounded-2xl p-8">
                 <div className="flex items-start gap-6 mb-8">
-                  <div className="w-28 h-28 rounded-2xl overflow-hidden shrink-0">
-                    <img src={okdomLogo} alt="Logo OKDOM" className="w-full h-full object-cover" />
+                  <div className="w-16 h-16 rounded-xl overflow-hidden shrink-0">
+                    <img src={okdomLogo} alt="Logo OKDOM" className="w-full h-full object-contain" />
                   </div>
                   <div>
                     <h2 className="font-display text-2xl font-bold mb-2">OKDOM</h2>
@@ -159,6 +159,13 @@ const technologies = [
                   </ul>
                 </div>
               ))}
+
+              <Button variant="outline" className="w-full gap-2" asChild>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <FileText className="w-4 h-4" />
+                  Cahier des charges du projet
+                </a>
+              </Button>
             </motion.div>
           </div>
         </div>

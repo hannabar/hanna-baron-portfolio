@@ -12,7 +12,6 @@ const MiniBlog = () => {
       <Navbar />
       
       <PageHeader
-        badge="Travaux Pratiques"
         title="Mini Blog"
         subtitle="Blog complet avec système de publication d'articles et authentification."
       />

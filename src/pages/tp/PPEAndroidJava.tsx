@@ -12,7 +12,6 @@ const PPEAndroidJava = () => {
       <Navbar />
       
       <PageHeader
-        badge="Travaux Pratiques"
         title="PPE Android Java"
         subtitle="Application mobile Android développée en Java dans le cadre du PPE."
       />
