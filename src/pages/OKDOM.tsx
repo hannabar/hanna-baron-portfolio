@@ -2,8 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { Calendar, MapPin, Users, Code, CheckCircle, FileText } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Calendar, MapPin, Users, Code, CheckCircle } from "lucide-react";
 import okdomLogo from "@/assets/okdom-logo.jpg";
 import okdomVideo from "@/assets/okdom-animated.mp4";
 
@@ -21,7 +20,7 @@ const technologies = [
   ];
 
   const skills = [
-    { category: "Techniques", items: ["Développement web full-stack", "Gestion de bases de données", "Versionning Git"] },
+    { category: "Techniques", items: ["Création d'un environnement de test", "Exploitation d'Odoo", "Amélioration des fonctionnalités existantes", "Gestion de bases de données", "Versionning Git"] },
     { category: "Transversales", items: ["Travail en équipe", "Autonomie", "Communication", "Gestion du temps"] },
   ];
 
@@ -47,8 +46,8 @@ const technologies = [
             >
               <div className="glass-card rounded-2xl p-8">
                 <div className="flex items-start gap-6 mb-8">
-                  <div className="w-16 h-16 rounded-xl overflow-hidden shrink-0">
-                    <img src={okdomLogo} alt="Logo OKDOM" className="w-full h-full object-contain" />
+                  <div className="w-24 h-24 rounded-xl overflow-hidden shrink-0">
+                    <img src={okdomLogo} alt="Logo OKDOM" className="w-full h-full object-cover" />
                   </div>
                   <div>
                     <h2 className="font-display text-2xl font-bold mb-2">OKDOM</h2>
@@ -160,12 +159,6 @@ const technologies = [
                 </div>
               ))}
 
-              <Button variant="outline" className="w-full gap-2" asChild>
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <FileText className="w-4 h-4" />
-                  Cahier des charges du projet
-                </a>
-              </Button>
             </motion.div>
           </div>
         </div>
