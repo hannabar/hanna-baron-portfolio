@@ -85,7 +85,7 @@ const Competences = () => {
                   <motion.div
                     key={skill.name}
                     whileHover={{ scale: 1.05, y: -4 }}
-                    className="flex flex-col items-center gap-3 p-4 rounded-xl bg-secondary/50 border border-border/50 hover:border-primary/30 hover:shadow-[0_0_15px_hsl(var(--primary)/0.15)] transition-all duration-300"
+                    className="flex flex-col items-center gap-3 p-4 rounded-xl bg-secondary/50 border border-primary/30 shadow-[0_0_12px_hsl(var(--primary)/0.2)] hover:border-primary/60 hover:shadow-[0_0_20px_hsl(var(--primary)/0.35)] transition-all duration-300"
                   >
                     <img src={skill.logo} alt={skill.name} className="w-10 h-10 brightness-0 invert opacity-60" style={{ filter: 'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(310deg)' }} />
                     <span className="text-sm font-medium text-center">{skill.name}</span>
@@ -111,7 +111,7 @@ const Competences = () => {
                   <motion.div
                     key={skill.name}
                     whileHover={{ scale: 1.05, y: -4 }}
-                    className="flex flex-col items-center gap-3 p-5 rounded-xl bg-secondary/50 border border-border/50 hover:border-primary/30 hover:shadow-[0_0_15px_hsl(var(--primary)/0.15)] transition-all duration-300"
+                    className="flex flex-col items-center gap-3 p-5 rounded-xl bg-secondary/50 border border-primary/30 shadow-[0_0_12px_hsl(var(--primary)/0.2)] hover:border-primary/60 hover:shadow-[0_0_20px_hsl(var(--primary)/0.35)] transition-all duration-300"
                   >
                     <img src={skill.logo} alt={skill.name} className="w-10 h-10" style={{ filter: 'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(310deg)' }} />
                     <span className="text-sm font-medium text-center">{skill.name}</span>
