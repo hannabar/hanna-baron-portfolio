@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import ppeMainVideo from "@/assets/ppe-main-animated.mp4";
 
 const PPEMain = () => {
   return (
@@ -13,7 +14,7 @@ const PPEMain = () => {
       
       <PageHeader
         title="PPE Main"
-        subtitle="Projet Professionnel Encadré - Application principale développée en équipe."
+        subtitle="Projet Professionnel Encadré - Application principale structure MVC."
       />
 
       <section className="section-padding">
@@ -39,7 +40,7 @@ const PPEMain = () => {
             transition={{ delay: 0.1 }}
             className="flex flex-wrap gap-2 mb-8"
           >
-            {["PHP", "MySQL", "HTML", "CSS", "JavaScript"].map((tech) => (
+            {["PHP", "MySQL", "HTML", "CSS"].map((tech) => (
               <span
                 key={tech}
                 className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"
@@ -49,18 +50,17 @@ const PPEMain = () => {
             ))}
           </motion.div>
 
-          {/* Images Gallery */}
+          {/* Video */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="grid md:grid-cols-2 gap-4 mb-12"
+            className="mb-12"
           >
-            <div className="aspect-video bg-gradient-to-br from-secondary to-muted rounded-xl flex items-center justify-center">
-              <span className="text-muted-foreground text-sm">Screenshot 1</span>
-            </div>
-            <div className="aspect-video bg-gradient-to-br from-secondary to-muted rounded-xl flex items-center justify-center">
-              <span className="text-muted-foreground text-sm">Screenshot 2</span>
+            <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
+              <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+                <source src={ppeMainVideo} type="video/mp4" />
+              </video>
             </div>
           </motion.div>
 

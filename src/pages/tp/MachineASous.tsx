@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import slotMachineVideo from "@/assets/slot-machine-animated.mp4";
 
 const MachineASous = () => {
   return (
@@ -49,18 +50,17 @@ const MachineASous = () => {
             ))}
           </motion.div>
 
-          {/* Images Gallery */}
+          {/* Video */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="grid md:grid-cols-2 gap-4 mb-12"
+            className="mb-12"
           >
-            <div className="aspect-video bg-gradient-to-br from-secondary to-muted rounded-xl flex items-center justify-center">
-              <span className="text-muted-foreground text-sm">Screenshot 1</span>
-            </div>
-            <div className="aspect-video bg-gradient-to-br from-secondary to-muted rounded-xl flex items-center justify-center">
-              <span className="text-muted-foreground text-sm">Screenshot 2</span>
+            <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
+              <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+                <source src={slotMachineVideo} type="video/mp4" />
+              </video>
             </div>
           </motion.div>
 
