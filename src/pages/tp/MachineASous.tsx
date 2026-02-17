@@ -119,9 +119,6 @@ const MachineASous = () => {
                 Ce projet ludique m'a permis d'approfondir mes connaissances en animation web
                 et en logique algorithmique pour la détection de patterns.
               </p>
-              <p className="text-foreground font-medium">
-                ✅ Résultat : Jeu immersif avec animations réalistes
-              </p>
             </div>
           </motion.div>
 

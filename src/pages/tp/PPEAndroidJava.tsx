@@ -119,9 +119,6 @@ const PPEAndroidJava = () => {
                 Ce projet m'a permis de découvrir le développement mobile natif avec Java et Android,
                 ainsi que la gestion d'une base de données embarquée.
               </p>
-              <p className="text-foreground font-medium">
-                ✅ Résultat : Application mobile fonctionnelle avec interface Material Design
-              </p>
             </div>
           </motion.div>
 

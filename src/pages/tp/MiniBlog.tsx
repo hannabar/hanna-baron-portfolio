@@ -119,9 +119,6 @@ const MiniBlog = () => {
                 Ce projet m'a permis d'approfondir la sécurité web (protection contre les injections SQL,
                 XSS) et la gestion des sessions utilisateur.
               </p>
-              <p className="text-foreground font-medium">
-                ✅ Résultat : Plateforme de blog sécurisée et fonctionnelle
-              </p>
             </div>
           </motion.div>
 
