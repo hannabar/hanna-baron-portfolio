@@ -13,7 +13,7 @@ const PPEMain = () => {
       <Navbar />
       
       <PageHeader
-        title="PPE GSB"
+        title="PPE Main"
         subtitle="Application web de gestion des frais des visiteurs médicaux avec une architecture MVC complète."
         backgroundVideo={ppeMainVideo}
       />
@@ -34,36 +34,19 @@ const PPEMain = () => {
             </Button>
           </motion.div>
 
-          {/* Technologies */}
+          {/* Technologies & Outils - aligned together */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="flex flex-wrap gap-2 mb-8"
           >
-            {["PHP", "MySQL"].map((tech) => (
+            {["PHP", "MySQL", "XAMPP", "Visual Studio Code"].map((tech) => (
               <span
                 key={tech}
                 className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"
               >
                 {tech}
-              </span>
-            ))}
-          </motion.div>
-
-          {/* Outils */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15 }}
-            className="flex flex-wrap gap-2 mb-8"
-          >
-            {["XAMPP", "Visual Studio Code"].map((tool) => (
-              <span
-                key={tool}
-                className="px-4 py-2 rounded-full bg-secondary/50 text-muted-foreground text-sm font-medium"
-              >
-                {tool}
               </span>
             ))}
           </motion.div>
@@ -80,13 +63,15 @@ const PPEMain = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                <strong className="text-foreground">PPE GSB</strong> est une application web de gestion des frais
-                des visiteurs médicaux, développée avec une architecture MVC complète en PHP avec MySQL.
+                <strong className="text-foreground">GSB</strong> est une application web de gestion des frais professionnels destinée aux visiteurs médicaux de l'entreprise Galaxy Swiss Bourdin. Ce projet répond à un besoin concret de centraliser et uniformiser la déclaration des dépenses engagées lors des déplacements professionnels comme les frais de restauration, d'hébergement et de déplacement. L'application a été développée individuellement en PHP avec une architecture MVC, une base de données MySQL, et une interface en HTML/CSS avec Bootstrap pour la rendre responsive.
+              </p>
+              <p>
+                Le visiteur médical se connecte avec ses identifiants sécurisés et accède à son espace personnel depuis lequel il peut déclarer, consulter, modifier ou supprimer ses fiches de frais. Chaque dépense est classée selon qu'elle est remboursable (fiche forfait) ou non remboursable (fiche hors forfait), permettant une gestion claire et transparente des remboursements.
               </p>
             </div>
           </motion.div>
 
-          {/* Compétences */}
+          {/* Fonctionnalités */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -94,29 +79,58 @@ const PPEMain = () => {
             className="glass-card rounded-2xl p-8 mb-8"
           >
             <h2 className="font-display text-2xl font-bold mb-6">
-              Compétences mobilisées
+              Fonctionnalités principales
             </h2>
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Développement web full-stack
+                Authentification sécurisée avec mot de passe haché et sessions protégées
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Architecture MVC
+                Saisie des frais par catégorie via un formulaire dédié
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Modélisation de base de données
+                Gestion des fiches forfait (remboursables) et hors forfait (non remboursables)
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1">•</span>
+                Modification et suppression des fiches de frais
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1">•</span>
+                Suivi du statut de remboursement (enregistré, validé, remboursé)
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1">•</span>
+                Interface responsive compatible PC, tablette et smartphone
               </li>
             </ul>
+          </motion.div>
+
+          {/* Conclusion */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="glass-card rounded-2xl p-8 mb-8"
+          >
+            <h2 className="font-display text-2xl font-bold mb-6 gradient-text">
+              Conclusion
+            </h2>
+            <div className="space-y-4 text-muted-foreground">
+              <p>
+                Ce projet démontre une maîtrise du développement web full-stack en PHP avec une architecture MVC structurée et une base de données relationnelle MySQL. Les compétences acquises couvrent la gestion des sessions et de l'authentification, la manipulation des données via des requêtes SQL sécurisées, et la conformité RGPD pour la protection des données personnelles des utilisateurs.
+              </p>
+            </div>
           </motion.div>
 
           {/* GitHub Link */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.5 }}
           >
             <Button asChild size="lg">
               <a href="https://github.com/hannabar/PPE_PHP.git" target="_blank" rel="noopener noreferrer">
