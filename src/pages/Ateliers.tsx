@@ -13,25 +13,21 @@ const ateliers = [
   {
     title: "Medicine App",
     icon: Stethoscope,
-    context: "Application de gestion médicale pour digitaliser le secteur médical.",
+    context: "Application mobile Android permettant aux utilisateurs de rechercher et consulter des informations sur les médicaments officiellement commercialisés en France.",
     objectives: [
-      "Gestion des patients et dossiers médicaux",
-      "Suivi des consultations",
-      "Gestion des prescriptions",
-      "Planning des rendez-vous",
+      "Recherche multicritères de médicaments (nom, substance active, forme pharmaceutique, voie d'administration)",
+      "Consultation des informations détaillées d'un médicament",
+      "Accès aux données officielles de l'ANSM directement en local",
     ],
     conception: [
-      "Cahier des charges détaillé",
-      "Diagrammes UML (cas d'utilisation, classes, séquence)",
-      "Modèle conceptuel de données (MCD)",
-      "Maquettes wireframes et mockups",
+      "Cahier des charges fonctionnel et technique",
+      "Maquettes wireframes et mockups UI/UX",
     ],
-    technologies: ["Architecture MVC", "API REST", "Base de données relationnelle"],
+    technologies: ["Java Android Studio", "Base de données SQLite locale"],
     competences: [
-      "Conception et modélisation UML",
-      "Développement full-stack",
-      "Gestion de projet",
-      "Sécurité des données médicales (RGPD)",
+      "Développement mobile Android",
+      "Gestion de bases de données locales",
+      "Conception UI/UX mobile",
     ],
     githubLink: "https://github.com/hannabar/GSB_MedicineApp.git",
     tpLink: "/tp/ppe-android-java",
@@ -80,7 +76,6 @@ const Ateliers = () => {
       <PageHeader
         title="Ateliers Professionnels"
         subtitle="2 PPE complets avec analyse, conception, développement et documentation technique."
-        backgroundVideo={ateliersHeaderBgVideo}
       />
 
       <section className="section-padding">
@@ -186,12 +181,6 @@ const Ateliers = () => {
 
                 {/* Buttons */}
                 <div className="px-8 pb-8 flex flex-wrap gap-3 relative z-10">
-                  <Button asChild size="sm" variant="outline">
-                    <a href={atelier.githubLink} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-2 h-4 w-4" />
-                      GitHub
-                    </a>
-                  </Button>
                   <Button asChild size="sm">
                     <Link to={atelier.tpLink}>
                       <ArrowRight className="mr-2 h-4 w-4" />
@@ -208,6 +197,12 @@ const Ateliers = () => {
                     <a href={atelier.cahierLink} target="_blank" rel="noopener noreferrer">
                       <FileDown className="mr-2 h-4 w-4" />
                       Cahier des charges
+                    </a>
+                  </Button>
+                  <Button asChild size="sm" variant="outline">
+                    <a href={atelier.githubLink} target="_blank" rel="noopener noreferrer">
+                      <Github className="mr-2 h-4 w-4" />
+                      GitHub
                     </a>
                   </Button>
                 </div>

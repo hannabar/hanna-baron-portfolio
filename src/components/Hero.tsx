@@ -201,7 +201,7 @@ const Hero = () => {
               <Button asChild variant="outline" size="lg">
                 <a href="#" download>
                   <Download className="mr-2 h-4 w-4" />
-                  Télécharger Tableau de Synthèse
+                  Tableau de Synthèse
                 </a>
               </Button>
             </motion.div>
