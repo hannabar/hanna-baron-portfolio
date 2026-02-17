@@ -2,9 +2,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { Stethoscope, Building, FileText, Code, TestTube, Shield, Github, ArrowRight } from "lucide-react";
+import { Stethoscope, Building, FileText, Code, TestTube, Shield, Github, ArrowRight, FileDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import ateliersHeaderBgVideo from "@/assets/ateliers-header-bg-animated.mp4";
+import medicineAppBgVideo from "@/assets/medicine-app-bg-animated.mp4";
+import gsbBgVideo from "@/assets/gsb-bg-animated.mp4";
 
 const ateliers = [
   {
@@ -33,6 +36,9 @@ const ateliers = [
     githubLink: "https://github.com/hannabar/GSB_MedicineApp.git",
     tpLink: "/tp/ppe-android-java",
     tpLabel: "PPE Android Java",
+    bgVideo: medicineAppBgVideo,
+    maquetteLink: "#",
+    cahierLink: "#",
   },
   {
     title: "GSB - Gestion Service des Bénéfices",
@@ -60,6 +66,9 @@ const ateliers = [
     githubLink: "https://github.com/hannabar/PPE_PHP.git",
     tpLink: "/tp/ppe-main",
     tpLabel: "PPE Main",
+    bgVideo: gsbBgVideo,
+    maquetteLink: "#",
+    cahierLink: "#",
   },
 ];
 
@@ -71,6 +80,7 @@ const Ateliers = () => {
       <PageHeader
         title="Ateliers Professionnels"
         subtitle="2 PPE complets avec analyse, conception, développement et documentation technique."
+        backgroundVideo={ateliersHeaderBgVideo}
       />
 
       <section className="section-padding">
@@ -83,10 +93,23 @@ const Ateliers = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
-                className="glass-card rounded-2xl overflow-hidden"
+                className="glass-card rounded-2xl overflow-hidden relative"
               >
+                {/* Background Video */}
+                {atelier.bgVideo && (
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none"
+                  >
+                    <source src={atelier.bgVideo} type="video/mp4" />
+                  </video>
+                )}
+
                 {/* Header */}
-                <div className="p-8 border-b border-border">
+                <div className="p-8 border-b border-border relative z-10">
                   <div className="flex items-start gap-6">
                     <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
                       <atelier.icon className="w-8 h-8 text-primary" />
@@ -99,7 +122,7 @@ const Ateliers = () => {
                 </div>
 
                 {/* Content */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 p-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 p-8 relative z-10">
                   <div>
                     <h3 className="font-display font-semibold mb-4 flex items-center gap-2">
                       <FileText className="w-4 h-4 text-primary" />
@@ -162,7 +185,7 @@ const Ateliers = () => {
                 </div>
 
                 {/* Buttons */}
-                <div className="px-8 pb-8 flex gap-3">
+                <div className="px-8 pb-8 flex flex-wrap gap-3 relative z-10">
                   <Button asChild size="sm" variant="outline">
                     <a href={atelier.githubLink} target="_blank" rel="noopener noreferrer">
                       <Github className="mr-2 h-4 w-4" />
@@ -174,6 +197,18 @@ const Ateliers = () => {
                       <ArrowRight className="mr-2 h-4 w-4" />
                       {atelier.tpLabel}
                     </Link>
+                  </Button>
+                  <Button asChild size="sm" variant="outline">
+                    <a href={atelier.maquetteLink} target="_blank" rel="noopener noreferrer">
+                      <FileDown className="mr-2 h-4 w-4" />
+                      Maquette
+                    </a>
+                  </Button>
+                  <Button asChild size="sm" variant="outline">
+                    <a href={atelier.cahierLink} target="_blank" rel="noopener noreferrer">
+                      <FileDown className="mr-2 h-4 w-4" />
+                      Cahier des charges
+                    </a>
                   </Button>
                 </div>
               </motion.div>
