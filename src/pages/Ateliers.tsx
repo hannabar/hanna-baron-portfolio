@@ -55,7 +55,6 @@ const ateliers = [
       "Développement web full-stack",
       "Authentification et gestion des sessions",
       "Modélisation de base de données",
-      "Analyse et réponse à un cahier des charges",
     ],
     githubLink: "https://github.com/hannabar/PPE_PHP.git",
     tpLink: "/tp/ppe-main",
