@@ -2,8 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { Code, Database, Shield, Wrench, Users, BookOpen } from "lucide-react";
-import competencesBgVideo from "@/assets/competences-bg-animated.mp4";
+import { Shield, Wrench, Users, BookOpen } from "lucide-react";
+import competencesBgImage from "@/assets/competences-bg-new.jpeg";
 
 const technicalSkills = [
   { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
@@ -63,7 +63,7 @@ const Competences = () => {
       <PageHeader
         title="Compétences"
         subtitle="Compétences techniques et transversales développées durant ma formation BTS SIO et mon expérience professionnelle."
-        backgroundVideo={competencesBgVideo}
+        backgroundImage={competencesBgImage}
       />
 
       <section className="section-padding">
@@ -77,17 +77,21 @@ const Competences = () => {
               className="glass-card rounded-2xl p-8"
             >
               <h2 className="font-display text-xl font-bold mb-6 flex items-center gap-3">
-                <Code className="w-6 h-6 text-primary" />
+                <span className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-lg">⟨/⟩</span>
                 Langages de programmation
               </h2>
-              <ul className="space-y-3">
+              <div className="grid grid-cols-3 gap-4">
                 {technicalSkills.map((skill) => (
-                  <li key={skill.name} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
-                    <span className="font-medium">{skill.name}</span>
-                  </li>
+                  <motion.div
+                    key={skill.name}
+                    whileHover={{ scale: 1.05, y: -4 }}
+                    className="flex flex-col items-center gap-3 p-4 rounded-xl bg-secondary/50 border border-border/50 hover:border-primary/30 hover:shadow-[0_0_15px_hsl(var(--primary)/0.15)] transition-all duration-300"
+                  >
+                    <img src={skill.logo} alt={skill.name} className="w-10 h-10" />
+                    <span className="text-sm font-medium text-center">{skill.name}</span>
+                  </motion.div>
                 ))}
-              </ul>
+              </div>
             </motion.div>
 
             {/* Database Skills */}
@@ -99,17 +103,21 @@ const Competences = () => {
               className="glass-card rounded-2xl p-8"
             >
               <h2 className="font-display text-xl font-bold mb-6 flex items-center gap-3">
-                <Database className="w-6 h-6 text-primary" />
+                <span className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-lg">🗄</span>
                 Bases de données
               </h2>
-              <ul className="space-y-3">
+              <div className="grid grid-cols-2 gap-4">
                 {dbSkills.map((skill) => (
-                  <li key={skill.name} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
-                    <span className="font-medium">{skill.name}</span>
-                  </li>
+                  <motion.div
+                    key={skill.name}
+                    whileHover={{ scale: 1.05, y: -4 }}
+                    className="flex flex-col items-center gap-3 p-5 rounded-xl bg-secondary/50 border border-border/50 hover:border-primary/30 hover:shadow-[0_0_15px_hsl(var(--primary)/0.15)] transition-all duration-300"
+                  >
+                    <img src={skill.logo} alt={skill.name} className="w-10 h-10" />
+                    <span className="text-sm font-medium text-center">{skill.name}</span>
+                  </motion.div>
                 ))}
-              </ul>
+              </div>
             </motion.div>
 
             {/* Security Skills */}
