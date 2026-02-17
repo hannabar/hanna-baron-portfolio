@@ -18,6 +18,7 @@ const Galerie = () => {
       <PageHeader
         title="Galerie d'Images"
         subtitle="Application web complète développée en PHP pour gérer une collection d'images de manière professionnelle."
+        backgroundVideo={galerieVideo}
       />
 
       <section className="section-padding">
@@ -53,25 +54,11 @@ const Galerie = () => {
             ))}
           </motion.div>
 
-          {/* Video */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mb-12"
-          >
-            <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
-              <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-                <source src={galerieVideo} type="video/mp4" />
-              </video>
-            </div>
-          </motion.div>
-
           {/* Presentation */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.2 }}
             className="glass-card rounded-2xl p-8 mb-8"
           >
             <h2 className="font-display text-2xl font-bold mb-6 gradient-text">

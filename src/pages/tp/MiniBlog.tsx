@@ -15,6 +15,7 @@ const MiniBlog = () => {
       <PageHeader
         title="Mini Blog"
         subtitle="Blog complet avec système de publication d'articles et authentification."
+        backgroundVideo={miniBlogVideo}
       />
 
       <section className="section-padding">
@@ -50,25 +51,11 @@ const MiniBlog = () => {
             ))}
           </motion.div>
 
-          {/* Video */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mb-12"
-          >
-            <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
-              <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-                <source src={miniBlogVideo} type="video/mp4" />
-              </video>
-            </div>
-          </motion.div>
-
           {/* Presentation */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.2 }}
             className="glass-card rounded-2xl p-8 mb-8"
           >
             <h2 className="font-display text-2xl font-bold mb-6 gradient-text">
@@ -91,7 +78,7 @@ const MiniBlog = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.3 }}
             className="glass-card rounded-2xl p-8 mb-8"
           >
             <h2 className="font-display text-2xl font-bold mb-6">
@@ -121,7 +108,7 @@ const MiniBlog = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.4 }}
             className="glass-card rounded-2xl p-8 mb-8"
           >
             <h2 className="font-display text-2xl font-bold mb-6 gradient-text">
@@ -142,7 +129,7 @@ const MiniBlog = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0.5 }}
           >
             <Button asChild size="lg">
               <a href="#" target="_blank" rel="noopener noreferrer">
