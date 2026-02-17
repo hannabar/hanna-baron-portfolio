@@ -13,8 +13,8 @@ const PPEAndroidJava = () => {
       <Navbar />
       
       <PageHeader
-        title="PPE Android Java"
-        subtitle="Application mobile Android développée en Java dans le cadre du PPE."
+        title="PPE Medicine App"
+        subtitle="Application mobile Android développée en Java pour les visiteurs médicaux de GSB."
         backgroundVideo={ppeAndroidJavaVideo}
       />
 
@@ -63,13 +63,10 @@ const PPEAndroidJava = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                <strong className="text-foreground">PPE Android Java</strong> est une application mobile
-                native développée en Java pour la plateforme Android. Elle s'inscrit dans le cadre du
-                Projet Professionnel Encadré de la formation BTS SIO.
+                <strong className="text-foreground">Medicine App</strong> est une application mobile Android développée pour les visiteurs médicaux de l'entreprise GSB, leur permettant de rechercher rapidement des médicaments officiellement commercialisés en France. Elle s'appuie sur la Base de Données Publique des Médicaments du gouvernement français intégrée directement dans l'application. Le projet a été développé individuellement en Java avec Android Studio.
               </p>
               <p>
-                L'application utilise une base de données locale SQLite pour le stockage des données
-                et suit les principes du Material Design pour l'interface utilisateur.
+                L'accès à l'application est sécurisé par une authentification en deux étapes : le visiteur saisit son code visiteur, le serveur vérifie le token associé puis envoie un code aléatoire par email que l'utilisateur doit saisir pour valider sa connexion. Une fois connecté, il peut rechercher un médicament selon plusieurs critères et consulter ses informations détaillées.
               </p>
             </div>
           </motion.div>
@@ -87,19 +84,19 @@ const PPEAndroidJava = () => {
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Interface mobile native Android
+                Authentification sécurisée par code visiteur et vérification par email
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Base de données locale SQLite
+                Recherche multicritères : nom commercial, substance active, titulaire, voie d'administration, forme pharmaceutique
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Gestion des activités et fragments
+                Affichage des résultats en liste claire et intuitive
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Design Material pour l'interface
+                Consultation des informations détaillées : composition, principes actifs, excipients, dosage, conditionnement
               </li>
             </ul>
           </motion.div>
@@ -116,8 +113,7 @@ const PPEAndroidJava = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Ce projet m'a permis de découvrir le développement mobile natif avec Java et Android,
-                ainsi que la gestion d'une base de données embarquée.
+                Ce projet démontre une maîtrise du développement mobile Android natif en Java ainsi que la gestion d'une base de données locale volumineuse issue de données officielles gouvernementales. Les compétences acquises couvrent la conception d'interfaces mobiles, les requêtes SQL multicritères, et l'implémentation d'un système d'authentification sécurisé à double vérification.
               </p>
             </div>
           </motion.div>
