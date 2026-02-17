@@ -28,7 +28,7 @@ const PageHeader = ({ title, subtitle, badge, backgroundImage, backgroundVideo, 
       )}
       {backgroundImage && !backgroundVideo && (
         <div
-          className="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-20 pointer-events-none"
+          className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-[0.06] pointer-events-none"
           style={{ backgroundImage: `url(${backgroundImage})` }} />
       )}
       
