@@ -118,9 +118,6 @@ const Cyber = () => {
                 Ce projet m'a sensibilisée à l'importance de la sécurité dans le développement web
                 et m'a appris à identifier et corriger les vulnérabilités courantes.
               </p>
-              <p className="text-foreground font-medium">
-                ✅ Résultat : Compréhension approfondie des enjeux de cybersécurité
-              </p>
             </div>
           </motion.div>
 

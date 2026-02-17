@@ -162,9 +162,6 @@ const Galerie = () => {
                 Les compétences acquises sont directement applicables en contexte professionnel : uploads sécurisés, 
                 performances optimisées et architecture maintenable.
               </p>
-              <p className="text-foreground font-medium">
-                ✅ Résultat : Application fonctionnelle, sécurisée et prête pour une mise en production
-              </p>
             </div>
           </motion.div>
 

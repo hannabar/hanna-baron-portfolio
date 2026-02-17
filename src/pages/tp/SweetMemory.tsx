@@ -133,9 +133,6 @@ const SweetMemory = () => {
                 Les compétences acquises sont directement exploitables en contexte professionnel pour la création 
                 d'interfaces interactives, de jeux web simples et d'expériences utilisateur dynamiques.
               </p>
-              <p className="text-foreground font-medium">
-                ✅ Résultat : Application fonctionnelle avec une expérience utilisateur fluide et ludique
-              </p>
             </div>
           </motion.div>
 

@@ -119,9 +119,6 @@ const CataloguePaniers = () => {
                 Ce projet e-commerce m'a permis de maîtriser les opérations CRUD, la gestion des sessions
                 PHP et l'architecture MVC.
               </p>
-              <p className="text-foreground font-medium">
-                ✅ Résultat : Site e-commerce fonctionnel avec back-office complet
-              </p>
             </div>
           </motion.div>
 
