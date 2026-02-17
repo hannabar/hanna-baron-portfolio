@@ -2,8 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { Shield, Wrench, Users, BookOpen } from "lucide-react";
-import competencesBgImage from "@/assets/competences-bg-new.jpeg";
+import { Code, Database, Shield, Wrench, Users, BookOpen } from "lucide-react";
+import competencesBgVideo from "@/assets/competences-bg-animated.mp4";
 
 const technicalSkills = [
   { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
@@ -63,7 +63,7 @@ const Competences = () => {
       <PageHeader
         title="Compétences"
         subtitle="Compétences techniques et transversales développées durant ma formation BTS SIO et mon expérience professionnelle."
-        backgroundImage={competencesBgImage}
+        backgroundVideo={competencesBgVideo}
       />
 
       <section className="section-padding">
@@ -77,7 +77,7 @@ const Competences = () => {
               className="glass-card rounded-2xl p-8"
             >
               <h2 className="font-display text-xl font-bold mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-lg">⟨/⟩</span>
+                <Code className="w-6 h-6 text-primary" />
                 Langages de programmation
               </h2>
               <div className="grid grid-cols-3 gap-4">
@@ -87,7 +87,7 @@ const Competences = () => {
                     whileHover={{ scale: 1.05, y: -4 }}
                     className="flex flex-col items-center gap-3 p-4 rounded-xl bg-secondary/50 border border-border/50 hover:border-primary/30 hover:shadow-[0_0_15px_hsl(var(--primary)/0.15)] transition-all duration-300"
                   >
-                    <img src={skill.logo} alt={skill.name} className="w-10 h-10" />
+                    <img src={skill.logo} alt={skill.name} className="w-10 h-10 brightness-0 invert opacity-60" style={{ filter: 'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(310deg)' }} />
                     <span className="text-sm font-medium text-center">{skill.name}</span>
                   </motion.div>
                 ))}
@@ -103,7 +103,7 @@ const Competences = () => {
               className="glass-card rounded-2xl p-8"
             >
               <h2 className="font-display text-xl font-bold mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-lg">🗄</span>
+                <Database className="w-6 h-6 text-primary" />
                 Bases de données
               </h2>
               <div className="grid grid-cols-2 gap-4">
@@ -113,7 +113,7 @@ const Competences = () => {
                     whileHover={{ scale: 1.05, y: -4 }}
                     className="flex flex-col items-center gap-3 p-5 rounded-xl bg-secondary/50 border border-border/50 hover:border-primary/30 hover:shadow-[0_0_15px_hsl(var(--primary)/0.15)] transition-all duration-300"
                   >
-                    <img src={skill.logo} alt={skill.name} className="w-10 h-10" />
+                    <img src={skill.logo} alt={skill.name} className="w-10 h-10" style={{ filter: 'brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(310deg)' }} />
                     <span className="text-sm font-medium text-center">{skill.name}</span>
                   </motion.div>
                 ))}
