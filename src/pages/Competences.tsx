@@ -62,7 +62,7 @@ const Competences = () => {
       
       <PageHeader
         title="Compétences"
-        subtitle="Compétences techniques et transversales développées durant ma formation BTS SIO et mes expériences professionnelles."
+        subtitle="Compétences techniques et transversales développées durant ma formation BTS SIO et mon expérience professionnelle."
         backgroundVideo={competencesBgVideo}
       />
 
