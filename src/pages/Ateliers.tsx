@@ -58,7 +58,7 @@ const ateliers = [
     ],
     githubLink: "https://github.com/hannabar/PPE_PHP.git",
     tpLink: "/tp/ppe-main",
-    tpLabel: "PPE Main",
+    tpLabel: "PPE GSB",
     bgVideo: gsbBgVideo,
     maquetteLink: "#",
     cahierLink: "#",

@@ -15,6 +15,7 @@ const SweetMemory = () => {
       <PageHeader
         title="Sweet Memory"
         subtitle="Jeu de memory interactif développé en JavaScript autour de petites sucreries."
+        backgroundVideo={sweetMemoryVideo}
       />
 
       <section className="section-padding">
@@ -50,25 +51,11 @@ const SweetMemory = () => {
             ))}
           </motion.div>
 
-          {/* Video */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mb-12"
-          >
-            <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
-              <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-                <source src={sweetMemoryVideo} type="video/mp4" />
-              </video>
-            </div>
-          </motion.div>
-
           {/* Presentation */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.2 }}
             className="glass-card rounded-2xl p-8 mb-8"
           >
             <h2 className="font-display text-2xl font-bold mb-6 gradient-text">
@@ -126,18 +113,6 @@ const SweetMemory = () => {
               </li>
             </ul>
           </motion.div>
-
-          {/* Screenshots Gallery - placeholder for future screenshots */}
-          {/* 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8"
-          >
-            Screenshots will go here
-          </motion.div>
-          */}
 
           {/* Conclusion */}
           <motion.div

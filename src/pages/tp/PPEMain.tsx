@@ -13,8 +13,9 @@ const PPEMain = () => {
       <Navbar />
       
       <PageHeader
-        title="PPE Main"
-        subtitle="Projet Professionnel Encadré - Application principale structure MVC."
+        title="PPE GSB"
+        subtitle="Application web de gestion des frais des visiteurs médicaux avec une architecture MVC complète."
+        backgroundVideo={ppeMainVideo}
       />
 
       <section className="section-padding">
@@ -40,7 +41,7 @@ const PPEMain = () => {
             transition={{ delay: 0.1 }}
             className="flex flex-wrap gap-2 mb-8"
           >
-            {["PHP", "MySQL", "HTML", "CSS"].map((tech) => (
+            {["PHP", "MySQL"].map((tech) => (
               <span
                 key={tech}
                 className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"
@@ -50,25 +51,28 @@ const PPEMain = () => {
             ))}
           </motion.div>
 
-          {/* Video */}
+          {/* Outils */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mb-12"
+            transition={{ delay: 0.15 }}
+            className="flex flex-wrap gap-2 mb-8"
           >
-            <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
-              <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-                <source src={ppeMainVideo} type="video/mp4" />
-              </video>
-            </div>
+            {["XAMPP", "Visual Studio Code"].map((tool) => (
+              <span
+                key={tool}
+                className="px-4 py-2 rounded-full bg-secondary/50 text-muted-foreground text-sm font-medium"
+              >
+                {tool}
+              </span>
+            ))}
           </motion.div>
 
           {/* Presentation */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.2 }}
             className="glass-card rounded-2xl p-8 mb-8"
           >
             <h2 className="font-display text-2xl font-bold mb-6 gradient-text">
@@ -76,73 +80,43 @@ const PPEMain = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                <strong className="text-foreground">PPE Main</strong> est un Projet Professionnel Encadré
-                développé en équipe dans le cadre de la formation BTS SIO. Il s'agit d'une application web
-                complète construite en PHP avec MySQL pour la gestion des données.
-              </p>
-              <p>
-                Ce projet a permis de mettre en pratique les compétences de développement en équipe,
-                la gestion de projet et la conception d'une architecture logicielle complète.
+                <strong className="text-foreground">PPE GSB</strong> est une application web de gestion des frais
+                des visiteurs médicaux, développée avec une architecture MVC complète en PHP avec MySQL.
               </p>
             </div>
           </motion.div>
 
-          {/* Features */}
+          {/* Compétences */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.3 }}
             className="glass-card rounded-2xl p-8 mb-8"
           >
             <h2 className="font-display text-2xl font-bold mb-6">
-              Fonctionnalités principales
+              Compétences mobilisées
             </h2>
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Développement collaboratif en équipe
+                Développement web full-stack
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Gestion de projet avec planification
+                Architecture MVC
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Architecture MVC complète
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary mt-1">•</span>
-                Documentation technique détaillée
+                Modélisation de base de données
               </li>
             </ul>
-          </motion.div>
-
-          {/* Conclusion */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="glass-card rounded-2xl p-8 mb-8"
-          >
-            <h2 className="font-display text-2xl font-bold mb-6 gradient-text">
-              Conclusion
-            </h2>
-            <div className="space-y-4 text-muted-foreground">
-              <p>
-                Ce PPE m'a permis d'acquérir une expérience concrète du travail en équipe
-                et de la gestion de projet dans un contexte professionnel.
-              </p>
-              <p className="text-foreground font-medium">
-                ✅ Résultat : Application fonctionnelle livrée dans les délais
-              </p>
-            </div>
           </motion.div>
 
           {/* GitHub Link */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0.4 }}
           >
             <Button asChild size="lg">
               <a href="https://github.com/hannabar/PPE_PHP.git" target="_blank" rel="noopener noreferrer">
