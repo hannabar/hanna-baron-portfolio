@@ -9,9 +9,9 @@ import veilleBgVideo from "@/assets/veille-bg-animated.mp4";
 
 const veilleSujets = [
   {
-    title: "Imagerie médicale avec IA",
+    title: "Imagerie médicale et Intelligence Artificielle",
     icon: Brain,
-    description: "L'intelligence artificielle révolutionne le diagnostic médical grâce à l'analyse d'images.",
+    description: "L'intelligence artificielle révolutionne le diagnostic médical grâce à l'analyse automatisée d'images, offrant aux médecins une aide précieuse pour détecter des pathologies plus rapidement et avec plus de précision.",
     sections: [
       {
         title: "Technologies actuelles",
@@ -30,17 +30,17 @@ const veilleSujets = [
           "Détection précoce du cancer du sein",
           "Analyse d'IRM et scanners cérébraux",
           "Détection de la rétinopathie diabétique",
-          "Analyse des radiographies pulmonaires (COVID-19)",
+          "Analyse de radiographies pulmonaires",
         ],
       },
       {
         title: "Enjeux éthiques",
         icon: Scale,
         items: [
-          "Fiabilité des diagnostics automatisés",
-          "Responsabilité médicale",
+          "Fiabilité et limites des diagnostics automatisés",
+          "Responsabilité médicale en cas d'erreur",
           "Protection des données de santé (RGPD)",
-          "Certification des dispositifs médicaux",
+          "Certification des dispositifs médicaux (marquage CE)",
         ],
       },
     ],
@@ -53,7 +53,7 @@ const veilleSujets = [
   {
     title: "Données biométriques",
     icon: Fingerprint,
-    description: "L'utilisation croissante des données biométriques dans l'authentification et la sécurité.",
+    description: "L'utilisation croissante des données biométriques dans l'authentification et la sécurité soulève des enjeux majeurs en 2025.",
     sections: [
       {
         title: "Technologies",
@@ -73,16 +73,17 @@ const veilleSujets = [
           "Surveillance de masse et traçage",
           "Deepfakes et failles de sécurité",
           "Discrimination algorithmique (biais)",
+          "Irrévocabilité : une donnée biométrique volée ne peut pas être changée contrairement à un mot de passe",
         ],
       },
       {
         title: "Cadre réglementaire",
         icon: Shield,
         items: [
-          "RGPD (article 9 : données sensibles)",
-          "Recommandations CNIL sur la biométrie",
-          "Débats législatifs (interdiction reconnaissance faciale)",
-          "Équilibre sécurité / liberté individuelle",
+          "RGPD Article 9 : données biométriques classées données sensibles",
+          "Loi sur l'IA (EU AI Act) : interdiction de la reconnaissance faciale en temps réel depuis février 2025",
+          "Recommandations CNIL : interdiction du badgeage biométrique au travail",
+          "Nouveau système EES aux frontières européennes depuis octobre 2025 imposant la collecte d'empreintes et photo du visage pour tous les voyageurs non-européens",
         ],
       },
     ],
@@ -118,7 +119,7 @@ const Veille = () => {
             <p className="text-muted-foreground">
               La veille technologique est essentielle dans le secteur informatique pour anticiper 
               les évolutions et adapter ses compétences. Je m'appuie sur diverses sources : 
-              alertes Google, vidéos, la presse et des podcasts.
+              alertes Google, vidéos YouTube, presse spécialisée et podcasts tech.
             </p>
           </motion.div>
         </div>
