@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import sweetMemoryVideo from "@/assets/sweet-memory-animated.mp4";
 
 const SweetMemory = () => {
   return (
@@ -49,11 +50,25 @@ const SweetMemory = () => {
             ))}
           </motion.div>
 
-          {/* Presentation */}
+          {/* Video */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
+            className="mb-12"
+          >
+            <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
+              <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+                <source src={sweetMemoryVideo} type="video/mp4" />
+              </video>
+            </div>
+          </motion.div>
+
+          {/* Presentation */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
             className="glass-card rounded-2xl p-8 mb-8"
           >
             <h2 className="font-display text-2xl font-bold mb-6 gradient-text">

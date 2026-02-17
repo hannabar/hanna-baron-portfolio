@@ -49,7 +49,7 @@ const projects = [
   {
     title: "Catalogue des paniers",
     description: "Site e-commerce de vente de paniers avec gestion CRUD complète.",
-    technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
+    technologies: ["PHP", "MySQL", "HTML", "CSS"],
     features: [
       "Affichage catalogue produits",
       "Panier d'achat fonctionnel",
@@ -64,7 +64,7 @@ const projects = [
   {
     title: "Mini Blog",
     description: "Blog complet avec système de publication d'articles et authentification.",
-    technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
+    technologies: ["PHP", "MySQL", "HTML", "CSS"],
     features: [
       "CRUD d'articles complet",
       "Système de commentaires",
@@ -79,7 +79,7 @@ const projects = [
   {
     title: "Galerie",
     description: "Galerie photos interactive avec upload de fichiers et manipulation d'images.",
-    technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
+    technologies: ["PHP", "MySQL", "HTML", "CSS"],
     features: [
       "Upload et gestion d'images",
       "Affichage grille et lightbox",
@@ -94,7 +94,7 @@ const projects = [
   {
     title: "Cyber",
     description: "Projet sur la cybersécurité avec sensibilisation aux failles de sécurité.",
-    technologies: ["HTML", "CSS", "JavaScript", "Sécurité"],
+    technologies: ["HTML", "CSS", "Sécurité"],
     features: [
       "Démonstration de failles de sécurité",
       "Tests de vulnérabilité",
@@ -108,8 +108,8 @@ const projects = [
   },
   {
     title: "PPE Main",
-    description: "Projet Professionnel Encadré - Application principale développée en équipe.",
-    technologies: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
+    description: "Projet Professionnel Encadré - Application principale structure MVC.",
+    technologies: ["PHP", "MySQL", "HTML", "CSS"],
     features: [
       "Développement en équipe",
       "Gestion de projet",

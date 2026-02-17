@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import screenshot1 from "@/assets/galerie-screenshot-1.png";
 import screenshot2 from "@/assets/galerie-screenshot-2.png";
 import screenshot3 from "@/assets/galerie-screenshot-3.png";
+import galerieVideo from "@/assets/galerie-hero-video.mp4";
 
 const Galerie = () => {
   return (
@@ -42,7 +43,7 @@ const Galerie = () => {
             transition={{ delay: 0.1 }}
             className="flex flex-wrap gap-2 mb-8"
           >
-            {["PHP", "MySQL", "HTML", "CSS", "JavaScript"].map((tech) => (
+            {["PHP", "MySQL", "HTML", "CSS"].map((tech) => (
               <span
                 key={tech}
                 className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"
@@ -52,11 +53,25 @@ const Galerie = () => {
             ))}
           </motion.div>
 
-          {/* Presentation */}
+          {/* Video */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
+            className="mb-12"
+          >
+            <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
+              <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+                <source src={galerieVideo} type="video/mp4" />
+              </video>
+            </div>
+          </motion.div>
+
+          {/* Presentation */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
             className="glass-card rounded-2xl p-8 mb-8"
           >
             <h2 className="font-display text-2xl font-bold mb-6 gradient-text">
