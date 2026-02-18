@@ -29,7 +29,7 @@ const projects = [
     category: "Jeux",
     slug: "sweet-memory",
     video: sweetMemoryVideo,
-    githubLink: "https://github.com/hannabar/tp-memory.git",
+    demoLink: "https://hannabar.github.io/memory-main/",
   },
   {
     title: "Machine à sous",
@@ -44,7 +44,7 @@ const projects = [
     category: "Jeux",
     slug: "machine-a-sous",
     video: slotMachineVideo,
-    githubLink: "https://github.com/hannabar/machine-a-sous-main.git",
+    demoLink: "https://hannabar.github.io/machine-a-sous-main2/",
   },
   {
     title: "Catalogue des paniers",
