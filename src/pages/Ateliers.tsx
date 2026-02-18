@@ -34,7 +34,7 @@ const ateliers = [
     tpLabel: "PPE Android Java",
     bgVideo: medicineAppBgVideo,
     maquetteLink: "#",
-    cahierLink: "#",
+    cahierLink: "/docs/cahier_des_charges_PPE1.pdf",
   },
   {
     title: "GSB - Gestion des Frais",
@@ -61,7 +61,7 @@ const ateliers = [
     tpLabel: "PPE GSB",
     bgVideo: gsbBgVideo,
     maquetteLink: "#",
-    cahierLink: "#",
+    cahierLink: "/docs/cahier_des_charges_PPE2.docx",
   },
 ];
 
