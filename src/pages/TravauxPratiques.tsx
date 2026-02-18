@@ -44,7 +44,7 @@ const projects = [
     category: "Jeux",
     slug: "machine-a-sous",
     video: slotMachineVideo,
-    githubLink: "#",
+    githubLink: "https://github.com/hannabar/machine-a-sous-main.git",
   },
   {
     title: "Catalogue des paniers",
@@ -74,7 +74,7 @@ const projects = [
     category: "Web App",
     slug: "mini-blog",
     video: miniBlogVideo,
-    githubLink: "#",
+    githubLink: "https://github.com/hannabar/MINIBLOG.git",
   },
   {
     title: "Galerie",
