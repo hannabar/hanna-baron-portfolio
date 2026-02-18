@@ -14,7 +14,7 @@ const Cyber = () => {
       
       <PageHeader
         title="Cyber"
-        subtitle="Projet sur la cybersécurité avec sensibilisation aux failles de sécurité."
+        subtitle="Cybersécurité Web — Exploitation & Correction de vulnérabilités OWASP"
         backgroundVideo={cyberVideo}
       />
 
@@ -63,17 +63,15 @@ const Cyber = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                <strong className="text-foreground">Cyber</strong> est un projet éducatif sur la cybersécurité
-                visant à sensibiliser aux principales vulnérabilités web et aux bonnes pratiques de sécurisation.
+                Ce TP pratique porte sur l'analyse et la correction de failles de sécurité courantes dans une application PHP/MySQL volontairement vulnérable, dans le cadre d'un exercice pédagogique encadré.
               </p>
               <p>
-                Le projet présente des démonstrations de failles courantes (XSS, injection SQL, CSRF)
-                et les méthodes pour s'en protéger.
+                Le projet consiste à identifier, exploiter puis corriger deux types de vulnérabilités classées par l'OWASP : une injection SQL sur un formulaire de connexion, et une faille XSS stockée dans un module de commentaires.
               </p>
             </div>
           </motion.div>
 
-          {/* Features */}
+          {/* Compétences */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -81,24 +79,24 @@ const Cyber = () => {
             className="glass-card rounded-2xl p-8 mb-8"
           >
             <h2 className="font-display text-2xl font-bold mb-6">
-              Fonctionnalités principales
+              Compétences mobilisées
             </h2>
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Démonstration de failles de sécurité courantes
+                Exploitation d'une injection SQL pour contourner l'authentification via une concaténation de requête non sécurisée
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Tests de vulnérabilité interactifs
+                Injection d'un script XSS stocké dans une base de données et exécuté côté client à chaque chargement de page
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Guide des bonnes pratiques de sécurisation
+                Mise en place de correctifs concrets : requêtes préparées avec PDO, hachage des mots de passe avec password_hash / password_verify, échappement HTML avec htmlspecialchars
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Protection des données sensibles
+                Rédaction d'un rapport technique documentant les payloads utilisés, les impacts et les recommandations (CSP, cookies SameSite, rate limiting)
               </li>
             </ul>
           </motion.div>
@@ -115,8 +113,7 @@ const Cyber = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Ce projet m'a sensibilisée à l'importance de la sécurité dans le développement web
-                et m'a appris à identifier et corriger les vulnérabilités courantes.
+                Ce projet m'a permis de comprendre concrètement comment des failles critiques peuvent être exploitées, et surtout comment les prévenir grâce aux bonnes pratiques de développement sécurisé.
               </p>
             </div>
           </motion.div>
