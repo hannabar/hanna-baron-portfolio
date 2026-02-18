@@ -104,7 +104,7 @@ const projects = [
     category: "Sécurité",
     slug: "cyber",
     video: cyberVideo,
-    githubLink: "#",
+    githubLink: "https://github.com/hannabar/Cybersecurity_TP2-main.git",
   },
   {
     title: "PPE Main",
