@@ -129,7 +129,7 @@ const MiniBlog = () => {
             transition={{ delay: 0.5 }}
           >
             <Button asChild size="lg">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/hannabar/MINIBLOG.git" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-5 w-5" />
                 Voir sur GitHub
               </a>
