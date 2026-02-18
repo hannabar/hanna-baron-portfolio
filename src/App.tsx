@@ -23,6 +23,8 @@ import Galerie from "./pages/tp/Galerie";
 import Cyber from "./pages/tp/Cyber";
 import PPEMain from "./pages/tp/PPEMain";
 import PPEAndroidJava from "./pages/tp/PPEAndroidJava";
+import TodoListCpp from "./pages/tp/TodoListCpp";
+import EuroformaShop from "./pages/tp/EuroformaShop";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +48,8 @@ const App = () => (
             <Route path="/tp/cyber" element={<Cyber />} />
             <Route path="/tp/ppe-main" element={<PPEMain />} />
             <Route path="/tp/ppe-android-java" element={<PPEAndroidJava />} />
+            <Route path="/tp/todolist-cpp" element={<TodoListCpp />} />
+            <Route path="/tp/euroforma-shop" element={<EuroformaShop />} />
             <Route path="/ateliers" element={<Ateliers />} />
             <Route path="/competences" element={<Competences />} />
             <Route path="/veille" element={<Veille />} />
