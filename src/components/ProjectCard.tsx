@@ -121,7 +121,7 @@ const ProjectCard = ({
               <Button asChild size="sm" variant="outline" className="flex-1">
                 <a href={demoLink} target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="mr-2 h-4 w-4" />
-                  Démo
+                  Jouer
                 </a>
               </Button>
             )}
