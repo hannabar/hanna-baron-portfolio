@@ -13,6 +13,8 @@ import cataloguePaniersVideo from "@/assets/catalogue-paniers-animated.mp4";
 import miniBlogVideo from "@/assets/mini-blog-animated.mp4";
 import ppeAndroidJavaVideo from "@/assets/ppe-android-java-animated.mp4";
 import ppeMainVideo from "@/assets/ppe-main-animated.mp4";
+import todoListCppVideo from "@/assets/todolist-cpp-animated.mp4";
+import euroformaShopVideo from "@/assets/euroforma-shop-animated.mp4";
 import tpBgVideo from "@/assets/tp-bg-animated.mp4";
 
 const projects = [
@@ -136,9 +138,37 @@ const projects = [
     video: ppeAndroidJavaVideo,
     githubLink: "https://github.com/hannabar/GSB_MedicineApp.git",
   },
+  {
+    title: "To Do List",
+    description: "Application console de gestion de tâches développée en C++.",
+    technologies: ["C++", "Console"],
+    features: [
+      "Ajout et suppression de tâches",
+      "Menu interactif en console",
+      "Persistance des données en fichier",
+      "Code modulaire en fonctions",
+    ],
+    category: "Desktop",
+    slug: "todolist-cpp",
+    video: todoListCppVideo,
+  },
+  {
+    title: "Euroforma Shop",
+    description: "Application e-commerce développée en Python pour la gestion d'une boutique en ligne.",
+    technologies: ["Python", "Flask", "SQLite"],
+    features: [
+      "Catalogue de produits dynamique",
+      "Panier d'achat avec sessions",
+      "Gestion des commandes",
+      "Interface responsive",
+    ],
+    category: "E-commerce",
+    slug: "euroforma-shop",
+    video: euroformaShopVideo,
+  },
 ];
 
-const categories = ["Tous", "Jeux", "E-commerce", "Web App", "Sécurité", "PPE"];
+const categories = ["Tous", "Jeux", "E-commerce", "Web App", "Sécurité", "PPE", "Desktop"];
 
 const TravauxPratiques = () => {
   const [activeFilter, setActiveFilter] = useState("Tous");
