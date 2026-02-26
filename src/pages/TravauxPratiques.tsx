@@ -14,8 +14,8 @@ import miniBlogVideo from "@/assets/mini-blog-animated.mp4";
 import ppeAndroidJavaVideo from "@/assets/ppe-android-java-animated.mp4";
 import ppeMainVideo from "@/assets/ppe-main-animated.mp4";
 import tpBgVideo from "@/assets/tp-bg-animated.mp4";
-import TodoListAnimation from "@/components/TodoListAnimation";
-import EuroformaShopAnimation from "@/components/EuroformaShopAnimation";
+import todoListHeaderBg from "@/assets/todolist-cpp-header.jpg";
+import euroformaHeaderBg from "@/assets/euroforma-shop-header.jpg";
 
 const projects = [
   {
@@ -110,13 +110,12 @@ const projects = [
   },
   {
     title: "To Do List",
-    description: "Application console de gestion de tâches développée en C++.",
-    technologies: ["C++", "Console"],
+    description: "Application de gestion de tâches développée en C++.",
+    technologies: ["C++"],
     features: [
-      "Ajout et suppression de tâches",
-      "Menu interactif en console",
-      "Persistance des données en fichier",
-      "Code modulaire en fonctions",
+      "Ajout, affichage, modification et suppression de tâches",
+      "Statut en temps réel (En cours / Terminée)",
+      "Menu interactif en boucle avec option quitter",
     ],
     category: "Desktop",
     slug: "todolist-cpp",
@@ -124,13 +123,12 @@ const projects = [
   },
   {
     title: "Euroforma Shop",
-    description: "Application e-commerce développée en Python pour la gestion d'une boutique en ligne.",
-    technologies: ["Python", "Flask", "SQLite"],
+    description: "Simulation de caisse de magasin développée en Python.",
+    technologies: ["Python"],
     features: [
-      "Catalogue de produits dynamique",
-      "Panier d'achat avec sessions",
-      "Gestion des commandes",
-      "Interface responsive",
+      "Saisie dynamique des articles et de leurs prix",
+      "Total mis à jour en temps réel",
+      "Calcul automatique du rendu de monnaie",
     ],
     category: "E-commerce",
     slug: "euroforma-shop",
@@ -213,9 +211,9 @@ const TravauxPratiques = () => {
               <ProjectCard
                 key={project.title}
                 {...project}
-                animatedComponent={
-                  project.slug === "todolist-cpp" ? <TodoListAnimation /> :
-                  project.slug === "euroforma-shop" ? <EuroformaShopAnimation /> :
+                image={
+                  project.slug === "todolist-cpp" ? todoListHeaderBg :
+                  project.slug === "euroforma-shop" ? euroformaHeaderBg :
                   undefined
                 }
                 detailLink={`/tp/${project.slug}`}
