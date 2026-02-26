@@ -6,6 +6,7 @@ import { ArrowLeft, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import euroformaVideo from "@/assets/euroforma-shop-animated.mp4";
+import EuroformaShopAnimation from "@/components/EuroformaShopAnimation";
 
 const EuroformaShop = () => {
   return (
@@ -103,6 +104,21 @@ const EuroformaShop = () => {
                 Messages d'accueil et de fin personnalisés
               </li>
             </ul>
+          </motion.div>
+
+          {/* Animation */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35 }}
+            className="glass-card rounded-2xl p-8 mb-8"
+          >
+            <h2 className="font-display text-2xl font-bold mb-6">
+              Démonstration animée
+            </h2>
+            <div className="rounded-xl overflow-hidden h-64">
+              <EuroformaShopAnimation />
+            </div>
           </motion.div>
 
           {/* Conclusion */}
