@@ -6,6 +6,9 @@ import { ArrowLeft, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import cyberVideo from "@/assets/cyber-animated.mp4";
+import cyberScreenshot1 from "@/assets/cyber-screenshot-1.png";
+import cyberScreenshot2 from "@/assets/cyber-screenshot-2.png";
+import cyberScreenshot3 from "@/assets/cyber-screenshot-3.png";
 
 const Cyber = () => {
   return (
@@ -68,6 +71,23 @@ const Cyber = () => {
               <p>
                 Le projet consiste à identifier, exploiter puis corriger deux types de vulnérabilités classées par l'OWASP : une injection SQL sur un formulaire de connexion, et une faille XSS stockée dans un module de commentaires.
               </p>
+            </div>
+          </motion.div>
+
+          {/* Screenshots */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.25 }}
+            className="glass-card rounded-2xl p-8 mb-8"
+          >
+            <h2 className="font-display text-2xl font-bold mb-6">
+              Captures d'écran
+            </h2>
+            <div className="grid md:grid-cols-3 gap-4">
+              <img src={cyberScreenshot1} alt="Cyber - Injection SQL connexion" className="rounded-lg w-full" />
+              <img src={cyberScreenshot2} alt="Cyber - Faille XSS commentaire" className="rounded-lg w-full" />
+              <img src={cyberScreenshot3} alt="Cyber - Alert XSS exécutée" className="rounded-lg w-full" />
             </div>
           </motion.div>
 
