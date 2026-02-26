@@ -13,8 +13,8 @@ const TodoListCpp = () => {
       <Navbar />
       
       <PageHeader
-        title="TP To Do List"
-        subtitle="Application console de gestion de tâches développée en C++."
+        title="To-Do List"
+        subtitle="Application de gestion de tâches développée en C++ sans vecteur."
         backgroundVideo={todoListVideo}
       />
 
@@ -63,15 +63,15 @@ const TodoListCpp = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Ce TP consiste à développer une application console en C++ permettant de gérer une liste de tâches (To Do List). L'utilisateur peut ajouter, afficher, modifier et supprimer des tâches via un menu interactif.
+                To-Do List est une application de gestion de tâches développée en C++ sans vecteur. Le programme propose un menu interactif permettant à l'utilisateur d'ajouter, afficher, modifier et supprimer des tâches stockées dans un tableau statique, chaque tâche étant représentée par une structure contenant un titre et un statut.
               </p>
               <p>
-                Le projet met en pratique les fondamentaux du langage C++ : structures de données, boucles, conditions, gestion de fichiers et manipulation de chaînes de caractères.
+                Ce projet m'a permis de maîtriser les structures de données statiques, la gestion de menus et la manipulation de tableaux en C++.
               </p>
             </div>
           </motion.div>
 
-          {/* Compétences */}
+          {/* Fonctionnalités */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -79,24 +79,28 @@ const TodoListCpp = () => {
             className="glass-card rounded-2xl p-8 mb-8"
           >
             <h2 className="font-display text-2xl font-bold mb-6">
-              Compétences mobilisées
+              Fonctionnalités principales
             </h2>
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Manipulation de structures de données (vecteurs, structures) pour stocker et organiser les tâches
+                Ajout de tâches avec titre personnalisé (max 30)
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Gestion d'un menu interactif en console avec boucle principale et gestion des entrées utilisateur
+                Affichage de toutes les tâches avec leur statut (En cours / Terminée)
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Persistance des données via la lecture et l'écriture dans des fichiers texte
+                Marquage d'une tâche comme terminée
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Organisation du code en fonctions modulaires pour la maintenabilité
+                Suppression d'une tâche avec décalage du tableau
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1">•</span>
+                Menu en boucle avec option quitter
               </li>
             </ul>
           </motion.div>
@@ -113,7 +117,7 @@ const TodoListCpp = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Ce projet m'a permis de consolider mes bases en C++ et de comprendre les mécanismes fondamentaux de la programmation orientée objet et de la gestion de données en mémoire.
+                Ce projet m'a permis de consolider les fondamentaux du C++ en travaillant sur les structures, les tableaux statiques et la logique de menu, des compétences essentielles en programmation bas niveau.
               </p>
             </div>
           </motion.div>
@@ -125,7 +129,7 @@ const TodoListCpp = () => {
             transition={{ delay: 0.5 }}
           >
             <Button asChild size="lg">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/hannabar/TodoList_Cpp.git" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-5 w-5" />
                 Voir sur GitHub
               </a>

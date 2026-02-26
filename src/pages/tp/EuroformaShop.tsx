@@ -13,8 +13,8 @@ const EuroformaShop = () => {
       <Navbar />
       
       <PageHeader
-        title="Euroforma Shop"
-        subtitle="Application e-commerce développée en Python pour la gestion d'une boutique en ligne."
+        title="EuroformaShop"
+        subtitle="Simulation de caisse de magasin développée en Python."
         backgroundVideo={euroformaVideo}
       />
 
@@ -63,15 +63,15 @@ const EuroformaShop = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Euroforma Shop est une application e-commerce développée en Python permettant de gérer une boutique en ligne avec catalogue de produits, panier d'achat et gestion des commandes.
+                EuroformaShop est une simulation de caisse de magasin développée en Python. Le programme guide l'utilisateur étape par étape : saisie du nombre d'articles, entrée des prix un par un avec affichage du total progressif, puis gestion du paiement en espèces avec calcul automatique de la monnaie à rendre.
               </p>
               <p>
-                Ce projet met en œuvre les principes du développement web côté serveur avec Python, la gestion de bases de données relationnelles et la création d'interfaces utilisateur dynamiques.
+                Ce projet m'a permis de travailler sur les boucles, la gestion des entrées utilisateur et la logique de calcul financier en temps réel.
               </p>
             </div>
           </motion.div>
 
-          {/* Compétences */}
+          {/* Fonctionnalités */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -79,24 +79,28 @@ const EuroformaShop = () => {
             className="glass-card rounded-2xl p-8 mb-8"
           >
             <h2 className="font-display text-2xl font-bold mb-6">
-              Compétences mobilisées
+              Fonctionnalités principales
             </h2>
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Développement d'une application web avec un framework Python (Flask/Django)
+                Saisie dynamique du nombre d'articles et de leurs prix
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Conception et gestion d'une base de données relationnelle pour le catalogue produits et les commandes
+                Affichage du total mis à jour après chaque article
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Implémentation d'un système de panier d'achat avec gestion des sessions
+                Calcul du montant total à payer
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1">•</span>
-                Création d'une interface utilisateur responsive pour la navigation et l'achat
+                Gestion du paiement en plusieurs fois avec rendu de monnaie
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary mt-1">•</span>
+                Messages d'accueil et de fin personnalisés
               </li>
             </ul>
           </motion.div>
@@ -113,7 +117,7 @@ const EuroformaShop = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Ce projet m'a permis d'approfondir mes compétences en Python dans un contexte de développement web e-commerce et de maîtriser la gestion complète d'un cycle de vente en ligne.
+                Ce projet concret m'a permis d'ancrer les bases de Python à travers un cas d'usage réel et quotidien, en combinant logique de boucles, conditions et interactions utilisateur.
               </p>
             </div>
           </motion.div>
@@ -125,7 +129,7 @@ const EuroformaShop = () => {
             transition={{ delay: 0.5 }}
           >
             <Button asChild size="lg">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/hannabar/Euroforma_Shop.git" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-5 w-5" />
                 Voir sur GitHub
               </a>
