@@ -16,7 +16,7 @@ const EuroformaShop = () => {
       <PageHeader
         title="EuroformaShop"
         subtitle="Simulation de caisse de magasin développée en Python."
-        backgroundVideo={euroformaVideo}
+        backgroundComponent={<EuroformaShopAnimation />}
       />
 
       <section className="section-padding">
@@ -106,20 +106,6 @@ const EuroformaShop = () => {
             </ul>
           </motion.div>
 
-          {/* Animation */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35 }}
-            className="glass-card rounded-2xl p-8 mb-8"
-          >
-            <h2 className="font-display text-2xl font-bold mb-6">
-              Démonstration animée
-            </h2>
-            <div className="rounded-xl overflow-hidden h-64">
-              <EuroformaShopAnimation />
-            </div>
-          </motion.div>
 
           {/* Conclusion */}
           <motion.div
