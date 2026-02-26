@@ -6,6 +6,9 @@ import { ArrowLeft, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import miniBlogVideo from "@/assets/mini-blog-animated.mp4";
+import miniblogScreenshot1 from "@/assets/miniblog-screenshot-1.png";
+import miniblogScreenshot2 from "@/assets/miniblog-screenshot-2.png";
+import miniblogScreenshot3 from "@/assets/miniblog-screenshot-3.png";
 
 const MiniBlog = () => {
   return (
@@ -71,6 +74,23 @@ const MiniBlog = () => {
                 Le projet inclut un système d'authentification complet avec différents niveaux d'accès
                 (administrateur, auteur, lecteur).
               </p>
+            </div>
+          </motion.div>
+
+          {/* Screenshots */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.25 }}
+            className="glass-card rounded-2xl p-8 mb-8"
+          >
+            <h2 className="font-display text-2xl font-bold mb-6">
+              Captures d'écran
+            </h2>
+            <div className="grid md:grid-cols-3 gap-4">
+              <img src={miniblogScreenshot1} alt="MiniBlog - Liste des articles" className="rounded-lg w-full" />
+              <img src={miniblogScreenshot2} alt="MiniBlog - Détail d'un article" className="rounded-lg w-full" />
+              <img src={miniblogScreenshot3} alt="MiniBlog - Suppression d'un article" className="rounded-lg w-full" />
             </div>
           </motion.div>
 
