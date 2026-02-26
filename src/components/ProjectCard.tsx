@@ -11,6 +11,7 @@ interface ProjectCardProps {
   image?: string;
   video?: string;
   backgroundVideo?: boolean;
+  animatedComponent?: React.ReactNode;
   demoLink?: string;
   githubLink?: string;
   detailLink?: string;
@@ -25,6 +26,7 @@ const ProjectCard = ({
   image,
   video,
   backgroundVideo = false,
+  animatedComponent,
   demoLink,
   githubLink,
   detailLink,
@@ -56,7 +58,9 @@ const ProjectCard = ({
       {/* Regular cover image/video */}
       {!backgroundVideo && (
       <div className="h-48 bg-gradient-to-br from-secondary to-muted relative overflow-hidden flex-shrink-0">
-        {video ? (
+        {animatedComponent ? (
+          animatedComponent
+        ) : video ? (
           <video
             src={video}
             autoPlay
