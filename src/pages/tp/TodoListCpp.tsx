@@ -5,8 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import todoListVideo from "@/assets/todolist-cpp-animated.mp4";
-import TodoListAnimation from "@/components/TodoListAnimation";
+import todoListHeaderBg from "@/assets/todolist-cpp-header.jpg";
 
 const TodoListCpp = () => {
   return (
@@ -16,7 +15,7 @@ const TodoListCpp = () => {
       <PageHeader
         title="To-Do List"
         subtitle="Application de gestion de tâches développée en C++ sans vecteur."
-        backgroundComponent={<TodoListAnimation />}
+        backgroundImage={todoListHeaderBg}
       />
 
       <section className="section-padding">
