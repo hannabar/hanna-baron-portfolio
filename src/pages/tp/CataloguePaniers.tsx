@@ -6,6 +6,9 @@ import { ArrowLeft, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import cataloguePaniersVideo from "@/assets/catalogue-paniers-animated.mp4";
+import catalogueScreenshot1 from "@/assets/catalogue-screenshot-1.png";
+import catalogueScreenshot2 from "@/assets/catalogue-screenshot-2.png";
+import catalogueScreenshot3 from "@/assets/catalogue-screenshot-3.png";
 
 const CataloguePaniers = () => {
   return (
@@ -71,6 +74,23 @@ const CataloguePaniers = () => {
                 Le projet inclut un système de panier d'achat, la gestion des quantités et une interface
                 d'administration pour gérer les produits.
               </p>
+            </div>
+          </motion.div>
+
+          {/* Screenshots */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.25 }}
+            className="glass-card rounded-2xl p-8 mb-8"
+          >
+            <h2 className="font-display text-2xl font-bold mb-6">
+              Captures d'écran
+            </h2>
+            <div className="grid md:grid-cols-3 gap-4">
+              <img src={catalogueScreenshot1} alt="Catalogue - Boutique en ligne" className="rounded-lg w-full" />
+              <img src={catalogueScreenshot2} alt="Catalogue - Mon Panier" className="rounded-lg w-full" />
+              <img src={catalogueScreenshot3} alt="Catalogue - Confirmation de commande" className="rounded-lg w-full" />
             </div>
           </motion.div>
 
