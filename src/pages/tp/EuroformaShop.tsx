@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import euroformaHeaderBg from "@/assets/euroforma-shop-header.jpg";
+import euroformaVideo from "@/assets/euroforma-shop-animated.mp4";
 
 const EuroformaShop = () => {
   return (
@@ -15,7 +15,7 @@ const EuroformaShop = () => {
       <PageHeader
         title="EuroformaShop"
         subtitle="Simulation de caisse de magasin développée en Python."
-        backgroundImage={euroformaHeaderBg}
+        backgroundVideo={euroformaVideo}
       />
 
       <section className="section-padding">

@@ -14,8 +14,8 @@ import miniBlogVideo from "@/assets/mini-blog-animated.mp4";
 import ppeAndroidJavaVideo from "@/assets/ppe-android-java-animated.mp4";
 import ppeMainVideo from "@/assets/ppe-main-animated.mp4";
 import tpBgVideo from "@/assets/tp-bg-animated.mp4";
-import todoListHeaderBg from "@/assets/todolist-cpp-header.jpg";
-import euroformaHeaderBg from "@/assets/euroforma-shop-header.jpg";
+import todoListVideo from "@/assets/todolist-cpp-animated.mp4";
+import euroformaVideo from "@/assets/euroforma-shop-animated.mp4";
 
 const projects = [
   {
@@ -211,10 +211,10 @@ const TravauxPratiques = () => {
               <ProjectCard
                 key={project.title}
                 {...project}
-                image={
-                  project.slug === "todolist-cpp" ? todoListHeaderBg :
-                  project.slug === "euroforma-shop" ? euroformaHeaderBg :
-                  undefined
+                video={
+                  project.slug === "todolist-cpp" ? todoListVideo :
+                  project.slug === "euroforma-shop" ? euroformaVideo :
+                  project.video
                 }
                 detailLink={`/tp/${project.slug}`}
                 delay={index * 0.1}
