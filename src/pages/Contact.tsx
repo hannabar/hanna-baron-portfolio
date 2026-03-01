@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Mail, Phone, MapPin, Github, Linkedin, Download, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import contactBgVideo from "@/assets/contact-bg-animated.mp4";
@@ -74,8 +74,8 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
-                      <Phone className="w-5 h-5 text-accent" />
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                      <Phone className="w-5 h-5 text-primary" />
                     </div>
                     <div>
                       <div className="font-medium mb-1">Disponibilité</div>
@@ -107,12 +107,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              <Button className="w-full" size="lg" asChild>
-                <a href="#" download>
-                  <Download className="mr-2 h-4 w-4" />
-                  Télécharger mon CV
-                </a>
-              </Button>
             </motion.div>
 
             {/* Contact Form */}
