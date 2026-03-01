@@ -199,7 +199,7 @@ const Hero = () => {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="#" download>
+                <a href="/docs/TABLEAU_SYNTHESE_E5_2026.xlsx" download>
                   <Download className="mr-2 h-4 w-4" />
                   Tableau de Synthèse
                 </a>
