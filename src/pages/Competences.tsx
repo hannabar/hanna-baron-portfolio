@@ -6,17 +6,17 @@ import { Code, Database, Shield, Wrench, Users, BookOpen } from "lucide-react";
 import competencesBgVideo from "@/assets/competences-bg-animated.mp4";
 
 const technicalSkills = [
-  { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-  { name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
-  { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-  { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
-  { name: "SQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-  { name: "HTML/CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+  { name: "Python", letters: "Py" },
+  { name: "PHP", letters: "PHP" },
+  { name: "JavaScript", letters: "JS" },
+  { name: "C++", letters: "C++" },
+  { name: "SQL", letters: "SQL" },
+  { name: "HTML/CSS", letters: "</>" },
 ];
 
 const dbSkills = [
-  { name: "MySQL / MariaDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-  { name: "Requêtes SQL (JOIN, INSERT...)", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+  { name: "MySQL / MariaDB", letters: "My" },
+  { name: "Requêtes SQL (JOIN, INSERT...)", letters: "PG" },
 ];
 
 const securitySkills = [
@@ -87,7 +87,10 @@ const Competences = () => {
                     whileHover={{ scale: 1.05, y: -4 }}
                     className="flex flex-col items-center gap-3 p-4 rounded-xl bg-secondary/50 border border-primary/30 shadow-[0_0_12px_hsl(var(--primary)/0.2)] hover:border-primary/60 hover:shadow-[0_0_20px_hsl(var(--primary)/0.35)] transition-all duration-300"
                   >
-                    <img src={skill.logo} alt={skill.name} className="w-10 h-10" style={{ filter: 'brightness(0) drop-shadow(0 0 2px hsl(350, 80%, 65%)) drop-shadow(0 0 1px hsl(350, 80%, 65%))' }} />
+                    <div className="w-12 h-12 rounded-xl bg-background/80 border border-primary/40 flex items-center justify-center"
+                      style={{ textShadow: '0 0 8px hsl(350, 80%, 65%), 0 0 16px hsl(350, 80%, 65%), 0 0 24px hsl(350, 80%, 55%)' }}>
+                      <span className="font-display font-bold text-lg text-primary">{skill.letters}</span>
+                    </div>
                     <span className="text-sm font-medium text-center">{skill.name}</span>
                   </motion.div>
                 ))}
@@ -113,7 +116,10 @@ const Competences = () => {
                     whileHover={{ scale: 1.05, y: -4 }}
                     className="flex flex-col items-center gap-3 p-5 rounded-xl bg-secondary/50 border border-primary/30 shadow-[0_0_12px_hsl(var(--primary)/0.2)] hover:border-primary/60 hover:shadow-[0_0_20px_hsl(var(--primary)/0.35)] transition-all duration-300"
                   >
-                    <img src={skill.logo} alt={skill.name} className="w-10 h-10" style={{ filter: 'brightness(0) drop-shadow(0 0 2px hsl(350, 80%, 65%)) drop-shadow(0 0 1px hsl(350, 80%, 65%))' }} />
+                    <div className="w-12 h-12 rounded-xl bg-background/80 border border-primary/40 flex items-center justify-center"
+                      style={{ textShadow: '0 0 8px hsl(350, 80%, 65%), 0 0 16px hsl(350, 80%, 65%), 0 0 24px hsl(350, 80%, 55%)' }}>
+                      <span className="font-display font-bold text-lg text-primary">{skill.letters}</span>
+                    </div>
                     <span className="text-sm font-medium text-center">{skill.name}</span>
                   </motion.div>
                 ))}
