@@ -33,7 +33,6 @@ const ateliers = [
     tpLink: "/tp/ppe-android-java",
     tpLabel: "PPE Android Java",
     bgVideo: medicineAppBgVideo,
-    maquetteLink: "#",
     cahierLink: "/docs/cahier_des_charges_PPE1.pdf",
   },
   {
@@ -60,8 +59,7 @@ const ateliers = [
     tpLink: "/tp/ppe-main",
     tpLabel: "PPE GSB",
     bgVideo: gsbBgVideo,
-    maquetteLink: "#",
-    cahierLink: "/docs/cahier_des_charges_PPE2.docx",
+    cahierLink: "/docs/cahier_des_charges_PPE2.pdf",
   },
 ];
 
@@ -183,12 +181,6 @@ const Ateliers = () => {
                       <ArrowRight className="mr-2 h-4 w-4" />
                       {atelier.tpLabel}
                     </Link>
-                  </Button>
-                  <Button asChild size="sm" variant="outline">
-                    <a href={atelier.maquetteLink} target="_blank" rel="noopener noreferrer">
-                      <FileDown className="mr-2 h-4 w-4" />
-                      Maquette
-                    </a>
                   </Button>
                   <Button asChild size="sm" variant="outline">
                     <a href={atelier.cahierLink} target="_blank" rel="noopener noreferrer">

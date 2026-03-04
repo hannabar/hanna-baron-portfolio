@@ -85,9 +85,9 @@ const Cyber = () => {
               Captures d'écran
             </h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <img src={cyberScreenshot1} alt="Cyber - Injection SQL connexion" className="rounded-lg w-full" />
-              <img src={cyberScreenshot2} alt="Cyber - Faille XSS commentaire" className="rounded-lg w-full" />
-              <img src={cyberScreenshot3} alt="Cyber - Alert XSS exécutée" className="rounded-lg w-full" />
+              <img src={cyberScreenshot1} alt="Cyber - Injection SQL connexion" className="rounded-lg w-full aspect-video object-cover" />
+              <img src={cyberScreenshot2} alt="Cyber - Faille XSS commentaire" className="rounded-lg w-full aspect-video object-cover" />
+              <img src={cyberScreenshot3} alt="Cyber - Alert XSS exécutée" className="rounded-lg w-full aspect-video object-cover" />
             </div>
           </motion.div>
 
