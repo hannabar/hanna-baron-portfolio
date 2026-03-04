@@ -88,9 +88,9 @@ const MiniBlog = () => {
               Captures d'écran
             </h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <img src={miniblogScreenshot1} alt="MiniBlog - Liste des articles" className="rounded-lg w-full" />
-              <img src={miniblogScreenshot2} alt="MiniBlog - Détail d'un article" className="rounded-lg w-full" />
-              <img src={miniblogScreenshot3} alt="MiniBlog - Suppression d'un article" className="rounded-lg w-full" />
+              <img src={miniblogScreenshot1} alt="MiniBlog - Liste des articles" className="rounded-lg w-full aspect-video object-cover" />
+              <img src={miniblogScreenshot2} alt="MiniBlog - Détail d'un article" className="rounded-lg w-full aspect-video object-cover" />
+              <img src={miniblogScreenshot3} alt="MiniBlog - Suppression d'un article" className="rounded-lg w-full aspect-video object-cover" />
             </div>
           </motion.div>
 

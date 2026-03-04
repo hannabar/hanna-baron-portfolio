@@ -88,9 +88,9 @@ const CataloguePaniers = () => {
               Captures d'écran
             </h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <img src={catalogueScreenshot1} alt="Catalogue - Boutique en ligne" className="rounded-lg w-full" />
-              <img src={catalogueScreenshot2} alt="Catalogue - Mon Panier" className="rounded-lg w-full" />
-              <img src={catalogueScreenshot3} alt="Catalogue - Confirmation de commande" className="rounded-lg w-full" />
+              <img src={catalogueScreenshot1} alt="Catalogue - Boutique en ligne" className="rounded-lg w-full aspect-video object-cover" />
+              <img src={catalogueScreenshot2} alt="Catalogue - Mon Panier" className="rounded-lg w-full aspect-video object-cover" />
+              <img src={catalogueScreenshot3} alt="Catalogue - Confirmation de commande" className="rounded-lg w-full aspect-video object-cover" />
             </div>
           </motion.div>
 
