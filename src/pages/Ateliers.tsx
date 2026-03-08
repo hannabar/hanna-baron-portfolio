@@ -33,7 +33,7 @@ const ateliers = [
     tpLink: "/tp/ppe-android-java",
     tpLabel: "PPE Android Java",
     bgVideo: medicineAppBgVideo,
-    cahierLink: "/docs/cahier_des_charges_PPE1.pdf",
+    cahierLink: "https://drive.google.com/file/d/1FYp_kHn9XAypf-bVAHYxeHdkpZ7G3sU8/view?usp=drive_link",
   },
   {
     title: "GSB - Gestion des Frais",
@@ -59,7 +59,7 @@ const ateliers = [
     tpLink: "/tp/ppe-main",
     tpLabel: "PPE GSB",
     bgVideo: gsbBgVideo,
-    cahierLink: "/docs/cahier_des_charges_PPE2.pdf",
+    cahierLink: "https://docs.google.com/document/d/1yQOQrlsyGkEufn0FIOQtpcAaWkXpicSM/edit?usp=sharing&ouid=102439132412217033167&rtpof=true&sd=true",
   },
 ];
 
