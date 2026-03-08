@@ -219,14 +219,14 @@ const Veille = () => {
                   {
                     handle: "@FuturaSciences",
                     avatar: "FS",
-                    text: "Cancer du sein : une nouvelle technologie IA promet une meilleure détection",
-                    date: "5 oct. 2024",
+                    text: "Le CEA obtient les images IRM du cerveau les plus précises au monde pour mieux comprendre Alzheimer",
+                    date: "2 avril 2024",
                     category: "IA Médicale",
                     catColor: "blue",
                     likes: 193,
                     retweets: 72,
                     comments: 28,
-                    link: "https://www.futura-sciences.com/sante/actualites/cancer-sein-cancer-sein-nouvelle-technologie-ia-promet-meilleure-detection-116440/",
+                    link: "https://www.futura-sciences.com/sante/actualites/medecine-cea-obtient-images-irm-cerveau-plus-precises-monde-mieux-comprendre-alzheimer-94013/",
                   },
                   {
                     handle: "@Numerama",
