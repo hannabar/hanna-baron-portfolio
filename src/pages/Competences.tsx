@@ -212,15 +212,15 @@ const Competences = () => {
                     </li>
                   ))}
                 </ul>
+                <div className="mt-4">
+                  <Button asChild size="sm" variant="outline">
+                    <a href="/docs/TABLEAU_SYNTHESE_E5_2026.xlsx" download>
+                      <Download className="mr-2 h-4 w-4" />
+                      Tableau de Synthèse
+                    </a>
+                  </Button>
+                </div>
               </div>
-            </div>
-            <div className="mt-8 flex justify-center">
-              <Button asChild size="sm" variant="outline">
-                <a href="/docs/TABLEAU_SYNTHESE_E5_2026.xlsx" download>
-                  <Download className="mr-2 h-4 w-4" />
-                  Tableau de Synthèse
-                </a>
-              </Button>
             </div>
           </motion.div>
 
