@@ -182,10 +182,18 @@ const Competences = () => {
             viewport={{ once: true }}
             className="mt-8 glass-card rounded-2xl p-8"
           >
-            <h2 className="font-display text-xl font-bold mb-8 flex items-center gap-3">
-              <BookOpen className="w-6 h-6 text-primary" />
-              Compétences du référentiel BTS SIO
-            </h2>
+            <div className="flex items-center justify-between flex-wrap gap-4 mb-8">
+              <h2 className="font-display text-xl font-bold flex items-center gap-3">
+                <BookOpen className="w-6 h-6 text-primary" />
+                Compétences du référentiel BTS SIO
+              </h2>
+              <Button asChild size="sm" variant="outline">
+                <a href="/docs/TABLEAU_SYNTHESE_E5_2026.xlsx" download>
+                  <Download className="mr-2 h-4 w-4" />
+                  Tableau de Synthèse
+                </a>
+              </Button>
+            </div>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="font-display font-semibold mb-4 text-primary">
