@@ -253,6 +253,153 @@ const Veille = () => {
         </div>
       </section>
 
+      {/* Feed de veille */}
+      <section className="py-12 px-6">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="font-display text-xl font-bold mb-8 flex items-center gap-3">
+              <MessageCircle className="w-6 h-6 text-primary" />
+              Mon feed de veille
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                {
+                  handle: "@FuturaSciences",
+                  avatar: "FS",
+                  text: "L'IA détecte le cancer du sein avec 94% de précision",
+                  date: "12 jan. 2025",
+                  category: "IA Médicale",
+                  catColor: "blue",
+                  likes: 248,
+                  retweets: 87,
+                  comments: 34,
+                },
+                {
+                  handle: "@CNIL",
+                  avatar: "CN",
+                  text: "Les données biométriques classées données sensibles selon l'article 9 du RGPD",
+                  date: "28 fév. 2025",
+                  category: "Biométrie",
+                  catColor: "violet",
+                  likes: 312,
+                  retweets: 145,
+                  comments: 56,
+                },
+                {
+                  handle: "@Numerama",
+                  avatar: "Nu",
+                  text: "EU AI Act : interdiction de la reconnaissance faciale en temps réel depuis février 2025",
+                  date: "3 fév. 2025",
+                  category: "Biométrie",
+                  catColor: "violet",
+                  likes: 521,
+                  retweets: 203,
+                  comments: 89,
+                },
+                {
+                  handle: "@01net",
+                  avatar: "01",
+                  text: "Deep Learning et réseaux de neurones révolutionnent l'analyse d'IRM",
+                  date: "18 déc. 2024",
+                  category: "IA Médicale",
+                  catColor: "blue",
+                  likes: 176,
+                  retweets: 64,
+                  comments: 22,
+                },
+                {
+                  handle: "@UsineDigitale",
+                  avatar: "UD",
+                  text: "Deepfakes et failles biométriques : les nouveaux risques en 2025",
+                  date: "10 jan. 2025",
+                  category: "Biométrie",
+                  catColor: "violet",
+                  likes: 389,
+                  retweets: 112,
+                  comments: 47,
+                },
+                {
+                  handle: "@SciencesAvenir",
+                  avatar: "SA",
+                  text: "Télémédecine augmentée : l'IA au service du diagnostic à distance",
+                  date: "22 jan. 2025",
+                  category: "IA Médicale",
+                  catColor: "blue",
+                  likes: 204,
+                  retweets: 78,
+                  comments: 31,
+                },
+              ].map((post, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                  className="rounded-xl border border-border bg-card p-5 hover:border-primary/30 transition-colors"
+                >
+                  <div className="flex items-start gap-3">
+                    {/* Avatar */}
+                    <div
+                      className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 font-bold text-sm text-white ${
+                        post.catColor === "blue"
+                          ? "bg-gradient-to-br from-blue-500 to-cyan-500"
+                          : "bg-gradient-to-br from-violet-500 to-purple-600"
+                      }`}
+                    >
+                      {post.avatar}
+                    </div>
+
+                    <div className="flex-1 min-w-0">
+                      {/* Header */}
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="font-bold text-sm">{post.handle}</span>
+                        <span className="text-xs text-muted-foreground">· {post.date}</span>
+                        <span
+                          className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${
+                            post.catColor === "blue"
+                              ? "bg-blue-500/15 text-blue-400"
+                              : "bg-violet-500/15 text-violet-400"
+                          }`}
+                        >
+                          {post.category}
+                        </span>
+                      </div>
+
+                      {/* Content */}
+                      <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{post.text}</p>
+
+                      {/* Actions */}
+                      <div className="flex items-center gap-6 mt-3 text-muted-foreground">
+                        <span className="flex items-center gap-1.5 text-xs hover:text-blue-400 transition-colors cursor-default">
+                          <MessageCircle className="w-3.5 h-3.5" />
+                          {post.comments}
+                        </span>
+                        <span className="flex items-center gap-1.5 text-xs hover:text-green-400 transition-colors cursor-default">
+                          <Repeat2 className="w-3.5 h-3.5" />
+                          {post.retweets}
+                        </span>
+                        <span className="flex items-center gap-1.5 text-xs hover:text-rose-400 transition-colors cursor-default">
+                          <Heart className="w-3.5 h-3.5" />
+                          {post.likes}
+                        </span>
+                        <span className="flex items-center gap-1.5 text-xs hover:text-primary transition-colors cursor-default">
+                          <Share className="w-3.5 h-3.5" />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Subjects */}
       <section className="section-padding pt-8">
         <div className="container-custom">
