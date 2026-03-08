@@ -59,7 +59,8 @@ const ateliers = [
     tpLink: "/tp/ppe-main",
     tpLabel: "PPE GSB",
     bgVideo: gsbBgVideo,
-    cahierLink: "https://docs.google.com/document/d/1yQOQrlsyGkEufn0FIOQtpcAaWkXpicSM/edit?usp=sharing&ouid=102439132412217033167&rtpof=true&sd=true",
+    cahierLink: "",
+    embedCahier: "https://docs.google.com/document/d/1yQOQrlsyGkEufn0FIOQtpcAaWkXpicSM/edit?usp=sharing&ouid=102439132412217033167&rtpof=true&sd=true",
   },
 ];
 
