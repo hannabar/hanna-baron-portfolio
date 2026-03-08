@@ -97,6 +97,8 @@ const veilleSujets = [
 ];
 
 const Veille = () => {
+  const [feedFilter, setFeedFilter] = useState<"all" | "ia" | "bio">("all");
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
