@@ -262,6 +262,7 @@ const Veille = () => {
                     likes: 389,
                     retweets: 112,
                     comments: 47,
+                    link: "https://usine-digitale.fr",
                   },
                   {
                     handle: "@SciencesAvenir",
