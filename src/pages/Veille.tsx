@@ -262,7 +262,7 @@ const Veille = () => {
                     likes: 389,
                     retweets: 112,
                     comments: 47,
-                    link: "https://usine-digitale.fr",
+                    link: "https://www.usine-digitale.fr/article/la-prevention-des-deepfakes-doit-etre-une-priorite-absolue-pour-les-forces-de-l-ordre-d-apres-europol.N1999797",
                   },
                   {
                     handle: "@SciencesAvenir",
