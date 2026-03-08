@@ -122,7 +122,7 @@ const Veille = () => {
             </p>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {/* Sites consultés */}
+              {/* Sites — IA médicale */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -134,18 +134,30 @@ const Veille = () => {
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <Globe className="w-5 h-5 text-primary" />
                   </div>
-                  <h3 className="font-display font-semibold text-sm">Sites consultés</h3>
+                  <h3 className="font-display font-semibold text-sm">Sites — IA médicale</h3>
                 </div>
                 <ul className="space-y-2">
                   {[
-                    "MIT Technology Review",
-                    "The Verge",
+                    "Futura Sciences — futura-sciences.com",
                     "01net.com",
                     "Numerama.com",
-                    "Futura Sciences",
-                    "CNIL.fr",
+                    "Le Monde (Tech) — lemonde.fr/pixels",
+                    "Sciences et Avenir — sciencesetavenir.fr",
+                  ].map((site, i) => (
+                    <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
+                      <span className="w-1 h-1 rounded-full bg-primary shrink-0" />
+                      {site}
+                    </li>
+                  ))}
+                </ul>
+
+                <h4 className="font-display font-semibold text-sm mt-6 mb-3 text-primary/80">Sites — Biométrie / RGPD</h4>
+                <ul className="space-y-2">
+                  {[
+                    "CNIL.fr — site officiel",
                     "Nextinpact.com",
-                    "LeMonde.fr (Tech)",
+                    "L'Usine Digitale — usine-digitale.fr",
+                    "Le Monde Informatique — lemondeinformatique.fr",
                   ].map((site, i) => (
                     <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
                       <span className="w-1 h-1 rounded-full bg-primary shrink-0" />
@@ -171,9 +183,9 @@ const Veille = () => {
                 </div>
                 <ul className="space-y-2">
                   {[
-                    "The Algorithm (MIT)",
-                    "L'Usine Digitale",
-                    "Numerama Règle 30",
+                    "L'Usine Digitale — hebdomadaire tech",
+                    "Numerama Règle 30 — vie privée et données",
+                    "CNIL Newsletter — actualités RGPD",
                   ].map((nl, i) => (
                     <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
                       <span className="w-1 h-1 rounded-full bg-primary shrink-0" />
@@ -199,9 +211,9 @@ const Veille = () => {
                 </div>
                 <div className="space-y-2">
                   {[
-                    "Intelligence artificielle imagerie médicale",
-                    "Biométrie RGPD 2025",
-                    "EU AI Act reconnaissance faciale",
+                    "IA imagerie médicale",
+                    "biométrie données personnelles",
+                    "reconnaissance faciale France",
                   ].map((alert, i) => (
                     <span key={i} className="inline-block text-xs px-3 py-1.5 rounded-full bg-primary/10 text-primary font-medium mr-1 mb-1">
                       {alert}
@@ -210,7 +222,7 @@ const Veille = () => {
                 </div>
               </motion.div>
 
-              {/* Réseaux sociaux */}
+              {/* Réseaux sociaux — kept as before */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
