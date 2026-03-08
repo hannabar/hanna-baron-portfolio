@@ -247,23 +247,6 @@ const Competences = () => {
         </div>
       </section>
 
-      {/* Tableau de Synthèse */}
-      <section className="section-padding bg-card/30">
-        <div className="container-custom text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <Button asChild size="lg" variant="outline">
-              <a href="/docs/TABLEAU_SYNTHESE_E5_2026.xlsx" download>
-                <Download className="mr-2 h-4 w-4" />
-                Tableau de Synthèse
-              </a>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
 
       <Footer />
     </div>
