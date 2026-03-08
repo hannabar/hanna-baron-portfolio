@@ -2,7 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { Code, Database, Shield, Wrench, Users, BookOpen } from "lucide-react";
+import { Code, Database, Shield, Wrench, Users, BookOpen, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import competencesBgVideo from "@/assets/competences-bg-animated.mp4";
 
 const technicalSkills = [
