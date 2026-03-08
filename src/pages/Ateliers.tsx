@@ -182,14 +182,12 @@ const Ateliers = () => {
                       {atelier.tpLabel}
                     </Link>
                   </Button>
-                  {atelier.cahierLink && (
-                    <Button asChild size="sm" variant="outline">
-                      <a href={atelier.cahierLink} target="_blank" rel="noopener noreferrer">
-                        <FileDown className="mr-2 h-4 w-4" />
-                        Cahier des charges
-                      </a>
-                    </Button>
-                  )}
+                  <Button asChild size="sm" variant="outline">
+                    <a href={atelier.cahierLink} target="_blank" rel="noopener noreferrer">
+                      <FileDown className="mr-2 h-4 w-4" />
+                      Cahier des charges
+                    </a>
+                  </Button>
                   <Button asChild size="sm" variant="outline">
                     <a href={atelier.githubLink} target="_blank" rel="noopener noreferrer">
                       <Github className="mr-2 h-4 w-4" />
