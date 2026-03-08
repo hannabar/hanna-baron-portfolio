@@ -281,9 +281,9 @@ const Veille = () => {
                     className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${
                       feedFilter === f.key
                         ? f.key === "ia"
-                          ? "bg-blue-500 text-white"
+                          ? "bg-pink-400 text-white"
                           : f.key === "bio"
-                          ? "bg-violet-500 text-white"
+                          ? "bg-rose-600 text-white"
                           : "bg-primary text-primary-foreground"
                         : "bg-secondary text-muted-foreground hover:text-foreground"
                     }`}
@@ -438,8 +438,8 @@ const Veille = () => {
                         <div
                           className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 font-bold text-sm text-white ${
                             post.catColor === "blue"
-                              ? "bg-gradient-to-br from-blue-500 to-cyan-500"
-                              : "bg-gradient-to-br from-violet-500 to-purple-600"
+                              ? "bg-gradient-to-br from-pink-400 to-rose-500"
+                              : "bg-gradient-to-br from-rose-500 to-pink-700"
                           }`}
                         >
                           {post.avatar}
@@ -452,8 +452,8 @@ const Veille = () => {
                             <span
                               className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${
                                 post.catColor === "blue"
-                                  ? "bg-blue-500/15 text-blue-400"
-                                  : "bg-violet-500/15 text-violet-400"
+                                  ? "bg-pink-400/15 text-pink-400"
+                                  : "bg-rose-600/15 text-rose-400"
                               }`}
                             >
                               {post.category}
