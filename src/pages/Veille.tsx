@@ -281,9 +281,9 @@ const Veille = () => {
                     className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${
                       feedFilter === f.key
                         ? f.key === "ia"
-                          ? "bg-blue-500 text-white"
+                          ? "bg-pink-400 text-white"
                           : f.key === "bio"
-                          ? "bg-violet-500 text-white"
+                          ? "bg-rose-600 text-white"
                           : "bg-primary text-primary-foreground"
                         : "bg-secondary text-muted-foreground hover:text-foreground"
                     }`}
