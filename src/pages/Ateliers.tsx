@@ -198,6 +198,25 @@ const Ateliers = () => {
                     </a>
                   </Button>
                 </div>
+
+                {/* Embedded Cahier des charges */}
+                {atelier.embedCahier && (
+                  <div className="px-8 pb-8 relative z-10">
+                    <h3 className="font-display font-semibold mb-4 flex items-center gap-2">
+                      <FileDown className="w-4 h-4 text-primary" />
+                      Cahier des charges
+                    </h3>
+                    <div className="rounded-xl overflow-hidden border border-border">
+                      <iframe
+                        src={atelier.embedCahier}
+                        width="100%"
+                        height="800px"
+                        allow="autoplay"
+                        className="bg-white"
+                      />
+                    </div>
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>
