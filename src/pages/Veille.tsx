@@ -145,24 +145,24 @@ const Veille = () => {
         {/* Decorative background */}
         <div className="absolute inset-0 pointer-events-none flex items-center justify-center" aria-hidden="true">
           {/* Smartphone outline */}
-          <svg viewBox="0 0 280 560" className="w-[320px] h-[640px] opacity-[0.07] text-primary" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg viewBox="0 0 280 560" className="w-[380px] h-[760px] opacity-[0.18] text-primary" fill="none" stroke="currentColor" strokeWidth="3">
             <rect x="10" y="10" width="260" height="540" rx="36" ry="36" />
             <rect x="24" y="60" width="232" height="420" rx="4" ry="4" />
             <circle cx="140" cy="510" r="16" />
             <rect x="110" y="28" width="60" height="8" rx="4" ry="4" />
           </svg>
           {/* Scattered social icons */}
-          <Heart className="absolute top-[12%] left-[8%] w-8 h-8 text-primary opacity-20 rotate-[-15deg]" />
-          <Heart className="absolute bottom-[18%] right-[6%] w-5 h-5 text-primary opacity-25 rotate-[10deg]" />
-          <Heart className="absolute top-[55%] left-[4%] w-4 h-4 text-primary opacity-15 rotate-[20deg]" />
-          <Repeat2 className="absolute top-[8%] right-[12%] w-7 h-7 text-primary opacity-20 rotate-[12deg]" />
-          <Repeat2 className="absolute bottom-[25%] left-[10%] w-5 h-5 text-primary opacity-25 rotate-[-8deg]" />
-          <Repeat2 className="absolute top-[40%] right-[5%] w-4 h-4 text-primary opacity-15" />
+          <Heart className="absolute top-[12%] left-[8%] w-10 h-10 text-primary/30" style={{ transform: 'rotate(-15deg)' }} />
+          <Heart className="absolute bottom-[18%] right-[6%] w-7 h-7 text-primary/25" style={{ transform: 'rotate(10deg)' }} />
+          <Heart className="absolute top-[55%] left-[4%] w-6 h-6 text-primary/20" style={{ transform: 'rotate(20deg)' }} />
+          <Repeat2 className="absolute top-[8%] right-[12%] w-9 h-9 text-primary/30" style={{ transform: 'rotate(12deg)' }} />
+          <Repeat2 className="absolute bottom-[25%] left-[10%] w-7 h-7 text-primary/25" style={{ transform: 'rotate(-8deg)' }} />
+          <Repeat2 className="absolute top-[40%] right-[5%] w-6 h-6 text-primary/20" />
           {/* Thumbs up SVGs */}
-          <svg className="absolute top-[15%] right-[8%] w-10 h-10 text-primary opacity-20 rotate-[-10deg]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
-          <svg className="absolute bottom-[12%] left-[15%] w-7 h-7 text-primary opacity-25 rotate-[15deg]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
-          <svg className="absolute top-[60%] right-[15%] w-6 h-6 text-primary opacity-15 rotate-[5deg]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
-          <svg className="absolute top-[30%] left-[6%] w-5 h-5 text-primary opacity-20 rotate-[-20deg]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+          <svg className="absolute top-[15%] right-[8%] w-12 h-12 text-primary/30" style={{ transform: 'rotate(-10deg)' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+          <svg className="absolute bottom-[12%] left-[15%] w-9 h-9 text-primary/25" style={{ transform: 'rotate(15deg)' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+          <svg className="absolute top-[60%] right-[15%] w-8 h-8 text-primary/20" style={{ transform: 'rotate(5deg)' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+          <svg className="absolute top-[30%] left-[6%] w-7 h-7 text-primary/25" style={{ transform: 'rotate(-20deg)' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
         </div>
         <div className="container-custom relative z-10">
           <motion.div
