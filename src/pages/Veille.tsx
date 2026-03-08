@@ -267,13 +267,14 @@ const Veille = () => {
                   {
                     handle: "@SciencesAvenir",
                     avatar: "SA",
-                    text: "Télémédecine augmentée : l'IA au service du diagnostic à distance",
+                    text: "L'IA ouvre un large champ des possibles en imagerie pulmonaire",
                     date: "22 jan. 2025",
                     category: "IA Médicale",
                     catColor: "blue",
                     likes: 204,
                     retweets: 78,
                     comments: 31,
+                    link: "https://www.thema-radiologie.fr/actualites/3481/les-progres-scientifiques-et-technologiques-ouvrent-le-champ-des-possibles-en-imagerie-pulmonaire.html",
                   },
                   {
                     handle: "@CNIL",
