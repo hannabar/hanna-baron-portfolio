@@ -452,8 +452,8 @@ const Veille = () => {
                             <span
                               className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${
                                 post.catColor === "blue"
-                                  ? "bg-blue-500/15 text-blue-400"
-                                  : "bg-violet-500/15 text-violet-400"
+                                  ? "bg-pink-400/15 text-pink-400"
+                                  : "bg-rose-600/15 text-rose-400"
                               }`}
                             >
                               {post.category}
