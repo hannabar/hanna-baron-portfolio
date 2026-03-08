@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { Brain, Scan, Fingerprint, Shield, AlertTriangle, Scale, Globe, Mail, Bell, Users } from "lucide-react";
+import { Brain, Scan, Fingerprint, Shield, AlertTriangle, Scale, Globe, Mail, Bell, Users, Heart, Repeat2, MessageCircle, Share } from "lucide-react";
 import dnaVideo from "@/assets/dna-animation.mp4";
 import fingerprintVideo from "@/assets/fingerprint-scan.mp4";
 import veilleBgVideo from "@/assets/veille-bg-animated.mp4";
