@@ -1,8 +1,9 @@
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
-import { motion } from "framer-motion";
-import { Brain, Scan, Fingerprint, Shield, AlertTriangle, Scale, Globe, Mail, Bell, Users, Heart, Repeat2, MessageCircle, Share } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Brain, Scan, Fingerprint, Shield, AlertTriangle, Scale, Globe, Mail, Bell, Users, Heart, Repeat2, MessageCircle, Share, ExternalLink } from "lucide-react";
 import dnaVideo from "@/assets/dna-animation.mp4";
 import fingerprintVideo from "@/assets/fingerprint-scan.mp4";
 import veilleBgVideo from "@/assets/veille-bg-animated.mp4";
@@ -96,6 +97,8 @@ const veilleSujets = [
 ];
 
 const Veille = () => {
+  const [feedFilter, setFeedFilter] = useState<"all" | "ia" | "bio">("all");
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -261,140 +264,229 @@ const Veille = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-xl font-bold mb-8 flex items-center gap-3">
-              <MessageCircle className="w-6 h-6 text-primary" />
-              Mon feed de veille
-            </h2>
+            <div className="flex items-center justify-between flex-wrap gap-4 mb-8">
+              <h2 className="font-display text-xl font-bold flex items-center gap-3">
+                <MessageCircle className="w-6 h-6 text-primary" />
+                Mon feed de veille
+              </h2>
+              <div className="flex gap-2">
+                {[
+                  { key: "all" as const, label: "Tous" },
+                  { key: "ia" as const, label: "IA Médicale" },
+                  { key: "bio" as const, label: "Biométrie" },
+                ].map((f) => (
+                  <button
+                    key={f.key}
+                    onClick={() => setFeedFilter(f.key)}
+                    className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${
+                      feedFilter === f.key
+                        ? f.key === "ia"
+                          ? "bg-blue-500 text-white"
+                          : f.key === "bio"
+                          ? "bg-violet-500 text-white"
+                          : "bg-primary text-primary-foreground"
+                        : "bg-secondary text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    {f.label}
+                  </button>
+                ))}
+              </div>
+            </div>
             <div className="grid md:grid-cols-2 gap-4">
-              {[
-                {
-                  handle: "@FuturaSciences",
-                  avatar: "FS",
-                  text: "L'IA détecte le cancer du sein avec 94% de précision",
-                  date: "12 jan. 2025",
-                  category: "IA Médicale",
-                  catColor: "blue",
-                  likes: 248,
-                  retweets: 87,
-                  comments: 34,
-                },
-                {
-                  handle: "@CNIL",
-                  avatar: "CN",
-                  text: "Les données biométriques classées données sensibles selon l'article 9 du RGPD",
-                  date: "28 fév. 2025",
-                  category: "Biométrie",
-                  catColor: "violet",
-                  likes: 312,
-                  retweets: 145,
-                  comments: 56,
-                },
-                {
-                  handle: "@Numerama",
-                  avatar: "Nu",
-                  text: "EU AI Act : interdiction de la reconnaissance faciale en temps réel depuis février 2025",
-                  date: "3 fév. 2025",
-                  category: "Biométrie",
-                  catColor: "violet",
-                  likes: 521,
-                  retweets: 203,
-                  comments: 89,
-                },
-                {
-                  handle: "@01net",
-                  avatar: "01",
-                  text: "Deep Learning et réseaux de neurones révolutionnent l'analyse d'IRM",
-                  date: "18 déc. 2024",
-                  category: "IA Médicale",
-                  catColor: "blue",
-                  likes: 176,
-                  retweets: 64,
-                  comments: 22,
-                },
-                {
-                  handle: "@UsineDigitale",
-                  avatar: "UD",
-                  text: "Deepfakes et failles biométriques : les nouveaux risques en 2025",
-                  date: "10 jan. 2025",
-                  category: "Biométrie",
-                  catColor: "violet",
-                  likes: 389,
-                  retweets: 112,
-                  comments: 47,
-                },
-                {
-                  handle: "@SciencesAvenir",
-                  avatar: "SA",
-                  text: "Télémédecine augmentée : l'IA au service du diagnostic à distance",
-                  date: "22 jan. 2025",
-                  category: "IA Médicale",
-                  catColor: "blue",
-                  likes: 204,
-                  retweets: 78,
-                  comments: 31,
-                },
-              ].map((post, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.08 }}
-                  className="rounded-xl border border-border bg-card p-5 hover:border-primary/30 transition-colors"
-                >
-                  <div className="flex items-start gap-3">
-                    {/* Avatar */}
-                    <div
-                      className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 font-bold text-sm text-white ${
-                        post.catColor === "blue"
-                          ? "bg-gradient-to-br from-blue-500 to-cyan-500"
-                          : "bg-gradient-to-br from-violet-500 to-purple-600"
-                      }`}
+              <AnimatePresence mode="popLayout">
+                {[
+                  {
+                    handle: "@FuturaSciences",
+                    avatar: "FS",
+                    text: "L'IA décode les tumeurs mieux que l'œil humain dans la lutte contre le cancer",
+                    date: "17 oct. 2024",
+                    category: "IA Médicale",
+                    catColor: "blue",
+                    likes: 248,
+                    retweets: 87,
+                    comments: 34,
+                    link: "https://www.futura-sciences.com/sante/actualites/cancer-sein-intelligence-artificielle-decode-tumeurs-mieux-oeil-humain-lutte-cancer-116457/",
+                  },
+                  {
+                    handle: "@CNIL",
+                    avatar: "CN",
+                    text: "Biométrie sur les lieux de travail : publication d'un règlement type",
+                    date: "2024",
+                    category: "Biométrie",
+                    catColor: "violet",
+                    likes: 312,
+                    retweets: 145,
+                    comments: 56,
+                    link: "https://www.cnil.fr/fr/biometrie-sur-les-lieux-de-travail-publication-dun-reglement-type",
+                  },
+                  {
+                    handle: "@TouteLEurope",
+                    avatar: "TE",
+                    text: "EU AI Act : interdiction de la reconnaissance faciale en temps réel depuis le 2 février 2025",
+                    date: "4 août 2025",
+                    category: "Biométrie",
+                    catColor: "violet",
+                    likes: 521,
+                    retweets: 203,
+                    comments: 89,
+                    link: "https://www.touteleurope.eu/economie-et-social/intelligence-artificielle-que-fait-l-union-europeenne/",
+                  },
+                  {
+                    handle: "@FuturaSciences",
+                    avatar: "FS",
+                    text: "Cancer du sein : une nouvelle technologie IA promet une meilleure détection",
+                    date: "5 oct. 2024",
+                    category: "IA Médicale",
+                    catColor: "blue",
+                    likes: 193,
+                    retweets: 72,
+                    comments: 28,
+                    link: "https://www.futura-sciences.com/sante/actualites/cancer-sein-cancer-sein-nouvelle-technologie-ia-promet-meilleure-detection-116440/",
+                  },
+                  {
+                    handle: "@Numerama",
+                    avatar: "Nu",
+                    text: "EU AI Act : interdiction des systèmes d'IA à risque inacceptable depuis février 2025",
+                    date: "3 fév. 2025",
+                    category: "Biométrie",
+                    catColor: "violet",
+                    likes: 445,
+                    retweets: 178,
+                    comments: 65,
+                    link: "https://intelligence-artificielle.developpez.com/actu/368699/",
+                  },
+                  {
+                    handle: "@01net",
+                    avatar: "01",
+                    text: "Deep Learning et réseaux de neurones révolutionnent l'analyse d'IRM",
+                    date: "18 déc. 2024",
+                    category: "IA Médicale",
+                    catColor: "blue",
+                    likes: 176,
+                    retweets: 64,
+                    comments: 22,
+                  },
+                  {
+                    handle: "@UsineDigitale",
+                    avatar: "UD",
+                    text: "Deepfakes et failles biométriques : les nouveaux risques en 2025",
+                    date: "10 jan. 2025",
+                    category: "Biométrie",
+                    catColor: "violet",
+                    likes: 389,
+                    retweets: 112,
+                    comments: 47,
+                  },
+                  {
+                    handle: "@SciencesAvenir",
+                    avatar: "SA",
+                    text: "Télémédecine augmentée : l'IA au service du diagnostic à distance",
+                    date: "22 jan. 2025",
+                    category: "IA Médicale",
+                    catColor: "blue",
+                    likes: 204,
+                    retweets: 78,
+                    comments: 31,
+                  },
+                  {
+                    handle: "@CNIL",
+                    avatar: "CN",
+                    text: "Biométrie dans les smartphones : quels principes respecter ?",
+                    date: "2024",
+                    category: "Biométrie",
+                    catColor: "violet",
+                    likes: 267,
+                    retweets: 98,
+                    comments: 41,
+                    link: "https://www.cnil.fr/fr/biometrie-dans-les-smartphones-des-particuliers-application-du-cadre-de-protection-des-donnees",
+                  },
+                  {
+                    handle: "@FuturaSciences",
+                    avatar: "FS",
+                    text: "Un modèle d'IA peut prédire le cancer du sein à cinq ans",
+                    date: "2024",
+                    category: "IA Médicale",
+                    catColor: "blue",
+                    likes: 318,
+                    retweets: 134,
+                    comments: 52,
+                    link: "https://www.thema-radiologie.fr/actualites/3839/un-modele-d-ia-peut-predire-le-cancer-du-sein-a-cinq-ans.html",
+                  },
+                ]
+                  .filter((post) =>
+                    feedFilter === "all"
+                      ? true
+                      : feedFilter === "ia"
+                      ? post.catColor === "blue"
+                      : post.catColor === "violet"
+                  )
+                  .map((post, i) => (
+                    <motion.a
+                      key={post.text}
+                      href={post.link || "#"}
+                      target={post.link ? "_blank" : undefined}
+                      rel={post.link ? "noopener noreferrer" : undefined}
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.95 }}
+                      transition={{ delay: i * 0.05 }}
+                      layout
+                      className="rounded-xl border border-border bg-card p-5 hover:border-primary/30 transition-colors block group"
                     >
-                      {post.avatar}
-                    </div>
-
-                    <div className="flex-1 min-w-0">
-                      {/* Header */}
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <span className="font-bold text-sm">{post.handle}</span>
-                        <span className="text-xs text-muted-foreground">· {post.date}</span>
-                        <span
-                          className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${
+                      <div className="flex items-start gap-3">
+                        <div
+                          className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 font-bold text-sm text-white ${
                             post.catColor === "blue"
-                              ? "bg-blue-500/15 text-blue-400"
-                              : "bg-violet-500/15 text-violet-400"
+                              ? "bg-gradient-to-br from-blue-500 to-cyan-500"
+                              : "bg-gradient-to-br from-violet-500 to-purple-600"
                           }`}
                         >
-                          {post.category}
-                        </span>
-                      </div>
+                          {post.avatar}
+                        </div>
 
-                      {/* Content */}
-                      <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{post.text}</p>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <span className="font-bold text-sm">{post.handle}</span>
+                            <span className="text-xs text-muted-foreground">· {post.date}</span>
+                            <span
+                              className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${
+                                post.catColor === "blue"
+                                  ? "bg-blue-500/15 text-blue-400"
+                                  : "bg-violet-500/15 text-violet-400"
+                              }`}
+                            >
+                              {post.category}
+                            </span>
+                            {post.link && (
+                              <ExternalLink className="w-3 h-3 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                            )}
+                          </div>
 
-                      {/* Actions */}
-                      <div className="flex items-center gap-6 mt-3 text-muted-foreground">
-                        <span className="flex items-center gap-1.5 text-xs hover:text-blue-400 transition-colors cursor-default">
-                          <MessageCircle className="w-3.5 h-3.5" />
-                          {post.comments}
-                        </span>
-                        <span className="flex items-center gap-1.5 text-xs hover:text-green-400 transition-colors cursor-default">
-                          <Repeat2 className="w-3.5 h-3.5" />
-                          {post.retweets}
-                        </span>
-                        <span className="flex items-center gap-1.5 text-xs hover:text-rose-400 transition-colors cursor-default">
-                          <Heart className="w-3.5 h-3.5" />
-                          {post.likes}
-                        </span>
-                        <span className="flex items-center gap-1.5 text-xs hover:text-primary transition-colors cursor-default">
-                          <Share className="w-3.5 h-3.5" />
-                        </span>
+                          <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{post.text}</p>
+
+                          <div className="flex items-center gap-6 mt-3 text-muted-foreground">
+                            <span className="flex items-center gap-1.5 text-xs">
+                              <MessageCircle className="w-3.5 h-3.5" />
+                              {post.comments}
+                            </span>
+                            <span className="flex items-center gap-1.5 text-xs">
+                              <Repeat2 className="w-3.5 h-3.5" />
+                              {post.retweets}
+                            </span>
+                            <span className="flex items-center gap-1.5 text-xs">
+                              <Heart className="w-3.5 h-3.5" />
+                              {post.likes}
+                            </span>
+                            <span className="flex items-center gap-1.5 text-xs">
+                              <Share className="w-3.5 h-3.5" />
+                            </span>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+                    </motion.a>
+                  ))}
+              </AnimatePresence>
             </div>
           </motion.div>
         </div>
