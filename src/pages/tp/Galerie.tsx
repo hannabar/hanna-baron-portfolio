@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import screenshot1 from "@/assets/galerie-screenshot-1.png";
 import screenshot2 from "@/assets/galerie-screenshot-2.png";
 import screenshot3 from "@/assets/galerie-screenshot-3.png";
-import galerieVideo from "@/assets/galerie-hero-video.mp4";
+import galerieVideo from "@/assets/galerie-hero-animated.mp4";
 
 const Galerie = () => {
   return (
