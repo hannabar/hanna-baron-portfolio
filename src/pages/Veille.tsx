@@ -121,7 +121,7 @@ const Veille = () => {
               les évolutions et adapter ses compétences. Voici les outils et sources que j'utilise au quotidien.
             </p>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 gap-6">
               {/* Sites — IA médicale */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
