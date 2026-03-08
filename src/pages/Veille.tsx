@@ -243,13 +243,14 @@ const Veille = () => {
                   {
                     handle: "@01net",
                     avatar: "01",
-                    text: "Deep Learning et réseaux de neurones révolutionnent l'analyse d'IRM",
+                    text: "L'IA vs le radiologue dans l'interprétation de la radiographie pulmonaire",
                     date: "18 déc. 2024",
                     category: "IA Médicale",
                     catColor: "blue",
                     likes: 176,
                     retweets: 64,
                     comments: 22,
+                    link: "https://www.thema-radiologie.fr/actualites/3953/lia-vs-le-radiologue-dans-linterpretation-de-la-radiographie-pulmonaire.html",
                   },
                   {
                     handle: "@UsineDigitale",
