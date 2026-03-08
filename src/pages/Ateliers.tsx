@@ -59,7 +59,8 @@ const ateliers = [
     tpLink: "/tp/ppe-main",
     tpLabel: "PPE GSB",
     bgVideo: gsbBgVideo,
-    cahierLink: "https://docs.google.com/document/d/1yQOQrlsyGkEufn0FIOQtpcAaWkXpicSM/edit?usp=sharing&ouid=102439132412217033167&rtpof=true&sd=true",
+    cahierLink: "",
+    embedCahier: "https://docs.google.com/document/d/1yQOQrlsyGkEufn0FIOQtpcAaWkXpicSM/edit?usp=sharing&ouid=102439132412217033167&rtpof=true&sd=true",
   },
 ];
 
@@ -182,12 +183,14 @@ const Ateliers = () => {
                       {atelier.tpLabel}
                     </Link>
                   </Button>
-                  <Button asChild size="sm" variant="outline">
-                    <a href={atelier.cahierLink} target="_blank" rel="noopener noreferrer">
-                      <FileDown className="mr-2 h-4 w-4" />
-                      Cahier des charges
-                    </a>
-                  </Button>
+                  {atelier.cahierLink && (
+                    <Button asChild size="sm" variant="outline">
+                      <a href={atelier.cahierLink} target="_blank" rel="noopener noreferrer">
+                        <FileDown className="mr-2 h-4 w-4" />
+                        Cahier des charges
+                      </a>
+                    </Button>
+                  )}
                   <Button asChild size="sm" variant="outline">
                     <a href={atelier.githubLink} target="_blank" rel="noopener noreferrer">
                       <Github className="mr-2 h-4 w-4" />
@@ -195,6 +198,25 @@ const Ateliers = () => {
                     </a>
                   </Button>
                 </div>
+
+                {/* Embedded Cahier des charges */}
+                {atelier.embedCahier && (
+                  <div className="px-8 pb-8 relative z-10">
+                    <h3 className="font-display font-semibold mb-4 flex items-center gap-2">
+                      <FileDown className="w-4 h-4 text-primary" />
+                      Cahier des charges
+                    </h3>
+                    <div className="rounded-xl overflow-hidden border border-border">
+                      <iframe
+                        src={atelier.embedCahier}
+                        width="100%"
+                        height="800px"
+                        allow="autoplay"
+                        className="bg-white"
+                      />
+                    </div>
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>
