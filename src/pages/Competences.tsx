@@ -2,7 +2,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { Code, Database, Shield, Wrench, Users, BookOpen } from "lucide-react";
+import { Code, Database, Shield, Wrench, Users, BookOpen, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import competencesBgVideo from "@/assets/competences-bg-animated.mp4";
 
 const technicalSkills = [
@@ -234,6 +235,24 @@ const Competences = () => {
                 </div>
               ))}
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Tableau de Synthèse */}
+      <section className="section-padding bg-card/30">
+        <div className="container-custom text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <Button asChild size="lg" variant="outline">
+              <a href="/docs/TABLEAU_SYNTHESE_E5_2026.xlsx" download>
+                <Download className="mr-2 h-4 w-4" />
+                Tableau de Synthèse
+              </a>
+            </Button>
           </motion.div>
         </div>
       </section>
