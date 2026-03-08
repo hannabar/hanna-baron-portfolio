@@ -438,8 +438,8 @@ const Veille = () => {
                         <div
                           className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 font-bold text-sm text-white ${
                             post.catColor === "blue"
-                              ? "bg-gradient-to-br from-blue-500 to-cyan-500"
-                              : "bg-gradient-to-br from-violet-500 to-purple-600"
+                              ? "bg-gradient-to-br from-pink-400 to-rose-500"
+                              : "bg-gradient-to-br from-rose-500 to-pink-700"
                           }`}
                         >
                           {post.avatar}
