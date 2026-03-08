@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
 import { Calendar, MapPin, Users, Code, CheckCircle } from "lucide-react";
-import okdomLogo from "@/assets/okdom-logo-real.webp";
+import okdomLogo from "@/assets/okdom-logo-square.png";
 import okdomVideo from "@/assets/okdom-animated.mp4";
 
 const OKDOM = () => {
