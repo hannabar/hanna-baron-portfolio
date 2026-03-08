@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
 import { Calendar, MapPin, Users, Code, CheckCircle } from "lucide-react";
-import okdomLogo from "@/assets/okdom-logo-real.webp";
+import okdomLogo from "@/assets/okdom-logo-square.png";
 import okdomVideo from "@/assets/okdom-animated.mp4";
 
 const OKDOM = () => {
@@ -46,8 +46,8 @@ const technologies = [
             >
               <div className="glass-card rounded-2xl p-8">
                 <div className="flex items-start gap-6 mb-8">
-                  <div className="h-16 px-4 rounded-xl overflow-hidden shrink-0 bg-[#0d7377] flex items-center justify-center">
-                    <img src={okdomLogo} alt="Logo OKDOM" className="h-8 w-auto object-contain" />
+                  <div className="w-24 h-24 rounded-xl overflow-hidden shrink-0">
+                    <img src={okdomLogo} alt="Logo OKDOM" className="w-full h-full object-cover" />
                   </div>
                   <div>
                     <h2 className="font-display text-2xl font-bold mb-2">OKDOM</h2>
