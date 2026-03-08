@@ -33,7 +33,7 @@ const ateliers = [
     tpLink: "/tp/ppe-android-java",
     tpLabel: "PPE Android Java",
     bgVideo: medicineAppBgVideo,
-    cahierLink: "/docs/cahier_des_charges_PPE1.pdf",
+    cahierLink: "https://drive.google.com/file/d/1FYp_kHn9XAypf-bVAHYxeHdkpZ7G3sU8/view?usp=drive_link",
   },
   {
     title: "GSB - Gestion des Frais",
