@@ -110,147 +110,31 @@ const Veille = () => {
       />
 
       {/* Comment j'effectue ma veille */}
-      <section className="py-12 px-6">
+      <section className="pt-12 pb-6 px-6">
         <div className="container-custom">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-card rounded-2xl p-8"
           >
-            <h2 className="font-display text-xl font-bold mb-2">Comment j'effectue ma veille</h2>
-            <p className="text-muted-foreground mb-8">
-              La veille technologique est essentielle dans le secteur informatique pour anticiper 
-              les évolutions et adapter ses compétences. Voici les outils et sources que j'utilise au quotidien.
-            </p>
-
-            <div className="grid grid-cols-1 gap-6">
-              {/* Sites — IA médicale */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="rounded-xl border border-border bg-secondary/30 p-5"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Globe className="w-5 h-5 text-primary" />
+            <h2 className="font-display text-lg font-bold mb-4">Comment j'effectue ma veille</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {[
+                { icon: Globe, title: "Sites spécialisés", desc: "Futura Sciences, CNIL, 01net..." },
+                { icon: Mail, title: "Newsletters", desc: "Usine Digitale, Numerama Règle 30..." },
+                { icon: Bell, title: "Alertes Google", desc: "Configurées sur mes thèmes" },
+                { icon: Users, title: "Réseaux sociaux", desc: "LinkedIn, Twitter/X" },
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-3 rounded-xl border border-border bg-card p-3">
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                    <item.icon className="w-4 h-4 text-primary" />
                   </div>
-                  <h3 className="font-display font-semibold text-sm">Sites — IA médicale</h3>
-                </div>
-                <ul className="space-y-2">
-                  {[
-                    "Futura Sciences — futura-sciences.com",
-                    "01net.com",
-                    "Numerama.com",
-                    "Le Monde (Tech) — lemonde.fr/pixels",
-                    "Sciences et Avenir — sciencesetavenir.fr",
-                  ].map((site, i) => (
-                    <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-primary shrink-0" />
-                      {site}
-                    </li>
-                  ))}
-                </ul>
-
-                <h4 className="font-display font-semibold text-sm mt-6 mb-3 text-primary/80">Sites — Biométrie / RGPD</h4>
-                <ul className="space-y-2">
-                  {[
-                    "CNIL.fr — site officiel",
-                    "Nextinpact.com",
-                    "L'Usine Digitale — usine-digitale.fr",
-                    "Le Monde Informatique — lemondeinformatique.fr",
-                  ].map((site, i) => (
-                    <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-primary shrink-0" />
-                      {site}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-
-              {/* Newsletters */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="rounded-xl border border-border bg-secondary/30 p-5"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-primary" />
+                  <div className="min-w-0">
+                    <div className="font-semibold text-xs">{item.title}</div>
+                    <div className="text-[11px] text-muted-foreground truncate">{item.desc}</div>
                   </div>
-                  <h3 className="font-display font-semibold text-sm">Newsletters</h3>
                 </div>
-                <ul className="space-y-2">
-                  {[
-                    "L'Usine Digitale — hebdomadaire tech",
-                    "Numerama Règle 30 — vie privée et données",
-                    "CNIL Newsletter — actualités RGPD",
-                  ].map((nl, i) => (
-                    <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-primary shrink-0" />
-                      {nl}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-
-              {/* Alertes Google */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="rounded-xl border border-border bg-secondary/30 p-5"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Bell className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="font-display font-semibold text-sm">Alertes Google</h3>
-                </div>
-                <div className="space-y-2">
-                  {[
-                    "IA imagerie médicale",
-                    "biométrie données personnelles",
-                    "reconnaissance faciale France",
-                  ].map((alert, i) => (
-                    <span key={i} className="inline-block text-xs px-3 py-1.5 rounded-full bg-primary/10 text-primary font-medium mr-1 mb-1">
-                      {alert}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* Réseaux sociaux — kept as before */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 }}
-                className="rounded-xl border border-border bg-secondary/30 p-5"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Users className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="font-display font-semibold text-sm">Réseaux sociaux</h3>
-                </div>
-                <ul className="space-y-2">
-                  {[
-                    "LinkedIn : experts IA santé",
-                    "Twitter/X : @CNIL, @MIT_CSAIL",
-                  ].map((rs, i) => (
-                    <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-primary shrink-0" />
-                      {rs}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
