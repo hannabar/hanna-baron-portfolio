@@ -46,8 +46,8 @@ const technologies = [
             >
               <div className="glass-card rounded-2xl p-8">
                 <div className="flex items-start gap-6 mb-8">
-                  <div className="w-24 h-24 rounded-xl overflow-hidden shrink-0">
-                    <img src={okdomLogo} alt="Logo OKDOM" className="w-full h-full object-cover" />
+                  <div className="w-24 h-24 rounded-xl overflow-hidden shrink-0 bg-[#0d7377] flex items-center justify-center p-2">
+                    <img src={okdomLogo} alt="Logo OKDOM" className="w-full h-auto object-contain" />
                   </div>
                   <div>
                     <h2 className="font-display text-2xl font-bold mb-2">OKDOM</h2>
