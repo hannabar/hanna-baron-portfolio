@@ -141,30 +141,8 @@ const Veille = () => {
       </section>
 
       {/* Feed de veille */}
-      <section className="py-12 px-6 relative overflow-hidden">
-        {/* Decorative background */}
-        <div className="absolute inset-0 pointer-events-none flex items-center justify-center" aria-hidden="true">
-          {/* Smartphone outline */}
-          <svg viewBox="0 0 280 560" className="w-[380px] h-[760px] opacity-[0.18] text-primary" fill="none" stroke="currentColor" strokeWidth="3">
-            <rect x="10" y="10" width="260" height="540" rx="36" ry="36" />
-            <rect x="24" y="60" width="232" height="420" rx="4" ry="4" />
-            <circle cx="140" cy="510" r="16" />
-            <rect x="110" y="28" width="60" height="8" rx="4" ry="4" />
-          </svg>
-          {/* Scattered social icons */}
-          <Heart className="absolute top-[12%] left-[8%] w-10 h-10 text-primary/30" style={{ transform: 'rotate(-15deg)' }} />
-          <Heart className="absolute bottom-[18%] right-[6%] w-7 h-7 text-primary/25" style={{ transform: 'rotate(10deg)' }} />
-          <Heart className="absolute top-[55%] left-[4%] w-6 h-6 text-primary/20" style={{ transform: 'rotate(20deg)' }} />
-          <Repeat2 className="absolute top-[8%] right-[12%] w-9 h-9 text-primary/30" style={{ transform: 'rotate(12deg)' }} />
-          <Repeat2 className="absolute bottom-[25%] left-[10%] w-7 h-7 text-primary/25" style={{ transform: 'rotate(-8deg)' }} />
-          <Repeat2 className="absolute top-[40%] right-[5%] w-6 h-6 text-primary/20" />
-          {/* Thumbs up SVGs */}
-          <svg className="absolute top-[15%] right-[8%] w-12 h-12 text-primary/30" style={{ transform: 'rotate(-10deg)' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
-          <svg className="absolute bottom-[12%] left-[15%] w-9 h-9 text-primary/25" style={{ transform: 'rotate(15deg)' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
-          <svg className="absolute top-[60%] right-[15%] w-8 h-8 text-primary/20" style={{ transform: 'rotate(5deg)' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
-          <svg className="absolute top-[30%] left-[6%] w-7 h-7 text-primary/25" style={{ transform: 'rotate(-20deg)' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
-        </div>
-        <div className="container-custom relative z-10">
+      <section className="py-12 px-6 relative">
+        <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -199,203 +177,237 @@ const Veille = () => {
                 ))}
               </div>
             </div>
-            <div className="grid md:grid-cols-2 gap-4">
-              <AnimatePresence mode="popLayout">
-                {[
-                  {
-                    handle: "@FuturaSciences",
-                    avatar: "FS",
-                    text: "L'IA décode les tumeurs mieux que l'œil humain dans la lutte contre le cancer",
-                    date: "17 oct. 2024",
-                    category: "IA Médicale",
-                    catColor: "blue",
-                    likes: 248,
-                    retweets: 87,
-                    comments: 34,
-                    link: "https://www.futura-sciences.com/sante/actualites/cancer-sein-intelligence-artificielle-decode-tumeurs-mieux-oeil-humain-lutte-cancer-116457/",
-                  },
-                  {
-                    handle: "@CNIL",
-                    avatar: "CN",
-                    text: "Biométrie sur les lieux de travail : publication d'un règlement type",
-                    date: "2024",
-                    category: "Biométrie",
-                    catColor: "violet",
-                    likes: 312,
-                    retweets: 145,
-                    comments: 56,
-                    link: "https://www.cnil.fr/fr/biometrie-sur-les-lieux-de-travail-publication-dun-reglement-type",
-                  },
-                  {
-                    handle: "@TouteLEurope",
-                    avatar: "TE",
-                    text: "EU AI Act : interdiction de la reconnaissance faciale en temps réel depuis le 2 février 2025",
-                    date: "4 août 2025",
-                    category: "Biométrie",
-                    catColor: "violet",
-                    likes: 521,
-                    retweets: 203,
-                    comments: 89,
-                    link: "https://www.touteleurope.eu/economie-et-social/intelligence-artificielle-que-fait-l-union-europeenne/",
-                  },
-                  {
-                    handle: "@FuturaSciences",
-                    avatar: "FS",
-                    text: "Le CEA obtient les images IRM du cerveau les plus précises au monde pour mieux comprendre Alzheimer",
-                    date: "2 avril 2024",
-                    category: "IA Médicale",
-                    catColor: "blue",
-                    likes: 193,
-                    retweets: 72,
-                    comments: 28,
-                    link: "https://www.futura-sciences.com/sante/actualites/medecine-cea-obtient-images-irm-cerveau-plus-precises-monde-mieux-comprendre-alzheimer-94013/",
-                  },
-                  {
-                    handle: "@Numerama",
-                    avatar: "Nu",
-                    text: "EU AI Act : interdiction des systèmes d'IA à risque inacceptable depuis février 2025",
-                    date: "3 fév. 2025",
-                    category: "Biométrie",
-                    catColor: "violet",
-                    likes: 445,
-                    retweets: 178,
-                    comments: 65,
-                    link: "https://intelligence-artificielle.developpez.com/actu/368699/",
-                  },
-                  {
-                    handle: "@01net",
-                    avatar: "01",
-                    text: "L'IA vs le radiologue dans l'interprétation de la radiographie pulmonaire",
-                    date: "18 déc. 2024",
-                    category: "IA Médicale",
-                    catColor: "blue",
-                    likes: 176,
-                    retweets: 64,
-                    comments: 22,
-                    link: "https://www.thema-radiologie.fr/actualites/3953/lia-vs-le-radiologue-dans-linterpretation-de-la-radiographie-pulmonaire.html",
-                  },
-                  {
-                    handle: "@UsineDigitale",
-                    avatar: "UD",
-                    text: "Deepfakes et failles biométriques : les nouveaux risques en 2025",
-                    date: "10 jan. 2025",
-                    category: "Biométrie",
-                    catColor: "violet",
-                    likes: 389,
-                    retweets: 112,
-                    comments: 47,
-                    link: "https://www.usine-digitale.fr/article/la-prevention-des-deepfakes-doit-etre-une-priorite-absolue-pour-les-forces-de-l-ordre-d-apres-europol.N1999797",
-                  },
-                  {
-                    handle: "@SciencesAvenir",
-                    avatar: "SA",
-                    text: "L'IA ouvre un large champ des possibles en imagerie pulmonaire",
-                    date: "22 jan. 2025",
-                    category: "IA Médicale",
-                    catColor: "blue",
-                    likes: 204,
-                    retweets: 78,
-                    comments: 31,
-                    link: "https://www.thema-radiologie.fr/actualites/3481/les-progres-scientifiques-et-technologiques-ouvrent-le-champ-des-possibles-en-imagerie-pulmonaire.html",
-                  },
-                  {
-                    handle: "@CNIL",
-                    avatar: "CN",
-                    text: "Biométrie dans les smartphones : quels principes respecter ?",
-                    date: "2024",
-                    category: "Biométrie",
-                    catColor: "violet",
-                    likes: 267,
-                    retweets: 98,
-                    comments: 41,
-                    link: "https://www.cnil.fr/fr/biometrie-dans-les-smartphones-des-particuliers-application-du-cadre-de-protection-des-donnees",
-                  },
-                  {
-                    handle: "@FuturaSciences",
-                    avatar: "FS",
-                    text: "Un modèle d'IA peut prédire le cancer du sein à cinq ans",
-                    date: "2024",
-                    category: "IA Médicale",
-                    catColor: "blue",
-                    likes: 318,
-                    retweets: 134,
-                    comments: 52,
-                    link: "https://www.thema-radiologie.fr/actualites/3839/un-modele-d-ia-peut-predire-le-cancer-du-sein-a-cinq-ans.html",
-                  },
-                ]
-                  .filter((post) =>
-                    feedFilter === "all"
-                      ? true
-                      : feedFilter === "ia"
-                      ? post.catColor === "blue"
-                      : post.catColor === "violet"
-                  )
-                  .map((post, i) => (
-                    <motion.a
-                      key={post.text}
-                      href={post.link || "#"}
-                      target={post.link ? "_blank" : undefined}
-                      rel={post.link ? "noopener noreferrer" : undefined}
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.95 }}
-                      transition={{ delay: i * 0.05 }}
-                      layout
-                      className="rounded-xl border border-border bg-card p-5 hover:border-primary/30 transition-colors block group"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div
-                          className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 font-bold text-sm text-white ${
-                            post.catColor === "blue"
-                              ? "bg-gradient-to-br from-pink-400 to-rose-500"
-                              : "bg-gradient-to-br from-rose-500 to-pink-700"
-                          }`}
-                        >
-                          {post.avatar}
-                        </div>
 
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2 flex-wrap">
-                            <span className="font-bold text-sm">{post.handle}</span>
-                            <span className="text-xs text-muted-foreground">· {post.date}</span>
-                            <span
-                              className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${
-                                post.catColor === "blue"
-                                  ? "bg-pink-400/15 text-pink-400"
-                                  : "bg-rose-600/15 text-rose-400"
-                              }`}
+            {/* Smartphone frame with feed inside */}
+            <div className="relative flex justify-center">
+              {/* Decorative scattered icons around the phone */}
+              <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+                <Heart className="absolute top-[5%] left-[5%] w-10 h-10 text-primary/25" style={{ transform: 'rotate(-15deg)' }} />
+                <Heart className="absolute bottom-[10%] right-[3%] w-7 h-7 text-primary/20" style={{ transform: 'rotate(10deg)' }} />
+                <Heart className="absolute top-[60%] left-[2%] w-6 h-6 text-primary/15" style={{ transform: 'rotate(20deg)' }} />
+                <Repeat2 className="absolute top-[3%] right-[8%] w-9 h-9 text-primary/25" style={{ transform: 'rotate(12deg)' }} />
+                <Repeat2 className="absolute bottom-[20%] left-[8%] w-7 h-7 text-primary/20" style={{ transform: 'rotate(-8deg)' }} />
+                <Repeat2 className="absolute top-[40%] right-[2%] w-6 h-6 text-primary/15" />
+                <svg className="absolute top-[10%] right-[5%] w-12 h-12 text-primary/25" style={{ transform: 'rotate(-10deg)' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+                <svg className="absolute bottom-[8%] left-[10%] w-9 h-9 text-primary/20" style={{ transform: 'rotate(15deg)' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+                <svg className="absolute top-[50%] right-[6%] w-8 h-8 text-primary/15" style={{ transform: 'rotate(5deg)' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+                <svg className="absolute top-[28%] left-[4%] w-7 h-7 text-primary/20" style={{ transform: 'rotate(-20deg)' }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+              </div>
+
+              {/* Phone frame */}
+              <div className="relative w-full max-w-[420px] mx-auto">
+                <div className="rounded-[3rem] border-[6px] border-primary/20 bg-card/50 backdrop-blur-sm shadow-2xl shadow-primary/10 p-2">
+                  {/* Notch */}
+                  <div className="flex justify-center mb-2">
+                    <div className="w-28 h-6 bg-primary/10 rounded-full" />
+                  </div>
+                  {/* Screen area - scrollable feed */}
+                  <div className="rounded-[2.2rem] bg-background/80 overflow-hidden">
+                    <div className="max-h-[700px] overflow-y-auto px-4 py-4 space-y-3">
+                      <AnimatePresence mode="popLayout">
+                        {[
+                          {
+                            handle: "@FuturaSciences",
+                            avatar: "FS",
+                            text: "L'IA décode les tumeurs mieux que l'œil humain dans la lutte contre le cancer",
+                            date: "17 oct. 2024",
+                            category: "IA Médicale",
+                            catColor: "blue",
+                            likes: 248,
+                            retweets: 87,
+                            comments: 34,
+                            link: "https://www.futura-sciences.com/sante/actualites/cancer-sein-intelligence-artificielle-decode-tumeurs-mieux-oeil-humain-lutte-cancer-116457/",
+                          },
+                          {
+                            handle: "@CNIL",
+                            avatar: "CN",
+                            text: "Biométrie sur les lieux de travail : publication d'un règlement type",
+                            date: "2024",
+                            category: "Biométrie",
+                            catColor: "violet",
+                            likes: 312,
+                            retweets: 145,
+                            comments: 56,
+                            link: "https://www.cnil.fr/fr/biometrie-sur-les-lieux-de-travail-publication-dun-reglement-type",
+                          },
+                          {
+                            handle: "@TouteLEurope",
+                            avatar: "TE",
+                            text: "EU AI Act : interdiction de la reconnaissance faciale en temps réel depuis le 2 février 2025",
+                            date: "4 août 2025",
+                            category: "Biométrie",
+                            catColor: "violet",
+                            likes: 521,
+                            retweets: 203,
+                            comments: 89,
+                            link: "https://www.touteleurope.eu/economie-et-social/intelligence-artificielle-que-fait-l-union-europeenne/",
+                          },
+                          {
+                            handle: "@FuturaSciences",
+                            avatar: "FS",
+                            text: "Le CEA obtient les images IRM du cerveau les plus précises au monde pour mieux comprendre Alzheimer",
+                            date: "2 avril 2024",
+                            category: "IA Médicale",
+                            catColor: "blue",
+                            likes: 193,
+                            retweets: 72,
+                            comments: 28,
+                            link: "https://www.futura-sciences.com/sante/actualites/medecine-cea-obtient-images-irm-cerveau-plus-precises-monde-mieux-comprendre-alzheimer-94013/",
+                          },
+                          {
+                            handle: "@Numerama",
+                            avatar: "Nu",
+                            text: "EU AI Act : interdiction des systèmes d'IA à risque inacceptable depuis février 2025",
+                            date: "3 fév. 2025",
+                            category: "Biométrie",
+                            catColor: "violet",
+                            likes: 445,
+                            retweets: 178,
+                            comments: 65,
+                            link: "https://intelligence-artificielle.developpez.com/actu/368699/",
+                          },
+                          {
+                            handle: "@01net",
+                            avatar: "01",
+                            text: "L'IA vs le radiologue dans l'interprétation de la radiographie pulmonaire",
+                            date: "18 déc. 2024",
+                            category: "IA Médicale",
+                            catColor: "blue",
+                            likes: 176,
+                            retweets: 64,
+                            comments: 22,
+                            link: "https://www.thema-radiologie.fr/actualites/3953/lia-vs-le-radiologue-dans-linterpretation-de-la-radiographie-pulmonaire.html",
+                          },
+                          {
+                            handle: "@UsineDigitale",
+                            avatar: "UD",
+                            text: "Deepfakes et failles biométriques : les nouveaux risques en 2025",
+                            date: "10 jan. 2025",
+                            category: "Biométrie",
+                            catColor: "violet",
+                            likes: 389,
+                            retweets: 112,
+                            comments: 47,
+                            link: "https://www.usine-digitale.fr/article/la-prevention-des-deepfakes-doit-etre-une-priorite-absolue-pour-les-forces-de-l-ordre-d-apres-europol.N1999797",
+                          },
+                          {
+                            handle: "@SciencesAvenir",
+                            avatar: "SA",
+                            text: "L'IA ouvre un large champ des possibles en imagerie pulmonaire",
+                            date: "22 jan. 2025",
+                            category: "IA Médicale",
+                            catColor: "blue",
+                            likes: 204,
+                            retweets: 78,
+                            comments: 31,
+                            link: "https://www.thema-radiologie.fr/actualites/3481/les-progres-scientifiques-et-technologiques-ouvrent-le-champ-des-possibles-en-imagerie-pulmonaire.html",
+                          },
+                          {
+                            handle: "@CNIL",
+                            avatar: "CN",
+                            text: "Biométrie dans les smartphones : quels principes respecter ?",
+                            date: "2024",
+                            category: "Biométrie",
+                            catColor: "violet",
+                            likes: 267,
+                            retweets: 98,
+                            comments: 41,
+                            link: "https://www.cnil.fr/fr/biometrie-dans-les-smartphones-des-particuliers-application-du-cadre-de-protection-des-donnees",
+                          },
+                          {
+                            handle: "@FuturaSciences",
+                            avatar: "FS",
+                            text: "Un modèle d'IA peut prédire le cancer du sein à cinq ans",
+                            date: "2024",
+                            category: "IA Médicale",
+                            catColor: "blue",
+                            likes: 318,
+                            retweets: 134,
+                            comments: 52,
+                            link: "https://www.thema-radiologie.fr/actualites/3839/un-modele-d-ia-peut-predire-le-cancer-du-sein-a-cinq-ans.html",
+                          },
+                        ]
+                          .filter((post) =>
+                            feedFilter === "all"
+                              ? true
+                              : feedFilter === "ia"
+                              ? post.catColor === "blue"
+                              : post.catColor === "violet"
+                          )
+                          .map((post, i) => (
+                            <motion.a
+                              key={post.text}
+                              href={post.link || "#"}
+                              target={post.link ? "_blank" : undefined}
+                              rel={post.link ? "noopener noreferrer" : undefined}
+                              initial={{ opacity: 0, scale: 0.95 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              exit={{ opacity: 0, scale: 0.95 }}
+                              transition={{ delay: i * 0.05 }}
+                              layout
+                              className="rounded-xl border border-border bg-card p-3 hover:border-primary/30 transition-colors block group"
                             >
-                              {post.category}
-                            </span>
-                            {post.link && (
-                              <ExternalLink className="w-3 h-3 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
-                            )}
-                          </div>
+                              <div className="flex items-start gap-2.5">
+                                <div
+                                  className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 font-bold text-[10px] text-white ${
+                                    post.catColor === "blue"
+                                      ? "bg-gradient-to-br from-pink-400 to-rose-500"
+                                      : "bg-gradient-to-br from-rose-500 to-pink-700"
+                                  }`}
+                                >
+                                  {post.avatar}
+                                </div>
 
-                          <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{post.text}</p>
+                                <div className="flex-1 min-w-0">
+                                  <div className="flex items-center gap-1.5 flex-wrap">
+                                    <span className="font-bold text-[11px]">{post.handle}</span>
+                                    <span className="text-[10px] text-muted-foreground">· {post.date}</span>
+                                    <span
+                                      className={`text-[9px] font-semibold px-1.5 py-0.5 rounded-full ${
+                                        post.catColor === "blue"
+                                          ? "bg-pink-400/15 text-pink-400"
+                                          : "bg-rose-600/15 text-rose-400"
+                                      }`}
+                                    >
+                                      {post.category}
+                                    </span>
+                                    {post.link && (
+                                      <ExternalLink className="w-2.5 h-2.5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    )}
+                                  </div>
 
-                          <div className="flex items-center gap-6 mt-3 text-muted-foreground">
-                            <span className="flex items-center gap-1.5 text-xs">
-                              <MessageCircle className="w-3.5 h-3.5" />
-                              {post.comments}
-                            </span>
-                            <span className="flex items-center gap-1.5 text-xs">
-                              <Repeat2 className="w-3.5 h-3.5" />
-                              {post.retweets}
-                            </span>
-                            <span className="flex items-center gap-1.5 text-xs">
-                              <Heart className="w-3.5 h-3.5" />
-                              {post.likes}
-                            </span>
-                            <span className="flex items-center gap-1.5 text-xs">
-                              <Share className="w-3.5 h-3.5" />
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </motion.a>
-                  ))}
-              </AnimatePresence>
+                                  <p className="text-[11px] text-muted-foreground mt-1 leading-relaxed">{post.text}</p>
+
+                                  <div className="flex items-center gap-4 mt-1.5 text-muted-foreground">
+                                    <span className="flex items-center gap-1 text-[10px]">
+                                      <MessageCircle className="w-3 h-3" />
+                                      {post.comments}
+                                    </span>
+                                    <span className="flex items-center gap-1 text-[10px]">
+                                      <Repeat2 className="w-3 h-3" />
+                                      {post.retweets}
+                                    </span>
+                                    <span className="flex items-center gap-1 text-[10px]">
+                                      <Heart className="w-3 h-3" />
+                                      {post.likes}
+                                    </span>
+                                    <span className="flex items-center gap-1 text-[10px]">
+                                      <Share className="w-3 h-3" />
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </motion.a>
+                          ))}
+                      </AnimatePresence>
+                    </div>
+                  </div>
+                  {/* Home indicator */}
+                  <div className="flex justify-center mt-2">
+                    <div className="w-32 h-1 bg-primary/15 rounded-full" />
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
