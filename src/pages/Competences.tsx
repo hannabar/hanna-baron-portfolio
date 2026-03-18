@@ -214,7 +214,7 @@ const Competences = () => {
                 </ul>
                 <div className="mt-4">
                   <Button asChild size="sm" variant="outline">
-                    <a href="/hanna-baron-portfolio/docs/TABLEAU_SYNTHESE_E5_2026.xlsx" download>
+                    <a href="/docs/TABLEAU_SYNTHESE_E5_2026.xlsx" download>
                       <Download className="mr-2 h-4 w-4" />
                       Tableau de Synthèse
                     </a>
